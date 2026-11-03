@@ -515,6 +515,8 @@ def main():
     }
     OUT.mkdir(parents=True, exist_ok=True)
     blob = json.dumps(out, ensure_ascii=False, separators=(",", ":"))
+    for wrong, right in CONFIG.get("nameFixes", {}).items():  # schrijffouten in CueScore-namen
+        blob = blob.replace(wrong, right)
     (OUT / "data.json").write_text(blob, encoding="utf-8")
     # data.js laat de site ook werken als je index.html direct opent (file://)
     (OUT / "data.js").write_text("window.POOL_DATA=" + blob + ";", encoding="utf-8")

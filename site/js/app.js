@@ -340,7 +340,7 @@ views.voorspel = (a, b) => {
       const slots = D.meta.slots;
       const bestA = bestLineup(D, A, B, P, T, pa, pb);
       document.getElementById("pv-line").innerHTML = bestA
-        ? `<h3>Beste opstelling ${esc(T[A].name.split(":")[0])}</h3><div class="mute small">Uit ${pa.length} aanwezige spelers${pb.length ? `, tegen ${pb.length} aanwezige tegenstanders` : ", tegen de verwachte opstelling van de tegenstander"}. Max. 2,5 wedstrijd per speler (enkel = 1, koppel = 0,5).</div>
+        ? `<h3>Beste opstelling ${esc(T[A].name.split(":")[0])}</h3><div class="mute small">Uit ${pa.length} aanwezige spelers${pb.length ? `, tegen ${pb.length} aanwezige tegenstanders` : ", tegen de verwachte opstelling van de tegenstander"}. Iedereen speelt; max. 2,5 wedstrijd per speler (enkel = 1, koppel = 0,5) en hooguit 1 speler met 3 potten, eerlijk verdeeld.${bestA.cut ? ` Let op: er zijn maar 7 plekken, dus ${bestA.cut} speler(s) met de laagste rating spelen niet.` : ""}</div>
            <div class="lineup">${lineHtml(bestA, A, slots)}</div>
            <p style="margin-top:10px">Winstkans met dit advies: <b class="win">${pct(bestA.win)}</b> · gelijk ${pct(bestA.draw)} · verlies ${pct(bestA.loss)}</p>${probBar(bestA)}
            <p class="small mute">Speelbeurten: ${Object.entries(bestA.load).map(([id, n]) => `${esc(P[id].name.split(" ")[0])} ${n}`).join(" · ")}</p>`
@@ -370,7 +370,7 @@ views.voorspel = (a, b) => {
   <div class="grid g2"><div class="card"><h3>Wie is er aanwezig?</h3>
     <div class="bold">${esc(T[A].name)} <button class="btn small" data-all="${A}" data-mode="on">allemaal</button> <button class="btn small" data-all="${A}" data-mode="off">niemand</button></div>${picks(A)}
     <div class="bold">${esc(T[B].name)} <button class="btn small" data-all="${B}" data-mode="on">allemaal</button> <button class="btn small" data-all="${B}" data-mode="off">niemand</button></div>${picks(B)}
-    <p class="small mute">Tip: een speler speelt max. 2,5 wedstrijd, dus hoe meer spelers aanwezig, hoe beter de verdeling. Niets aangevinkt = verwachte opstelling.</p></div>
+    <p class="small mute">Tip: alle aangevinkte spelers spelen mee en de beurten worden eerlijk verdeeld (max. 2,5 wedstrijd, hooguit 1 speler met 3 potten). Niets aangevinkt = verwachte opstelling.</p></div>
   <div class="card" id="pv-odds"></div></div>
   <div class="grid g2" style="margin-top:16px"><div class="card lineup" id="pv-line"></div><div class="card lineup" id="pv-lineB"></div></div>
   </div>

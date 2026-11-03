@@ -26,6 +26,9 @@
       "current": true
     }
   ],
+  "nameFixes": {
+    "InfinlTy": "Infinity"
+  },
   "teamAliases": {
     "86084932": [
       47037808,
