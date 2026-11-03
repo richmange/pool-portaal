@@ -1,0 +1,36 @@
+{
+  "title": "Pool Portaal",
+  "competition": "Pool Gelderland Tweede klasse",
+  "myTeamId": 31035910,
+  "rating": {
+    "slug": "KNBB+Pool+Rating",
+    "id": 20655568
+  },
+  "relegationSpots": 0,
+  "promotionSpots": 1,
+  "seasons": [
+    {
+      "label": "2024/2025",
+      "id": 46283338,
+      "slug": "Pool+Gelderland+Tweede+klasse+2024%252F2025"
+    },
+    {
+      "label": "2025/2026",
+      "id": 61204774,
+      "slug": "Pool+Gelderland+Tweede+klasse+2025%252F2026"
+    },
+    {
+      "label": "2026/2027",
+      "id": 83574409,
+      "slug": "Pool+Gelderland+Tweede+klasse+2026%252F2027",
+      "current": true
+    }
+  ],
+  "teamAliases": {
+    "86084932": [
+      47037808,
+      64348228,
+      86084932
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl" data-theme="blue">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pool Portaal</title>
+<meta name="description" content="Statistieken, rankings en voorspellingen voor de Pool Gelderland Tweede klasse competitie.">
+<meta name="theme-color" content="#040a17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23111'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23fff'/%3E%3Ctext x='16' y='20.5' font-size='11' font-family='Arial' font-weight='700' text-anchor='middle'%3E8%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pool Portaal"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("theme")||"blue"}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/"><span class="ball">8</span><span><b>Pool Portaal</b><small id="seasonLabel"></small></span></a>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+  <nav id="nav">
+    <a href="#/" data-r="">Dashboard</a>
+    <a href="#/stand" data-r="stand">Stand</a>
+    <a href="#/programma" data-r="programma">Programma</a>
+    <a href="#/teams" data-r="teams team">Teams</a>
+    <a href="#/spelers" data-r="spelers speler">Spelers</a>
+    <a href="#/ranking" data-r="ranking">Ranking</a>
+    <a href="#/top10" data-r="top10">Top 10</a>
+    <a href="#/voorspel" data-r="voorspel">Voorspeller</a>
+    <a href="#/titelrace" data-r="titelrace">Titelrace</a>
+    <a href="#/regels" data-r="regels">Regels</a>
+    <a href="#/seizoenen" data-r="seizoenen">Seizoenen</a>
+    <a href="#/over" data-r="over">Over</a>
+  </nav>
+  <label class="theme">Thema <select id="theme"><option value="neon">Neon</option><option value="arcade">Arcade</option><option value="blue">Tafelblauw</option><option value="licht">Licht</option></select></label>
+  <label class="myteam">Mijn team <select id="myTeam"></select></label>
+</header>
+<main id="app"><p class="loading">Laden…</p></main>
+<nav class="tabbar" id="tabbar">
+  <a href="#/" data-r=""><span>🏠</span>Home</a>
+  <a href="#/stand" data-r="stand"><span>📊</span>Stand</a>
+  <a href="#/programma" data-r="programma wedstrijd"><span>📅</span>Programma</a>
+  <a href="#/spelers" data-r="spelers speler ranking"><span>🎱</span>Spelers</a>
+  <a href="#/voorspel" data-r="voorspel"><span>🔮</span>Voorspel</a>
+  <a href="#" id="more" data-r="x"><span>☰</span>Meer</a>
+</nav>
+<footer>
+  <span id="updated"></span> · Data van <a href="https://cuescore.com" target="_blank" rel="noopener">CueScore</a> — onofficiële aanvulling, geen onderdeel van de KNBB.
+</footer>
+<script src="data/data.js"></script>
+<script src="js/model.js"></script>
+<script src="js/regels.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

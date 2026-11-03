@@ -1,0 +1,8 @@
+data/raw/rating_players/
+data/raw/*.html
+data/raw/*.json
+data/raw/*.js
+__pycache__/
+wparegels2009.pdf
+data/regels/
+.claude/
