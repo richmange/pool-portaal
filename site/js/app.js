@@ -386,6 +386,8 @@ views.titelrace = () => {
   <p class="note" style="margin-top:14px">Alleen de nummer 1 promoveert; er is geen degradatie.</p>`;
 };
 
+views.scorebord = () => { after = () => SCOREBORD.mount(document.getElementById("sb")); return `<div id="sb"></div>`; };
+
 views.regels = (sub) => {
   const R = window.REGELS;
   const tab = R.tabs.find((t) => t.id === sub) ? sub : "competitie";
@@ -406,10 +408,11 @@ views.over = () => `<h1>Over dit portaal</h1>
   <div class="card"><h3>Hoe werken de voorspellingen?</h3><ol class="small"><li>De KNBB-rating is een Elo-rating: kans dat A wint = 1 / (1 + 10<sup>(Rb−Ra)/400</sup>).</li><li>Per spelsoort corrigeren we de rating met de (gekrompen) winstrate van de speler in die spelsoort dit seizoen.</li><li>Een teamwedstrijd bestaat uit 6 partijen. Wie speelt is niet bekend; per partij wegen we spelers naar hoe vaak ze die spelsoort speelden.</li><li>De kans op elke uitslag (0–6 partijen) volgt exact uit de 6 partijkansen: winst = 4 of meer, gelijk = 3.</li><li>Titel/top 3: ${D.meta.sims.toLocaleString("nl-NL")} Monte-Carlo-simulaties van alle resterende wedstrijden.</li></ol><p class="mute small">Een model is geen glazen bol: met weinig gespeelde wedstrijden zijn de kansen onzeker. Ze worden elke ronde scherper.</p></div></div>`;
 
 // ------------------------------------------------------------------ router
-const routes = { "": "dashboard", stand: "stand", programma: "programma", wedstrijd: "wedstrijd", teams: "teams", team: "team", spelers: "spelers", speler: "speler", ranking: "ranking", top10: "top10", voorspel: "voorspel", titelrace: "titelrace", regels: "regels", seizoenen: "seizoenen", over: "over" };
+const routes = { "": "dashboard", stand: "stand", programma: "programma", wedstrijd: "wedstrijd", teams: "teams", team: "team", spelers: "spelers", speler: "speler", ranking: "ranking", top10: "top10", voorspel: "voorspel", titelrace: "titelrace", regels: "regels", scorebord: "scorebord", seizoenen: "seizoenen", over: "over" };
 function render() {
   const [r = "", ...args] = location.hash.replace(/^#\/?/, "").split("/");
   const name = routes[r] ?? "dashboard";
+  if (window.SCOREBORD) SCOREBORD.release();
   try { $app.innerHTML = views[name](...args); } catch (e) { console.error(e); $app.innerHTML = `<p class="empty">Er ging iets mis bij het weergeven van deze pagina.</p>`; }
   document.querySelectorAll("#tabbar a").forEach((a) => a.classList.toggle("on", a.dataset.r.split(" ").includes(r)));
   document.querySelectorAll("#nav a").forEach((a) => a.classList.toggle("on", a.dataset.r.split(" ").includes(r)));
@@ -420,7 +423,7 @@ function render() {
   const va = document.getElementById("va"), vb = document.getElementById("vb");
   if (va) { va.onchange = vb.onchange = () => (location.hash = `#/voorspel/${va.value}/${vb.value}`); }
   window.scrollTo(0, 0);
-  document.title = `Pool Portaal – ${{ dashboard: "Dashboard", stand: "Stand", programma: "Programma", wedstrijd: "Wedstrijd", teams: "Teams", team: T[args[0]]?.name ?? "Team", spelers: "Spelers", speler: P[args[0]]?.name ?? "Speler", ranking: "Ranking", top10: "Top 10", voorspel: "Voorspeller", titelrace: "Titelrace", regels: "Poolregels", seizoenen: "Seizoenen", over: "Over" }[name]}`;
+  document.title = `Pool Portaal – ${{ dashboard: "Dashboard", stand: "Stand", programma: "Programma", wedstrijd: "Wedstrijd", teams: "Teams", team: T[args[0]]?.name ?? "Team", spelers: "Spelers", speler: P[args[0]]?.name ?? "Speler", ranking: "Ranking", top10: "Top 10", voorspel: "Voorspeller", titelrace: "Titelrace", regels: "Poolregels", scorebord: "Scorebord", seizoenen: "Seizoenen", over: "Over" }[name]}`;
 }
 
 function init() {
