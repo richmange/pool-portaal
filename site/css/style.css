@@ -206,8 +206,8 @@ select,input{border-color:var(--line)} select:focus,input:focus{outline:2px soli
 .sb-ball.stripe{background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.6),transparent 38%),linear-gradient(#f4f4f4 0 24%,var(--c) 24% 76%,#f4f4f4 76%)}
 .sb-ball i{font-style:normal;font-weight:800;font-size:clamp(1rem,4.6vw,1.45rem);background:#fff;color:#111;border-radius:50%;width:48%;height:48%;display:grid;place-items:center;line-height:1}
 .sb-ball:disabled{opacity:.22;cursor:default;box-shadow:none}
-.sb-ball.same{outline:2px dashed var(--mute);outline-offset:2px}
-.sb-ball.sel{border-color:var(--gold);transform:scale(1.1);box-shadow:0 0 0 3px var(--gold),0 0 20px var(--gold);z-index:1}
+.sb-ball.same{outline:5px solid var(--felt);outline-offset:3px;box-shadow:0 0 16px var(--felt),0 3px 8px rgba(0,0,0,.45)}
+.sb-ball.sel{border-color:var(--gold);outline:none;transform:scale(1.1);box-shadow:0 0 0 3px var(--gold),0 0 20px var(--gold);z-index:1}
 .sb-sum{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .sb-actions{display:flex;flex-wrap:wrap;gap:8px}
 .sb-ok{flex:1 1 180px;padding:14px;font-size:1.1rem;font-weight:700}
@@ -215,4 +215,3 @@ select,input{border-color:var(--line)} select:focus,input:focus{outline:2px soli
 .sb-log{margin-top:14px}.sb-log ol{margin:0;padding-left:2em}.sb-log li{margin:.2em 0}
 .sb-over h2{margin-top:0;color:var(--gold)}
 @media (max-width:520px){.sb-players{gap:8px}.sb-player{padding:10px 6px}.sb-tablehead .mute{display:none}}
-.sb-ball.newrack{box-shadow:0 0 0 2px var(--felt),0 3px 8px rgba(0,0,0,.45)}
