@@ -12,7 +12,7 @@ window.SCOREBORD = (() => {
 
   let S = store.get(KEY);        // lopende partij (of null)
   let pk = null, why = "gemist", rebreak = false, rr = false; // keuze die nog niet is bevestigd
-  let root = null, wake = null;
+  let root = null, wake = null, tv = false;
 
   const fresh = (names, target, first) => ({
     names, target, turn: first, first, n: 15, run: 0, breakNext: true,
@@ -110,7 +110,13 @@ window.SCOREBORD = (() => {
       <label>Race tot<select id="sb-t">${[25, 30, 40, 50, 75, 100].map((v) => `<option value="${v}" ${v === 40 ? "selected" : ""}>${v} punten</option>`).join("")}</select></label>
       <label>Wie breekt?<select id="sb-f"><option value="0">Speler 1</option><option value="1">Speler 2</option><option value="r">🎲 Loten</option></select></label>
       <button type="button" class="btn primary sb-go" data-a="start">Start de partij</button>
-    </div>`;
+    </div>
+    <details class="card sb-help"><summary>📺 Hoe laat ik het scorebord op de tv zien?</summary>
+      <ul class="small">
+        <li><b>Telefoon:</b> spiegel je scherm naar de tv (Chromecast: "Scherm casten" in de Google Home-app of snelle instellingen; iPhone: AirPlay-scherm; veel smart-tv's: Miracast/Smart View). Kantel de telefoon: het scorebord past dan op één scherm.</li>
+        <li><b>Alleen de score groot:</b> tik tijdens een partij op <b>📺 TV</b>. Je ziet dan een groot scorebord zonder knoppen; met "terug naar bediening" ga je verder.</li>
+        <li><b>Laptop met hdmi-kabel of Chrome "Casten":</b> open <b>poolinfo.nl/#/scorebord/tv</b> in een tweede venster op de tv. Dat venster volgt de partij live, die je in het eerste venster bijhoudt.</li>
+      </ul></details>`;
   }
 
   const rackMini = (n) => `<div class="sb-rack" aria-label="${n} ballen op tafel">${[1, 2, 3, 4, 5].map((r) => `<div>${Array.from({ length: r }, (_, i) => { const idx = (r * (r - 1)) / 2 + i; return `<b class="${idx < n ? "on" : ""}"></b>`; }).join("")}</div>`).join("")}</div>`;
@@ -118,7 +124,7 @@ window.SCOREBORD = (() => {
   function playerCard(i) {
     const act = S.turn === i && !S.over, win = S.over && S.winner === i;
     const pct = Math.max(0, Math.min(100, (S.score[i] / S.target) * 100));
-    return `<div class="sb-player ${act ? "act" : ""} ${win ? "win" : ""}" ${!S.over && !act ? `data-a="turn" data-p="${i}" title="Tik om de beurt hierheen te zetten"` : ""}>
+    return `<div class="sb-player ${act ? "act" : ""} ${win ? "win" : ""}" ${!S.over && !act && !tv ? `data-a="turn" data-p="${i}" title="Tik om de beurt hierheen te zetten"` : ""}>
       <div class="sb-name">${win ? "🏆 " : act ? "🎱 " : ""}${esc(nm(i))}</div>
       <div class="sb-score">${S.score[i]}</div>
       <div class="sb-bar"><span style="width:${pct}%"></span></div>
@@ -137,19 +143,19 @@ window.SCOREBORD = (() => {
       if (p.extra) parts.push(`3e foul op rij: −${p.extra} extra`);
       sum = `<div class="sb-sum">${parts.join(" · ")} → score <b>${p.total}</b>${p.win ? " 🏁 wint de partij" : p.same ? ` <span class="mute">· ${esc(nm(t))} blijft aan tafel${p.rerack ? ", nieuw rack" : ""}</span>` : p.rerack ? ' <span class="mute">· nieuw rack</span>' : ` <span class="mute">· beurt naar ${esc(nm(1 - t))}</span>`}</div>`;
     }
-    const balls = Array.from({ length: 15 }, (_, i) => i + 1).map((k) => ballEl(k, `data-a="ball" data-k="${k}" ${rack && k === 1 ? "disabled" : ""}`, `${pk === k ? "sel" : ""} ${k === S.n ? "same" : ""} ${k > S.n ? "newrack" : ""}`)).join("");
+    const balls = Array.from({ length: 15 }, (_, i) => i + 1).map((k) => ballEl(k, `data-a="ball" data-k="${k}" ${rack && k === 1 ? "disabled" : ""}`, `${pk === k ? "picked" : ""} ${k === S.n ? "same" : ""} ${k > S.n ? "newrack" : ""}`)).join("");
     return `<div class="card sb-table">
       <div class="sb-tablehead">${rackMini(S.n)}<div><div class="sb-q">Hoeveel ballen liggen er <u>nu</u> op tafel?</div>
         <div class="mute small">Er lagen ${S.n} ballen${S.breakNext ? " (openingsbreak)" : ""} — dat is de bal met de dikke ring. Is er één bal over, tik dan <b>1</b>: er komt een nieuw rack en ${esc(nm(t))} speelt door. Ook al een paar ballen van het nieuwe rack gepot? Tik dan een aantal hoger dan ${S.n} (of vink "nieuw rack" aan): de punten van beide racks worden opgeteld. Op een foul of safety gespotte ballen tel je gewoon mee.</div></div></div>
       <div class="sb-reasons">${REASONS.map(([k, l]) => `<button type="button" class="sb-chip ${why === k ? "on" : ""}" data-a="why" data-w="${k}">${l}</button>`).join("")}</div>
       ${why === "open" ? `<label class="sb-check"><input type="checkbox" data-a="rb" ${rebreak ? "checked" : ""}> Tegenstander eist een re-break (zelfde speler breekt opnieuw)</label>` : ""}
-      <label class="sb-check"><input type="checkbox" data-a="rr" ${rack ? "checked" : ""} ${pk != null && pk > S.n ? "disabled" : ""}> Er kwam een nieuw rack tijdens deze beurt (ballen tellen daarna weer vanaf 15)</label>
+      <label class="sb-check"><input type="checkbox" data-a="rr" ${rack ? "checked" : ""} ${pk != null && pk > S.n ? "disabled" : ""}> Nieuw rack tijdens deze beurt</label>
       <div class="sb-balls">${balls}</div>
       ${sum}
       <div class="sb-actions">
         <button type="button" class="btn primary sb-ok" data-a="ok" ${pk == null ? "disabled" : ""}>Bevestig beurt</button>
-        <button type="button" class="btn" data-a="skip" title="Beurt zonder punten: de andere speler is aan de beurt">Wissel speler (0 punten)</button>
-        <button type="button" class="btn" data-a="undo" ${S.hist.length ? "" : "disabled"}>↶ Ongedaan maken</button>
+        <button type="button" class="btn" data-a="skip" title="Beurt zonder punten: de andere speler is aan de beurt">Wissel speler</button>
+        <button type="button" class="btn" data-a="undo" ${S.hist.length ? "" : "disabled"}>↶ Terug</button>
       </div>
     </div>`;
   }
@@ -171,17 +177,30 @@ window.SCOREBORD = (() => {
   }
 
   function game() {
+    if (tv) return tvView();
     return `<h1>Scorebord <small>race tot ${S.target}</small></h1>
     <div class="sb-top mute small"><span>${S.over ? "Partij afgelopen" : `${esc(nm(S.turn))} is aan tafel`} · beurt ${S.visits[0] + S.visits[1] + (S.over ? 0 : 1)}</span>
-      <span>${wake ? "💡 scherm blijft aan" : ""} <button type="button" class="btn small" data-a="new" data-confirm="1">Nieuwe partij</button></span></div>
+      <span><a class="sb-back" href="#/">✕ site</a> <button type="button" class="btn small" data-a="tv" title="Groot scorebord voor een tv of tweede scherm">📺 TV</button> <button type="button" class="btn small" data-a="new" data-confirm="1">Nieuwe partij</button></span></div>
     <div class="sb-players">${playerCard(0)}${playerCard(1)}</div>
     ${S.over ? summary() : controls()}
     ${logHtml()}`;
   }
 
+  function tvView() {
+    const last = S.log.length ? S.log[S.log.length - 1].txt : "";
+    return `<div class="sb-tvbar"><button type="button" class="btn small" data-a="tvoff">⤺ terug naar bediening</button></div>
+    <div class="sb-tvhead">Race tot ${S.target}${S.over ? "" : ` · ${esc(nm(S.turn))} is aan tafel`}</div>
+    <div class="sb-players">${playerCard(0)}${playerCard(1)}</div>
+    ${S.over ? `<div class="sb-tvwin">🏆 ${esc(nm(S.winner))} wint met ${S.score[S.winner]} – ${S.score[1 - S.winner]}</div>` : `<div class="sb-tvtable">${rackMini(S.n)}<span><b>${S.n}</b> ballen op tafel</span></div>`}
+    ${last ? `<div class="sb-tvlast">${esc(last)}</div>` : ""}`;
+  }
+
   function paint() {
     if (!root) return;
     root.innerHTML = S ? game() : setup();
+    root.classList.toggle("sb-game", !!S);
+    root.classList.toggle("sb-tv", !!S && tv);
+    document.body.classList.toggle("sb-tv-page", !!S && tv);
     keepAwake(!!S && !S.over);
   }
 
@@ -212,6 +231,8 @@ window.SCOREBORD = (() => {
     else if (a === "rematch") rematch();
     else if (a === "new") { if (!S.over && b.dataset.confirm && !confirm("Deze partij verwijderen en opnieuw beginnen?")) return; newGame(); }
     else if (a === "share") share();
+    else if (a === "tv") { tv = true; paint(); try { document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); } catch (e) {} }
+    else if (a === "tvoff") { tv = false; paint(); try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {} }
   }
   function onChange(e) { const a = e.target.dataset.a; if (a === "rb") { rebreak = e.target.checked; paint(); } else if (a === "rr") { rr = e.target.checked; if (pk === 1 && rr) pk = null; paint(); } }
   function share() {
@@ -220,11 +241,13 @@ window.SCOREBORD = (() => {
     (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(() => alert("Uitslag gekopieerd."), () => prompt("Kopieer de uitslag:", txt));
   }
 
-  function mount(el) {
+  window.addEventListener("storage", (e) => { if (e.key === KEY && root && root.isConnected) { S = store.get(KEY); pk = null; paint(); } });
+  function mount(el, sub) {
+    tv = sub === "tv"; document.body.classList.add("sb-page");
     root = el; root.className = "sb";
     root.onclick = onClick; root.onchange = onChange;
     paint();
   }
-  const release = () => { root = null; if (wake) { try { wake.release(); } catch (e) {} wake = null; } };
+  const release = () => { root = null; tv = false; document.body.classList.remove("sb-page", "sb-tv-page"); try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {} if (wake) { try { wake.release(); } catch (e) {} wake = null; } };
   return { mount, release };
 })();

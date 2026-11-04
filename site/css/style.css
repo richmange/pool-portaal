@@ -207,7 +207,7 @@ select,input{border-color:var(--line)} select:focus,input:focus{outline:2px soli
 .sb-ball i{font-style:normal;font-weight:800;font-size:clamp(1rem,4.6vw,1.45rem);background:#fff;color:#111;border-radius:50%;width:48%;height:48%;display:grid;place-items:center;line-height:1}
 .sb-ball:disabled{opacity:.22;cursor:default;box-shadow:none}
 .sb-ball.same{outline:5px solid var(--felt);outline-offset:3px;box-shadow:0 0 16px var(--felt),0 3px 8px rgba(0,0,0,.45)}
-.sb-ball.sel{border-color:var(--gold);outline:none;transform:scale(1.1);box-shadow:0 0 0 3px var(--gold),0 0 20px var(--gold);z-index:1}
+.sb-ball.picked{border-color:var(--gold);outline:none;transform:scale(1.1);box-shadow:0 0 0 3px var(--gold),0 0 20px var(--gold);z-index:1}
 .sb-sum{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .sb-actions{display:flex;flex-wrap:wrap;gap:8px}
 .sb-ok{flex:1 1 180px;padding:14px;font-size:1.1rem;font-weight:700}
@@ -215,3 +215,33 @@ select,input{border-color:var(--line)} select:focus,input:focus{outline:2px soli
 .sb-log{margin-top:14px}.sb-log ol{margin:0;padding-left:2em}.sb-log li{margin:.2em 0}
 .sb-over h2{margin-top:0;color:var(--gold)}
 @media (max-width:520px){.sb-players{gap:8px}.sb-player{padding:10px 6px}.sb-tablehead .mute{display:none}}
+
+.sb-back{display:none;margin-right:8px}
+.sb-help{margin-top:14px;max-width:560px}.sb-help summary{cursor:pointer;font-weight:600}.sb-help li{margin:.5em 0}
+.sb-tvbar{text-align:right;opacity:.5}.sb-tvhead{text-align:center;font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1.1rem,3vw,2rem);color:var(--mute);margin:4px 0 10px}
+.sb-tvtable{display:flex;gap:16px;align-items:center;justify-content:center;font-size:clamp(1.1rem,3vw,2rem);margin:16px 0}.sb-tvtable b{font-size:1.5em;color:var(--felt)}
+.sb-tvwin{text-align:center;font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:800;font-size:clamp(1.8rem,6vw,4rem);color:var(--gold);margin:16px 0}
+.sb-tvlast{text-align:center;color:var(--mute);font-size:clamp(.9rem,2vw,1.3rem)}
+.sb-tv .sb-score{font-size:clamp(4rem,min(26vw,34vh),20rem)}.sb-tv .sb-name{font-size:clamp(1.2rem,min(5vw,6vh),3.5rem)}.sb-tv .sb-stats{font-size:clamp(.9rem,2vw,1.5rem)}.sb-tv .sb-run{font-size:clamp(1.4rem,4vw,3rem)}
+.sb-tv .sb-rack b{width:clamp(14px,2.4vw,28px);height:clamp(14px,2.4vw,28px)}
+body.sb-tv-page .top,body.sb-tv-page .tabbar,body.sb-tv-page footer{display:none}
+/* telefoon in liggende stand: alles op één scherm, zonder scrollen */
+@media (orientation:landscape) and (max-height:520px){
+  body.sb-page .top,body.sb-page .tabbar,body.sb-page footer{display:none}
+  body.sb-page main{padding:4px 12px 4px!important;min-height:0}
+  body.sb-page{padding-bottom:0!important}
+  .sb-top .btn.small{padding:3px 8px}.sb-table{gap:4px!important;padding:6px 8px!important}.sb-balls{gap:4px!important}
+  .sb-back{display:inline-block}
+  .sb.sb-game:not(.sb-tv){display:grid;grid-template-columns:minmax(0,46%) minmax(0,1fr);grid-template-areas:"top top" "pl ct";gap:6px 12px;align-items:start}
+  .sb.sb-game:not(.sb-tv) h1,.sb.sb-game:not(.sb-tv) .sb-log,.sb-tablehead,.sb-help{display:none}
+  .sb-top{grid-area:top;margin:0}.sb-players{grid-area:pl;margin:0;gap:8px}
+  .sb-table,.sb-over{grid-area:ct;gap:6px;padding:8px 10px}
+  .sb-player{padding:6px 4px;border-radius:12px}.sb-name{font-size:1rem}.sb-score{font-size:clamp(3rem,22vh,5.5rem)}.sb-bar{margin:2px 0}
+  .sb-stats{font-size:.68rem;gap:0 8px;margin-top:2px}.sb-run{font-size:.9rem}.sb-warn{font-size:.65rem;margin-top:2px}
+  .sb-reasons{gap:6px}.sb-chip{padding:4px 10px;font-size:.8rem}
+  .sb-check{font-size:.72rem}.sb-balls{gap:5px;max-width:min(100%,56vh)}.sb-ball i{font-size:clamp(.8rem,4vh,1.1rem)}
+  .sb-sum{padding:3px 8px;font-size:.78rem}.sb-actions{gap:6px;flex-wrap:nowrap}.sb-actions .btn{padding:6px 8px;font-size:.75rem;white-space:nowrap}.sb-ok{padding:8px;font-size:.9rem;flex:1 1 auto}.sb-ball.picked{transform:none}
+  .sb-over table{font-size:.8rem}.sb-over h2{font-size:1.1rem;margin:0 0 4px}
+}
+@media (max-height:520px){.sb-tv .sb-tvtable{margin:6px 0}.sb-tv .sb-tvhead{margin:0 0 4px}.sb-tv .sb-player{padding:6px}body.sb-tv-page main{padding:2px 12px!important}}
+@media (max-height:520px){.sb-tv .sb-rack{display:none}}

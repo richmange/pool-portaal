@@ -386,7 +386,7 @@ views.titelrace = () => {
   <p class="note" style="margin-top:14px">Alleen de nummer 1 promoveert; er is geen degradatie.</p>`;
 };
 
-views.scorebord = () => { after = () => SCOREBORD.mount(document.getElementById("sb")); return `<div id="sb"></div>`; };
+views.scorebord = (sub) => { after = () => SCOREBORD.mount(document.getElementById("sb"), sub); return `<div id="sb"></div>`; };
 
 views.regels = (sub) => {
   const R = window.REGELS;
