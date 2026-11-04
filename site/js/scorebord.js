@@ -11,7 +11,7 @@ window.SCOREBORD = (() => {
   };
 
   let S = store.get(KEY);        // lopende partij (of null)
-  let pk = null, why = "gemist", rebreak = false; // keuze die nog niet is bevestigd
+  let pk = null, why = "gemist", rebreak = false, rr = false; // keuze die nog niet is bevestigd
   let root = null, wake = null;
 
   const fresh = (names, target, first) => ({
@@ -25,12 +25,13 @@ window.SCOREBORD = (() => {
 
   // ------------------------------------------------------------ spellogica
   // Wat gebeurt er als de huidige speler z'n beurt afsluit met k ballen op tafel en reden `w`?
-  function preview(k, w, rb) {
-    const t = S.turn, pts = S.n - k;
+  function preview(k, w, rb, rack) {
+    const t = S.turn, pts = rack || k > S.n ? S.n - 1 + (15 - k) : S.n - k; // met nieuw rack: eerst tot 1 bal, daarna vanaf 15
     const pen = w === "foul" ? 1 : w === "open" ? 2 : 0;
     let extra = 0, rerack = false, same = false;
-    if (w === "gemist" && k === 1) { rerack = true; same = true; }
+    if (w === "gemist" && k === 1 && !rack) { rerack = true; same = true; }
     else if (k === 1) rerack = true;
+    if (rack) rerack = true;
     if (w === "foul") {
       const cf = (pts > 0 ? 0 : S.cf[t]) + 1;
       if (cf === 3) { extra = 15; rerack = true; same = true; }
@@ -40,9 +41,10 @@ window.SCOREBORD = (() => {
     return { pts, pen, extra, rerack, same, win: S.score[t] + pts >= S.target, total };
   }
 
-  function commit(k, w, rb) {
-    if (S.over || k > S.n || k < 1) return;
-    const t = S.turn, o = 1 - t, p = preview(k, w, rb);
+  function commit(k, w, rb, rack) {
+    rack = rack || k > S.n;
+    if (S.over || k < (rack ? 2 : 1) || k > 15) return;
+    const t = S.turn, o = 1 - t, p = preview(k, w, rb, rack);
     snap();
     S.score[t] += p.pts; S.pots[t] += p.pts; S.run += p.pts;
     const base = { t, pts: p.pts, run: S.run, why: w };
@@ -52,13 +54,13 @@ window.SCOREBORD = (() => {
       S.log.push({ ...base, txt: `${nm(t)} +${p.pts} en wint de partij` });
       return finish();
     }
-    if (w === "gemist" && k === 1) { // veertien ballen gepot: opnieuw racken, dezelfde speler speelt door
+    if (w === "gemist" && k === 1 && !rack) { // veertien ballen gepot: opnieuw racken, dezelfde speler speelt door
       S.n = 15; S.breakNext = false;
       S.log.push({ ...base, txt: `${nm(t)} +${p.pts} — rack leeg, nieuw rack, ${nm(t)} speelt door` });
       return finish();
     }
     S.hr[t] = Math.max(S.hr[t], S.run); S.visits[t]++;
-    let next = o, newN = k === 1 ? 15 : k, txt = `${nm(t)} ${p.pts > 0 ? "+" + p.pts : "0"}`;
+    let next = o, newN = k === 1 ? 15 : k, txt = `${nm(t)} ${p.pts > 0 ? "+" + p.pts : "0"}${rack ? " (incl. nieuw rack)" : ""}`;
     S.breakNext = false;
     if (w === "safety") { S.safes[t]++; txt += " · safety"; }
     else if (w === "foul" || w === "open") {
@@ -78,21 +80,21 @@ window.SCOREBORD = (() => {
     finish();
   }
 
-  function finish() { pk = null; why = "gemist"; rebreak = false; save(); paint(); try { navigator.vibrate && navigator.vibrate(15); } catch (e) {} }
+  function finish() { pk = null; why = "gemist"; rebreak = false; rr = false; save(); paint(); try { navigator.vibrate && navigator.vibrate(15); } catch (e) {} }
   function undo() {
     const last = S.hist.pop();
     if (!last) return;
-    const hist = S.hist; S = JSON.parse(last); S.hist = hist; pk = null; why = "gemist"; rebreak = false; save(); paint();
+    const hist = S.hist; S = JSON.parse(last); S.hist = hist; pk = null; why = "gemist"; rebreak = false; rr = false; save(); paint();
   }
   function startGame() {
     const n0 = root.querySelector("#sb-n0").value.trim() || "Speler 1", n1 = root.querySelector("#sb-n1").value.trim() || "Speler 2";
     const tgt = Math.max(5, parseInt(root.querySelector("#sb-t").value, 10) || 40);
     let f = root.querySelector("#sb-f").value; f = f === "r" ? Math.round(Math.random()) : Number(f);
     store.set(NAMES, [n0, n1]);
-    S = fresh([n0, n1], tgt, f); pk = null; why = "gemist"; rebreak = false; save(); paint();
+    S = fresh([n0, n1], tgt, f); pk = null; why = "gemist"; rebreak = false; rr = false; save(); paint();
   }
   function newGame() { S = null; store.set(KEY, null); pk = null; paint(); }
-  function rematch() { S = fresh(S.names.slice(), S.target, 1 - S.first); pk = null; why = "gemist"; save(); paint(); }
+  function rematch() { S = fresh(S.names.slice(), S.target, 1 - S.first); pk = null; rr = false; why = "gemist"; save(); paint(); }
 
   // ------------------------------------------------------------ scherm
   const ballEl = (k, attrs = "", cls = "") => `<button type="button" class="sb-ball ${k > 8 ? "stripe" : ""} ${cls}" style="--c:${COLORS[k > 8 ? k - 8 : k]}" ${attrs}><i>${k}</i></button>`;
@@ -127,7 +129,7 @@ window.SCOREBORD = (() => {
   }
 
   function controls() {
-    const t = S.turn, p = pk != null ? preview(pk, why, rebreak) : null;
+    const t = S.turn, rack = rr || (pk != null && pk > S.n), p = pk != null ? preview(pk, why, rebreak, rack) : null;
     let sum = "";
     if (p) {
       const parts = [`<b>${esc(nm(t))}</b>: ${p.pts > 0 ? `+${p.pts} punten` : "geen punten"}`];
@@ -135,12 +137,13 @@ window.SCOREBORD = (() => {
       if (p.extra) parts.push(`3e foul op rij: −${p.extra} extra`);
       sum = `<div class="sb-sum">${parts.join(" · ")} → score <b>${p.total}</b>${p.win ? " 🏁 wint de partij" : p.same ? ` <span class="mute">· ${esc(nm(t))} blijft aan tafel${p.rerack ? ", nieuw rack" : ""}</span>` : p.rerack ? ' <span class="mute">· nieuw rack</span>' : ` <span class="mute">· beurt naar ${esc(nm(1 - t))}</span>`}</div>`;
     }
-    const balls = Array.from({ length: 15 }, (_, i) => i + 1).map((k) => ballEl(k, `data-a="ball" data-k="${k}" ${k > S.n ? "disabled" : ""}`, `${pk === k ? "sel" : ""} ${k === S.n ? "same" : ""}`)).join("");
+    const balls = Array.from({ length: 15 }, (_, i) => i + 1).map((k) => ballEl(k, `data-a="ball" data-k="${k}" ${rack && k === 1 ? "disabled" : ""}`, `${pk === k ? "sel" : ""} ${k === S.n ? "same" : ""} ${k > S.n ? "newrack" : ""}`)).join("");
     return `<div class="card sb-table">
       <div class="sb-tablehead">${rackMini(S.n)}<div><div class="sb-q">Hoeveel ballen liggen er <u>nu</u> op tafel?</div>
-        <div class="mute small">Er lagen ${S.n} ballen${S.breakNext ? " (openingsbreak)" : ""}. Is er één bal over, tik dan <b>1</b>: er komt een nieuw rack en ${esc(nm(t))} speelt door. Op een foul of safety gespotte ballen tel je gewoon mee.</div></div></div>
+        <div class="mute small">Er lagen ${S.n} ballen${S.breakNext ? " (openingsbreak)" : ""}. Is er één bal over, tik dan <b>1</b>: er komt een nieuw rack en ${esc(nm(t))} speelt door. Ook al een paar ballen van het nieuwe rack gepot? Tik dan een aantal hoger dan ${S.n} (of vink "nieuw rack" aan): de punten van beide racks worden opgeteld. Op een foul of safety gespotte ballen tel je gewoon mee.</div></div></div>
       <div class="sb-reasons">${REASONS.map(([k, l]) => `<button type="button" class="sb-chip ${why === k ? "on" : ""}" data-a="why" data-w="${k}">${l}</button>`).join("")}</div>
       ${why === "open" ? `<label class="sb-check"><input type="checkbox" data-a="rb" ${rebreak ? "checked" : ""}> Tegenstander eist een re-break (zelfde speler breekt opnieuw)</label>` : ""}
+      <label class="sb-check"><input type="checkbox" data-a="rr" ${rack ? "checked" : ""} ${pk != null && pk > S.n ? "disabled" : ""}> Er kwam een nieuw rack tijdens deze beurt (ballen tellen daarna weer vanaf 15)</label>
       <div class="sb-balls">${balls}</div>
       ${sum}
       <div class="sb-actions">
@@ -202,7 +205,7 @@ window.SCOREBORD = (() => {
     if (a === "start") startGame();
     else if (a === "ball") { pk = pk === Number(b.dataset.k) ? null : Number(b.dataset.k); paint(); }
     else if (a === "why") { why = b.dataset.w; if (why !== "open") rebreak = false; paint(); }
-    else if (a === "ok") { if (pk != null) commit(pk, why, rebreak); }
+    else if (a === "ok") { if (pk != null) commit(pk, why, rebreak, rr || pk > S.n); }
     else if (a === "skip") commit(S.n, "gemist", false);
     else if (a === "undo") undo();
     else if (a === "turn") { snap(); S.turn = Number(b.dataset.p); S.run = 0; S.log.push({ t: S.turn, pts: 0, why: "wissel", txt: `Beurt gezet op ${nm(S.turn)} (correctie)` }); save(); paint(); }
@@ -210,7 +213,7 @@ window.SCOREBORD = (() => {
     else if (a === "new") { if (!S.over && b.dataset.confirm && !confirm("Deze partij verwijderen en opnieuw beginnen?")) return; newGame(); }
     else if (a === "share") share();
   }
-  function onChange(e) { if (e.target.dataset.a === "rb") { rebreak = e.target.checked; paint(); } }
+  function onChange(e) { const a = e.target.dataset.a; if (a === "rb") { rebreak = e.target.checked; paint(); } else if (a === "rr") { rr = e.target.checked; if (pk === 1 && rr) pk = null; paint(); } }
   function share() {
     const w = S.winner, l = 1 - w;
     const txt = `Straight pool tot ${S.target}: ${S.names[0]} ${S.score[0]} – ${S.score[1]} ${S.names[1]} (${S.visits[0] + S.visits[1]} beurten, hoogste serie ${S.hr[0]}/${S.hr[1]}). ${S.names[w]} wint! — poolinfo.nl`;

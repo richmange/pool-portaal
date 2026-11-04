@@ -215,3 +215,4 @@ select,input{border-color:var(--line)} select:focus,input:focus{outline:2px soli
 .sb-log{margin-top:14px}.sb-log ol{margin:0;padding-left:2em}.sb-log li{margin:.2em 0}
 .sb-over h2{margin-top:0;color:var(--gold)}
 @media (max-width:520px){.sb-players{gap:8px}.sb-player{padding:10px 6px}.sb-tablehead .mute{display:none}}
+.sb-ball.newrack{box-shadow:0 0 0 2px var(--felt),0 3px 8px rgba(0,0,0,.45)}
