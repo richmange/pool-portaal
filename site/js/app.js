@@ -200,7 +200,7 @@ views.wedstrijd = (id) => {
   if (!m) return `<p class="empty">Wedstrijd niet gevonden.</p>`;
   const fin = m.status === "finished", pr = m.pred;
   const dist = pr.dist.map((v, k) => `<tr><td>${k} – ${6 - k}</td><td style="width:60%">${meter(v, k > 3 ? "" : k === 3 ? "gold" : "red")}</td><td class="n">${pct(v)}</td></tr>`).join("");
-  const games = m.games.map((g) => `<div class="game"><div class="dc">${g.dbl ? "Dubbel " : ""}${DN[g.d] ?? g.d}<br>race ${g.r}</div><div class="${g.sa > g.sb ? "bold" : ""} right">${plLinks(g.a)}</div><div class="sc">${g.sa} – ${g.sb}</div><div class="${g.sb > g.sa ? "bold" : ""}">${plLinks(g.b)}</div></div>`).join("");
+  const games = m.games.map((g) => `<div class="game"><div class="dc">${g.dbl ? "Koppel " : ""}${DN[g.d] ?? g.d}<br>race ${g.r}</div><div class="${g.sa > g.sb ? "bold" : ""} right">${plLinks(g.a)}</div><div class="sc">${g.sa} – ${g.sb}</div><div class="${g.sb > g.sa ? "bold" : ""}">${plLinks(g.b)}</div></div>`).join("");
   return `<p><a href="#/programma">← Programma</a></p>
   <section class="card"><div class="mute small">Speelronde ${m.round} · wedstrijd ${m.no} · ${dt(m.start)} · ${esc(m.venue)}</div>
   <div class="match" style="border:0"><div class="t a" style="font-size:1.2rem"><b>${tl(m.home)}</b></div><div class="sc" style="font-size:1.6rem">${fin ? `${m.sa} – ${m.sb}` : "vs"}</div><div class="t" style="font-size:1.2rem"><b>${tl(m.away)}</b></div></div></section>
@@ -376,7 +376,7 @@ views.speler = (id) => {
   const pts = hist.map((r) => ({ y: r.r, label: `${r.date} vs ${r.oppName}`, group: r.tn.replace(/^Pool /, "") }));
   const cards = DISCS.map((d) => { const v = p.disc[d] || [0, 0, 0, 0]; const x = v[0] ? v[1] / v[0] : null;
     return `<div class="rowline"><span class="lb">${DN[d]}</span>${meter(x ?? 0)}<span class="v">${x == null ? "–" : pct(x)} <span class="mute small">${v[1]}/${v[0]}</span></span></div>`; }).join("")
-    + `<div class="rowline"><span class="lb">Dubbel</span>${meter(p.dbl[0] ? p.dbl[1] / p.dbl[0] : 0)}<span class="v">${p.dbl[0] ? pct(p.dbl[1] / p.dbl[0]) : "–"} <span class="mute small">${p.dbl[1]}/${p.dbl[0]}</span></span></div>`;
+    + `<div class="rowline"><span class="lb">Koppel</span>${meter(p.dbl[0] ? p.dbl[1] / p.dbl[0] : 0)}<span class="v">${p.dbl[0] ? pct(p.dbl[1] / p.dbl[0]) : "–"} <span class="mute small">${p.dbl[1]}/${p.dbl[0]}</span></span></div>`;
   const seasonGames = gamesOf(id).sort((a, b) => b.g.start.localeCompare(a.g.start));
   const groups = {};
   for (const r of p.hist) (groups[r.tn] ||= []).push(r);
@@ -391,12 +391,12 @@ views.speler = (id) => {
     <div class="card"><h3>Winst per spelsoort <small>dit seizoen</small></h3>${cards}</div>
     <div class="card"><h3>Inzichten</h3>${tipsHtml("players", id)}</div>
   </div>
-  <div class="card" style="margin-top:16px"><h3>Per seizoen</h3><div class="tw"><table><thead><tr><th>Seizoen</th><th>Team</th><th class="n">MVP%</th>${DISCS.map((d) => `<th class="n">${DN[d]}</th>`).join("")}<th class="n">Dubbel</th></tr></thead><tbody>
+  <div class="card" style="margin-top:16px"><h3>Per seizoen</h3><div class="tw"><table><thead><tr><th>Seizoen</th><th>Team</th><th class="n">MVP%</th>${DISCS.map((d) => `<th class="n">${DN[d]}</th>`).join("")}<th class="n">Koppel</th></tr></thead><tbody>
   ${Object.entries(p.seasons).map(([lb, s]) => `<tr><td>${esc(lb)}</td><td class="small">${esc(D.history.teamNames[s.team]?.[lb] ?? T[s.team]?.name ?? "")}</td><td class="n">${s.mvp != null ? fmt(s.mvp) : "–"}</td>${DISCS.map((d) => { const v = s.disc?.[d]; return `<td class="n">${v && v[0] ? `${v[1]}/${v[0]} <span class="mute small">${pct(v[1] / v[0])}</span>` : "–"}</td>`; }).join("")}<td class="n">${s.dbl && s.dbl[0] ? `${s.dbl[1]}/${s.dbl[0]}` : "–"}</td></tr>`).join("")}</tbody></table></div></div>
   <div class="card" style="margin-top:16px"><h3>Ratingverloop <small>${p.hist.length} gespeelde partijen</small></h3>${lineChart(pts)}</div>
   <div class="grid g2" style="margin-top:16px">
     <div class="card"><h3>Partijen dit seizoen</h3>${seasonGames.length ? seasonGames.map(({ m, g, side }) => { const my = side === "a" ? g.sa : g.sb, th = side === "a" ? g.sb : g.sa, oppIds = side === "a" ? g.b : g.a; const partner = (side === "a" ? g.a : g.b).filter((x) => x !== id);
-      return `<div class="game"><div class="dc">${g.dbl ? "Dubbel " : ""}${DN[g.d]}</div><div class="${my > th ? "win" : "lose"} bold">${my > th ? "Winst" : "Verlies"}${partner.length ? ` <span class="mute small">met ${plLinks(partner)}</span>` : ""}</div><div class="sc">${my} – ${th}</div><div>${plLinks(oppIds)}<br><a class="small mute" href="#/wedstrijd/${m.id}">ronde ${m.round}</a></div></div>`; }).join("") : '<p class="mute">Nog geen partijen.</p>'}</div>
+      return `<div class="game"><div class="dc">${g.dbl ? "Koppel " : ""}${DN[g.d]}</div><div class="${my > th ? "win" : "lose"} bold">${my > th ? "Winst" : "Verlies"}${partner.length ? ` <span class="mute small">met ${plLinks(partner)}</span>` : ""}</div><div class="sc">${my} – ${th}</div><div>${plLinks(oppIds)}<br><a class="small mute" href="#/wedstrijd/${m.id}">ronde ${m.round}</a></div></div>`; }).join("") : '<p class="mute">Nog geen partijen.</p>'}</div>
     <div class="card"><h3>Onderling (dit seizoen)</h3>${h2h.length ? `<table><tbody>${h2h.map((r) => `<tr><td>${pl(r.o)}</td><td class="n bold">${r.w} – ${r.l}</td></tr>`).join("")}</tbody></table>` : '<p class="mute">Nog geen onderlinge partijen.</p>'}</div>
   </div>
   <div class="card" style="margin-top:16px"><h3>Eerdere partijen &amp; seizoenen <small>uit de KNBB-rating</small></h3>
@@ -429,7 +429,7 @@ views.top10 = () => {
   ${list("📈 Grootste stijger", "Ratingwinst dit seizoen", A.risers, (r) => sgn(r.v))}
   ${DISCS.filter((d) => d !== 5).map((d) => list(`🎱 Beste ${DN[d]}`, "Winst% (min. 3 partijen)", A.disc[d], (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)).join("")}
   ${list("🅂 Beste straight pool", "Winst% (min. 3 partijen)", A.disc[5], (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)}
-  ${list("👥 Beste dubbelspeler", "Winst% in dubbels (min. 3 partijen)", A.doublesTop, (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)}
+  ${list("👥 Beste koppelspeler", "Winst% in koppels (min. 3 partijen)", A.doublesTop, (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)}
   ${list("🧰 Alleskunner", "Meeste spelsoorten gewonnen/gespeeld, hoogste winst%", A.allround, (r) => `${pct(r.pct)} <span class="mute small">${r.kinds} soorten</span>`)}
   ${list("🔥 Winstreeks", "Op rij gewonnen (huidige reeks)", A.streaks, (r) => r.v)}
   ${list("🎯 Straight pool-scorer", "Gemiddeld aantal punten per partij (min. 3 partijen)", A.straightpoints, (r) => fmt(r.avg))}
@@ -449,7 +449,7 @@ views.voorspel = (a, b) => {
   if (B === A) B = D.teams.find((t) => t.id !== A).id;
   const opts = (sel) => D.teams.map((t) => `<option value="${t.id}" ${t.id === sel ? "selected" : ""}>${esc(t.name)}</option>`).join("");
   const picks = (t) => `<div class="picks" data-team="${t}">${teamPlayers(t).sort((x, y) => y.rating - x.rating).map((p) => `<label><input type="checkbox" value="${p.id}" ${presOf(t).has(p.id) ? "checked" : ""}> ${esc(p.name)} <span class="mute small">${p.rating}</span></label>`).join("")}</div>`;
-  const lineHtml = (best, X, slots) => best.assign.map((x, i) => { const [d, dbl] = slots[i]; return `<div class="slot"><span class="mute small">${i + 1}. ${dbl ? "Dubbel " : ""}${DN[d]}</span><span>${(dbl ? x : [x]).map((id) => pl(id)).join(" &amp; ")}</span><span class="n bold right">${pct(best.probs[i])}</span></div>`; }).join("");
+  const lineHtml = (best, X, slots) => best.assign.map((x, i) => { const [d, dbl] = slots[i]; return `<div class="slot"><span class="mute small">${i + 1}. ${dbl ? "Koppel " : ""}${DN[d]}</span><span>${(dbl ? x : [x]).map((id) => pl(id)).join(" &amp; ")}</span><span class="n bold right">${pct(best.probs[i])}</span></div>`; }).join("");
   after = () => {
     const root = document.getElementById("pv");
     const paint = () => {

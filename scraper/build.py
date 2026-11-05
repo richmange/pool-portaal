@@ -3,7 +3,7 @@
 Model in het kort (staat ook uitgelegd op de pagina 'Hoe werkt het?'):
   - KNBB-rating is een Elo-rating (schaal 400, K=20): kans speler A wint = 1/(1+10^((Rb-Ra)/400)).
   - Per spelsoort corrigeren we de rating met de gekrompen winstrate van de speler in die spelsoort.
-  - Een teamwedstrijd = 6 partijen (dubbel 10-ball, 8-ball, straight pool, 8-ball, 9-ball, 10-ball).
+  - Een teamwedstrijd = 6 partijen (koppel 10-ball, 8-ball, straight pool, 8-ball, 9-ball, 10-ball).
     Wie er speelt is onbekend: per partij wegen we spelers naar hoe vaak ze die spelsoort speelden.
   - De verdeling van het aantal gewonnen partijen volgt exact uit convolutie van de 6 partijkansen.
   - Titel: Monte-Carlo simulatie van alle nog te spelen wedstrijden, met onzekerheid in teamsterkte.
@@ -22,7 +22,7 @@ OUT = ROOT / "site" / "data"
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 
 DISC = {1: "7-ball", 2: "8-ball", 3: "9-ball", 4: "10-ball", 5: "Straight pool", 10: "Multiball"}
-SLOTS = [(4, 2), (2, 0), (5, 0), (2, 0), (3, 0), (4, 0)]  # (spelsoort, type 2=dubbel) volgens CueScore-setup
+SLOTS = [(4, 2), (2, 0), (5, 0), (2, 0), (3, 0), (4, 0)]  # (spelsoort, type 2=koppel) volgens CueScore-setup
 SIMS = 20000
 PAST_W = 0.5      # gewicht van partijen uit eerdere seizoenen in de spelsoort-correctie
 SLOT_PAST_W = 0.3  # idem voor opstelling-gewichten
