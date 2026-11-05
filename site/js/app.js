@@ -221,6 +221,116 @@ views.teams = () => `<h1>Teams</h1><div class="grid g3">${standings().map((t) =>
   <div class="rowline"><span class="lb">Rating⌀</span>${meter((t.strength - 900) / 400)}<span class="v">${t.strength}</span></div>
   <div class="rowline"><span class="lb">Titelkans</span>${meter(t.race.title, "gold")}<span class="v">${pct1(t.race.title)}</span></div></a>`).join("")}</div>`;
 
+// ---- team-blokken onderaan de teampagina
+const joinNames = (ids) => ids.map((i) => pl(i)).join(" &amp; ");
+const rate = (n, w) => (n ? w / n : 0);
+
+function teamStatsHtml(id) {
+  const pls = teamPlayers(id);
+  // beste = hoogste winst%, dan meeste partijen, dan frameverschil; gelijken worden samen getoond.
+  // Spelers met minimaal 2 partijen gaan voor, anders tellen die met 1.
+  const best = (list) => {
+    const two = list.filter((r) => r.n >= 2), pool = two.length ? two : list.filter((r) => r.n >= 1);
+    if (!pool.length) return null;
+    const key = (r) => [rate(r.n, r.w), r.n, r.fw - r.fl];
+    const cmp = (a, b) => { const x = key(a), y = key(b); for (let i = 0; i < 3; i++) if (x[i] !== y[i]) return y[i] - x[i]; return 0; };
+    pool.sort(cmp);
+    return pool.filter((r) => cmp(r, pool[0]) === 0);
+  };
+  const rowFor = (label, top, tot, extra = "") => `<tr><td>${label}</td><td>${top ? joinNames(top.map((r) => r.ids[0])) : '<span class="mute">–</span>'}${extra}</td><td class="n">${top ? `<b>${pct(rate(top[0].n, top[0].w))}</b> <span class="mute small">${top[0].w}/${top[0].n}</span>` : ""}</td><td class="n hide-s">${tot && tot[0] ? `${pct(rate(tot[0], tot[1]))} <span class="mute small">${tot[1]}/${tot[0]}</span>` : "–"}</td></tr>`;
+  const rows = DISCS.map((d) => {
+    const top = best(pls.map((p) => { const v = p.disc[d] || [0, 0, 0, 0]; return { ids: [p.id], n: v[0], w: v[1], fw: v[2], fl: v[3] }; }));
+    let extra = "";
+    if (d === 5) {
+      const sp = pls.map((p) => ({ p, v: p.disc[5] })).filter((x) => x.v && x.v[0] >= 1).sort((a, b) => b.v[2] / b.v[0] - a.v[2] / a.v[0])[0];
+      if (sp) extra = `<div class="mute small">meeste punten per partij: ${pl(sp.p.id)} (${fmt(sp.v[2] / sp.v[0])})</div>`;
+    }
+    return rowFor(DN[d], top, T[id].disc[d], extra);
+  });
+  // koppel: beste speler en beste duo
+  const dblTop = best(pls.map((p) => ({ ids: [p.id], n: p.dbl[0], w: p.dbl[1], fw: p.dbl[2], fl: p.dbl[3] })));
+  const duos = {};
+  for (const m of D.matches) for (const g of m.games) {
+    if (!g.dbl) continue;
+    for (const [mineIds, mf, of] of [[g.a, g.sa, g.sb], [g.b, g.sb, g.sa]]) {
+      if (!mineIds.length || !mineIds.every((i) => T[id].players.includes(i))) continue;
+      const k = [...mineIds].sort().join("-");
+      const r = (duos[k] ||= { ids: [...mineIds], n: 0, w: 0, fw: 0, fl: 0 });
+      r.n++; r.w += mf > of ? 1 : 0; r.fw += mf; r.fl += of;
+    }
+  }
+  const duoTop = best(Object.values(duos));
+  const dblTot = pls.reduce((a, p) => [a[0] + p.dbl[0], a[1] + p.dbl[1]], [0, 0]).map((x) => x / 2);
+  const duoLine = duoTop ? `<div class="mute small">beste duo: ${duoTop[0].ids.map((i) => pl(i)).join(" + ")} (${duoTop[0].w}/${duoTop[0].n})</div>` : "";
+  rows.push(rowFor("Koppel", dblTop, dblTot, duoLine));
+  return `<div class="tw"><table><thead><tr><th>Spelsoort</th><th>Beste speler</th><th class="n">Winst%</th><th class="n hide-s">Team</th></tr></thead><tbody>${rows.join("")}</tbody></table></div>
+  <p class="mute small" style="margin-top:8px">Beste = hoogste winstpercentage (spelers met minimaal 2 partijen gaan voor); bij gelijke stand telt het aantal partijen en daarna het frameverschil.</p>`;
+}
+
+function teamFactsHtml(id) {
+  const t = T[id], b = t.table, pls = teamPlayers(id), out = [];
+  const add = (ic, title, text, cls = "") => out.push(`<div class="tip ${cls}"><span class="ic">${ic}</span><div><b>${title}</b><br><span class="mute">${text}</span></div></div>`);
+  const all = standings();
+  // koers
+  const lead = all[0], second = all[1];
+  if (b.pos === 1 && second) add("👑", "Koploper", `${b.pts - second.table.pts} punten voor op ${tl(second.id)}; ${pct1(t.race.title)} kans op de titel.`);
+  else if (lead) add("🏁", `Plaats ${b.pos}`, `${lead.table.pts - b.pts} punten achter op koploper ${tl(lead.id)}; ${pct1(t.race.title)} kans op de titel, ${pct1(t.race.top3)} op de top 3.`);
+  // vorm
+  const f = t.form || [];
+  let unb = 0; for (let i = f.length - 1; i >= 0 && f[i] !== "V" && f[i] !== "L"; i--) unb++;
+  let lose = 0; for (let i = f.length - 1; i >= 0 && (f[i] === "V" || f[i] === "L"); i--) lose++;
+  if (unb >= 3) add("🔥", `${unb} wedstrijden ongeslagen`, `${f.slice(-unb).filter((x) => x === "W").length} gewonnen en ${f.slice(-unb).filter((x) => x !== "W").length} gelijk.`);
+  else if (lose >= 2) add("🧊", `${lose} verliespartijen op rij`, "Tijd voor een reactie.", "bad");
+  // thuis/uit en grootste uitslagen
+  const fin = D.matches.filter((m) => m.status === "finished" && (m.home === id || m.away === id));
+  const mine = (m) => (m.home === id ? [m.sa, m.sb] : [m.sb, m.sa]);
+  const pts = (x, y) => x + (x > y ? 1 : 0);
+  const home = fin.filter((m) => m.home === id), away = fin.filter((m) => m.away === id);
+  if (home.length && away.length) {
+    const ph = home.reduce((a, m) => a + pts(...mine(m)), 0) / home.length, pa = away.reduce((a, m) => a + pts(...mine(m)), 0) / away.length;
+    add(ph >= pa ? "🏠" : "🚌", ph >= pa ? "Thuis sterker" : "Uit sterker", `Gemiddeld ${fmt(ph)} punten thuis (${home.length}x) tegen ${fmt(pa)} uit (${away.length}x).`);
+  }
+  if (fin.length) {
+    const diff = (m) => mine(m)[0] - mine(m)[1];
+    const bw = [...fin].sort((x, y) => diff(y) - diff(x))[0], bl = [...fin].sort((x, y) => diff(x) - diff(y))[0];
+    const opp = (m) => tl(m.home === id ? m.away : m.home);
+    if (diff(bw) > 0) add("💪", `Grootste winst: ${mine(bw)[0]}-${mine(bw)[1]}`, `tegen ${opp(bw)} (${bw.home === id ? "thuis" : "uit"}).`);
+    if (diff(bl) < 0) add("😬", `Zwaarste nederlaag: ${mine(bl)[0]}-${mine(bl)[1]}`, `tegen ${opp(bl)} (${bl.home === id ? "thuis" : "uit"}).`, "bad");
+  }
+  // teamsterkte
+  const rk = [...D.teams].sort((x, y) => y.strength - x.strength).findIndex((x) => x.id === id) + 1;
+  add("⚖️", `${rk}e sterkste team op rating`, `Gemiddelde spelersrating ${t.strength} (competitie ${Math.round(D.teams.reduce((a, x) => a + x.strength, 0) / D.teams.length)}). Staat nu op plaats ${b.pos}${rk < b.pos ? " – presteert onder de verwachting" : rk > b.pos ? " – presteert boven de verwachting" : ""}.`);
+  // partijen
+  const fr = b.fw + b.fl;
+  if (fr) add("🎱", `${pct(b.fw / fr)} van de partijen gewonnen`, `${b.fw} gewonnen, ${b.fl} verloren.`);
+  // spelers
+  const tot = (p) => [Object.values(p.disc).reduce((a, v) => a + v[0], 0) + p.dbl[0], Object.values(p.disc).reduce((a, v) => a + v[1], 0) + p.dbl[1]];
+  const act = pls.map((p) => ({ p, n: tot(p)[0] })).filter((x) => x.n > 0).sort((x, y) => y.n - x.n);
+  if (act[0]) add("🛠️", `Werkpaard: ${esc(act[0].p.name)}`, `${act[0].n} partijen gespeeld, het meest van het team.`);
+  pls.filter((p) => { const [n, w] = tot(p); return n >= 4 && w === n; }).forEach((p) => add("💯", `Foutloos: ${esc(p.name)}`, `Nog geen enkele partij verloren (${tot(p)[0]} gespeeld).`));
+  const hot = pls.filter((p) => p.streak >= 3).sort((x, y) => y.streak - x.streak)[0];
+  if (hot) add("🔥", `${esc(hot.name)}: ${hot.streak} gewonnen op rij`, "Huidige winstreeks in competitiepartijen.");
+  const riser = [...pls].filter((p) => p.season.matches).sort((x, y) => y.season.delta - x.season.delta);
+  if (riser[0] && riser[0].season.delta > 0) add("📈", `Opkomend: ${esc(riser[0].name)}`, `${sgn(riser[0].season.delta)} rating dit seizoen (nu ${riser[0].rating}).`);
+  const fall = riser[riser.length - 1];
+  if (fall && fall.season.delta < -10 && fall !== riser[0]) add("📉", `Zoekende: ${esc(fall.name)}`, `${sgn(fall.season.delta)} rating dit seizoen (nu ${fall.rating}).`, "bad");
+  const top = [...pls].sort((x, y) => y.rating - x.rating)[0];
+  if (top) add("⭐", `Hoogste rating: ${esc(top.name)}`, `${top.rating} – plaats ${Object.values(P).filter((x) => x.rating > top.rating).length + 1} van ${Object.keys(P).length} in de competitie.`);
+  // stunt
+  let up = null;
+  for (const p of pls) for (const r of p.hist) if (r.t === D.meta.tournamentId && r.win && r.oppR) { const diff = r.oppR - (r.r - r.delta); if (!up || diff > up.diff) up = { p, r, diff }; }
+  if (up && up.diff > 0) add("💥", `Grootste stunt: ${esc(up.p.name)}`, `won van ${esc(up.r.oppName)} (${up.r.s}-${up.r.o}), tegen ${up.diff} ratingpunten sterkere tegenstander.`);
+  // programma
+  const rest = D.matches.filter((m) => m.status !== "finished" && (m.home === id || m.away === id) && m.pred).map((m) => ({ m, pr: predFor(m, id) }));
+  if (rest.length) {
+    const avg = rest.reduce((a, x) => a + x.pr.ef, 0) / rest.length;
+    const easy = [...rest].sort((x, y) => y.pr.win - x.pr.win)[0], hard = [...rest].sort((x, y) => x.pr.win - y.pr.win)[0];
+    const o = (x) => tl(x.m.home === id ? x.m.away : x.m.home);
+    add("📅", `Nog ${rest.length} wedstrijden`, `Verwacht gemiddeld ${fmt(avg)} van de 6 partijen per wedstrijd. Meeste kans op winst: ${o(easy)} (${pct(easy.pr.win)}); lastigste: ${o(hard)} (${pct(hard.pr.win)}).`);
+  }
+  return out.join("") || '<p class="mute small">Nog te weinig gespeelde wedstrijden voor weetjes.</p>';
+}
+
 views.team = (id) => {
   id = Number(id);
   const t = T[id];
@@ -245,7 +355,11 @@ views.team = (id) => {
   </div>
   <div class="grid g2" style="margin-top:16px"><div class="card"><h3>Seizoenshistorie</h3>${teamHistory(id)}</div>
   <div class="card"><h3>Onderlinge historie</h3>${D.teams.filter((x) => x.id !== id).map((x) => { const ms = D.history.meetings.filter((m) => (m.home === id && m.away === x.id) || (m.home === x.id && m.away === id)); if (!ms.length) return ""; let w = 0, d = 0, l = 0; ms.forEach((m) => { const s1 = m.home === id ? m.sa : m.sb, s2 = m.home === id ? m.sb : m.sa; s1 > s2 ? w++ : s1 < s2 ? l++ : d++; }); return `<div class="rowline"><span class="lb" style="width:170px">${tl(x.id)}</span>${meter(w / ms.length)}<span class="v">${w}-${d}-${l}</span></div>`; }).join("") || '<p class="mute small">Geen data.</p>'}</div></div>
-  <div class="card" style="margin-top:16px"><h3>Programma</h3>${sched.map((m) => matchRow(m, id)).join("")}</div>`;
+  <div class="card" style="margin-top:16px"><h3>Programma</h3>${sched.map((m) => matchRow(m, id)).join("")}</div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><h3>Team statistieken <small>beste speler per spelsoort</small></h3>${teamStatsHtml(id)}</div>
+    <div class="card"><h3>Team weetjes</h3>${teamFactsHtml(id)}</div>
+  </div>`;
 };
 
 views.spelers = () => {
