@@ -147,6 +147,7 @@ views.dashboard = () => {
       ${D.meta.relegation ? `<div class="kpi"><b>${pct1(tm.race.relegation)}</b><span>kans op degradatie</span></div>` : `<div class="kpi"><b>${pct1(tm.race.top3)}</b><span>kans top 3</span></div>`}
     </div>
     <div style="margin-top:12px">${form(tm.form)}</div>
+    <a class="btn primary team" href="#/team/${tid}">Naar de teampagina van ${esc(tm.name)} →</a>
   </section>
   <div class="grid g2" style="margin-top:16px">
     <div class="card"><h3>Volgende wedstrijd</h3>${nextHtml}</div>
@@ -355,11 +356,11 @@ views.team = (id) => {
   </div>
   <div class="grid g2" style="margin-top:16px"><div class="card"><h3>Seizoenshistorie</h3>${teamHistory(id)}</div>
   <div class="card"><h3>Onderlinge historie</h3>${D.teams.filter((x) => x.id !== id).map((x) => { const ms = D.history.meetings.filter((m) => (m.home === id && m.away === x.id) || (m.home === x.id && m.away === id)); if (!ms.length) return ""; let w = 0, d = 0, l = 0; ms.forEach((m) => { const s1 = m.home === id ? m.sa : m.sb, s2 = m.home === id ? m.sb : m.sa; s1 > s2 ? w++ : s1 < s2 ? l++ : d++; }); return `<div class="rowline"><span class="lb" style="width:170px">${tl(x.id)}</span>${meter(w / ms.length)}<span class="v">${w}-${d}-${l}</span></div>`; }).join("") || '<p class="mute small">Geen data.</p>'}</div></div>
-  <div class="card" style="margin-top:16px"><h3>Programma</h3>${sched.map((m) => matchRow(m, id)).join("")}</div>
   <div class="grid g2" style="margin-top:16px">
     <div class="card"><h3>Team statistieken <small>beste speler per spelsoort</small></h3>${teamStatsHtml(id)}</div>
     <div class="card"><h3>Team weetjes</h3>${teamFactsHtml(id)}</div>
-  </div>`;
+  </div>
+  <div class="card" style="margin-top:16px"><h3>Programma</h3>${sched.map((m) => matchRow(m, id)).join("")}</div>`;
 };
 
 views.spelers = () => {
