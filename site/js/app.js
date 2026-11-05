@@ -146,8 +146,7 @@ views.dashboard = () => {
       <div class="kpi"><b>${pct1(tm.race.title)}</b><span>kans op titel</span></div>
       ${D.meta.relegation ? `<div class="kpi"><b>${pct1(tm.race.relegation)}</b><span>kans op degradatie</span></div>` : `<div class="kpi"><b>${pct1(tm.race.top3)}</b><span>kans top 3</span></div>`}
     </div>
-    <div style="margin-top:12px">${form(tm.form)}</div>
-    <a class="btn primary team" href="#/team/${tid}">Naar de teampagina van ${esc(tm.name)} →</a>
+    <div class="hero-foot">${form(tm.form)}<a class="teamlink" href="#/team/${tid}">Open teampagina →</a></div>
   </section>
   <div class="grid g2" style="margin-top:16px">
     <div class="card"><h3>Volgende wedstrijd</h3>${nextHtml}</div>
@@ -533,6 +532,20 @@ views.over = () => `<h1>Over dit portaal</h1>
 
 // ------------------------------------------------------------------ router
 const routes = { "": "dashboard", stand: "stand", programma: "programma", wedstrijd: "wedstrijd", teams: "teams", team: "team", spelers: "spelers", speler: "speler", ranking: "ranking", top10: "top10", mvp: "mvp", voorspel: "voorspel", titelrace: "titelrace", regels: "regels", scorebord: "scorebord", seizoenen: "seizoenen", over: "over" };
+// bezoekersstatistieken (GoatCounter, zonder cookies): elke tab telt als eigen paginaweergave
+let lastTracked = null;
+function track() {
+  const path = "/" + location.hash.replace(/^#\/?/, "");
+  if (path === lastTracked) return;
+  lastTracked = path;
+  let tries = 0;
+  const send = () => {
+    if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path, title: document.title });
+    else if (tries++ < 20) setTimeout(send, 500); // script laadt async
+  };
+  send();
+}
+
 function render() {
   const [r = "", ...args] = location.hash.replace(/^#\/?/, "").split("/");
   const name = routes[r] ?? "dashboard";
@@ -548,6 +561,7 @@ function render() {
   if (va) { va.onchange = vb.onchange = () => (location.hash = `#/voorspel/${va.value}/${vb.value}`); }
   window.scrollTo(0, 0);
   document.title = `Pool Portaal – ${{ dashboard: "Dashboard", stand: "Stand", programma: "Programma", wedstrijd: "Wedstrijd", teams: "Teams", team: T[args[0]]?.name ?? "Team", spelers: "Spelers", speler: P[args[0]]?.name ?? "Speler", ranking: "Ranking", top10: "Top 10", mvp: "MVP", voorspel: "Voorspeller", titelrace: "Titelrace", regels: "Poolregels", scorebord: "Scorebord", seizoenen: "Seizoenen", over: "Over" }[name]}`;
+  track();
 }
 
 function init() {
