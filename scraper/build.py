@@ -26,6 +26,8 @@ SLOTS = [(4, 2), (2, 0), (5, 0), (2, 0), (3, 0), (4, 0)]  # (spelsoort, type 2=d
 SIMS = 20000
 PAST_W = 0.5      # gewicht van partijen uit eerdere seizoenen in de spelsoort-correctie
 SLOT_PAST_W = 0.3  # idem voor opstelling-gewichten
+MIN_TOP = 3  # minimaal aantal partijen per spelsoort (en koppel) voor de top 10-lijsten
+MIN_MVP = 5  # minimaal aantal gespeelde potten voor de MVP top 10
 K_SHIFT = 120  # ratingpunten per 100% winstrate-verschil t.o.v. eigen gemiddelde
 
 
@@ -60,17 +62,25 @@ def parse_details(h):
 
 
 def parse_mvp(h):
+    """MVP-tabel van CueScore, in CueScore-volgorde. Spelers onder 60% deelname hebben geen positie (valid=False)."""
     rows = []
     for r in re.split(r"<tr>\s*<td class=\"position\">", h)[1:]:
+        r = r.split("</tr>")[0]
         m = re.search(r'href="//cuescore\.com/player/([^/]+)/(\d+)">([^<]*)</a>', r)
         t = re.search(r'href="//cuescore\.com/team/[^/]+/(\d+)">', r)
         if not m or not t:
             continue
+        pos = re.match(r"\s*(\d+)", r)
         cells = [c.strip() for c in re.findall(r"<td[^>]*>([^<]*)</td>", r)]
-        pct = re.search(r'class="nowrap">([\d.]+)%', r)
-        rows.append({"id": int(m.group(2)), "name": unesc(m.group(3)), "team": int(t.group(1)),
-                     "mvp": float(pct.group(1)) if pct else None,
-                     "pr": re.findall(r"([\d.]+)%", r)[-1] if "%" in r else None})
+        num = lambda x: int(x) if x.isdigit() else 0
+        pct = lambda x: float(x.rstrip("%")) if x.rstrip("%").replace(".", "", 1).isdigit() else None
+        # cellen: scheiding, MVP, scheiding, 8-ball(4), sch, straight(4), sch, 9-ball(4), sch, 10-ball(4), sch, MP, PR
+        blok = lambda i: [num(c) for c in cells[i:i + 4]]
+        ok = len(cells) >= 25
+        rows.append({"pos": int(pos.group(1)) if pos else None, "id": int(m.group(2)), "name": unesc(m.group(3)), "team": int(t.group(1)),
+                     "mvp": pct(cells[1]) if ok else None,
+                     "mp": num(cells[23]) if ok else 0, "pr": pct(cells[24]) if ok else None,
+                     "d": {"2": blok(3), "5": blok(8), "3": blok(13), "4": blok(18)} if ok else {}})
     return rows
 
 
@@ -445,12 +455,12 @@ def main():
         rows = []
         for pid in players:
             n, w, fw, fl = st[pid]["d"][d] if d in st[pid]["d"] else (0, 0, 0, 0)
-            if n >= 2:
+            if n >= MIN_TOP:
                 rows.append({"id": pid, "n": n, "w": w, "fw": fw, "fl": fl, "pct": w / n})
         rows.sort(key=lambda r: (r["pct"], r["n"], r["fw"] - r["fl"]), reverse=True)
         awards["disc"][str(d)] = rows[:10]
     awards["doublesTop"] = sorted(
-        [{"id": pid, "n": s["dbl"][0], "w": s["dbl"][1], "pct": s["dbl"][1] / s["dbl"][0]} for pid, s in st.items() if s["dbl"][0] >= 2],
+        [{"id": pid, "n": s["dbl"][0], "w": s["dbl"][1], "pct": s["dbl"][1] / s["dbl"][0]} for pid, s in st.items() if s["dbl"][0] >= MIN_TOP],
         key=lambda r: (r["pct"], r["n"]), reverse=True)[:10]
     allround = []
     for pid in players:
@@ -462,7 +472,9 @@ def main():
     awards["rating"] = sorted([{"id": pid, "v": p["rating"]} for pid, p in players.items() if p["rated"]], key=lambda r: -r["v"])[:10]
     awards["risers"] = sorted([{"id": pid, "v": p["season"]["delta"], "n": p["season"]["matches"]} for pid, p in players.items() if p["season"]["matches"]],
                               key=lambda r: -r["v"])[:10]
-    awards["mvp"] = sorted([{"id": pid, "v": p["mvp"]} for pid, p in players.items() if p["mvp"] is not None], key=lambda r: -r["v"])[:10]
+    mp_by = {r["id"]: r["mp"] for r in mvp_rows}
+    awards["mvp"] = sorted([{"id": pid, "v": p["mvp"], "n": mp_by.get(pid, 0)} for pid, p in players.items()
+                            if p["mvp"] is not None and mp_by.get(pid, 0) >= MIN_MVP], key=lambda r: -r["v"])[:10]
     ups = []
     for pid, p in players.items():
         for r in p["hist"]:
@@ -474,7 +486,7 @@ def main():
     sp = []
     for pid in players:
         n, w, fw, fl = st[pid]["d"][5] if 5 in st[pid]["d"] else (0, 0, 0, 0)
-        if n:
+        if n >= MIN_TOP:
             sp.append({"id": pid, "pts": fw, "n": n, "avg": fw / n})
     awards["straightpoints"] = sorted(sp, key=lambda r: -r["avg"])[:10]
 
@@ -508,6 +520,7 @@ def main():
         "matches": matches,
         "names": hist_names,
         "awards": awards,
+        "mvpList": [r for r in mvp_rows if r["pos"] is not None],
         "tips": tips,
         "history": {"seasons": history["seasons"], "teamHist": {str(k): v for k, v in history["teamHist"].items()},
                     "teamNames": {str(k): v for k, v in history["teamNames"].items()}, "meetings": history["meetings"]},

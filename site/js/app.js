@@ -297,19 +297,28 @@ views.ranking = () => {
   ${rows.map((p, i) => `<tr class="${p.team === myTeam() ? "me" : ""}"><td class="n">${i + 1}</td><td>${pl(p.id)}</td><td class="small">${tl(p.team)}</td><td class="n bold">${p.rating}</td><td class="n hide-s ${p.season.delta >= 0 ? "win" : "lose"}">${sgn(p.season.delta)}</td><td class="hide-s">${spark(p.hist.slice(0, 15).reverse().map((r) => r.r))}</td><td class="n hide-s" data-v="${p.career ? p.career.wins : 0}">${p.career ? `${p.career.wins}-${p.career.losses}` : "–"}</td></tr>`).join("")}</tbody></table></div>`;
 };
 
+views.mvp = () => {
+  const L = D.mvpList || [];
+  const COL = [2, 5, 3, 4]; // volgorde van CueScore
+  const cell = (v) => (v && v[0] ? `${v[1]}/${v[0]} <span class="mute small">${v[2]}–${v[3]}</span>` : '<span class="mute">–</span>');
+  return `<h1>MVP</h1><p class="mute">De MVP-lijst van CueScore, in dezelfde volgorde. Spelers met minder dan 60% deelname staan er niet bij. Per spelsoort: gewonnen/gespeeld en frames (bij straight pool punten) voor–tegen. <a href="${esc(D.meta.tournamentUrl)}/mvp" target="_blank" rel="noopener">Bekijk op CueScore ↗</a></p>
+  <div class="card tw"><table><thead><tr><th class="n">#</th><th>Speler</th><th class="hide-s">Team</th><th class="n">MVP%</th>${COL.map((d) => `<th class="n hide-s">${DN[d]}</th>`).join("")}<th class="n">Potten</th><th class="n hide-s">Deelname</th></tr></thead><tbody>
+  ${L.map((r) => `<tr><td class="n">${r.pos}</td><td>${pl(r.id, r.name)}</td><td class="hide-s">${esc(T[P[r.id]?.team ?? r.team]?.name ?? "")}</td><td class="n"><b>${r.mvp != null ? fmt(r.mvp) + "%" : "–"}</b></td>${COL.map((d) => `<td class="n hide-s">${cell(r.d[d])}</td>`).join("")}<td class="n">${r.mp}</td><td class="n hide-s">${r.pr != null ? fmt(r.pr) + "%" : "–"}</td></tr>`).join("")}</tbody></table></div>`;
+};
+
 views.top10 = () => {
   const A = D.awards;
   const list = (title, sub, rows, val) => `<div class="card"><h3>${title}</h3><div class="mute small" style="margin:-6px 0 8px">${sub}</div>${rows.length ? `<ol class="top10">${rows.map((r, i) => `<li><span class="rk">${i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}</span><span class="nm">${pl(r.id)} <span class="mute small">${esc(T[P[r.id]?.team]?.name ?? "")}</span></span><span class="vl">${val(r)}</span></li>`).join("")}</ol>` : '<p class="mute small">Nog geen data.</p>'}</div>`;
   return `<h1>Top 10 &amp; awards</h1><div class="grid g3">
-  ${list("⭐ MVP", "CueScore MVP-score", A.mvp, (r) => fmt(r.v) + "%")}
+  ${list("⭐ MVP", "CueScore MVP-score (min. 5 potten gespeeld) · <a href=\"#/mvp\">volledige lijst →</a>", A.mvp, (r) => `${fmt(r.v)}% <span class="mute small">${r.n} potten</span>`)}
   ${list("🏆 Hoogste rating", "KNBB Pool Rating", A.rating, (r) => r.v)}
   ${list("📈 Grootste stijger", "Ratingwinst dit seizoen", A.risers, (r) => sgn(r.v))}
-  ${DISCS.filter((d) => d !== 5).map((d) => list(`🎱 Beste ${DN[d]}`, "Winst% (min. 2 partijen)", A.disc[d], (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)).join("")}
-  ${list("🅂 Beste straight pool", "Winst% (min. 2 partijen)", A.disc[5], (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)}
-  ${list("👥 Beste dubbelspeler", "Winst% in dubbels", A.doublesTop, (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)}
+  ${DISCS.filter((d) => d !== 5).map((d) => list(`🎱 Beste ${DN[d]}`, "Winst% (min. 3 partijen)", A.disc[d], (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)).join("")}
+  ${list("🅂 Beste straight pool", "Winst% (min. 3 partijen)", A.disc[5], (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)}
+  ${list("👥 Beste dubbelspeler", "Winst% in dubbels (min. 3 partijen)", A.doublesTop, (r) => `${pct(r.pct)} <span class="mute small">${r.w}/${r.n}</span>`)}
   ${list("🧰 Alleskunner", "Meeste spelsoorten gewonnen/gespeeld, hoogste winst%", A.allround, (r) => `${pct(r.pct)} <span class="mute small">${r.kinds} soorten</span>`)}
   ${list("🔥 Winstreeks", "Op rij gewonnen (huidige reeks)", A.streaks, (r) => r.v)}
-  ${list("🎯 Straight pool-scorer", "Gemiddeld aantal punten per partij", A.straightpoints, (r) => fmt(r.avg))}
+  ${list("🎯 Straight pool-scorer", "Gemiddeld aantal punten per partij (min. 3 partijen)", A.straightpoints, (r) => fmt(r.avg))}
   <div class="card"><h3>💥 Grootste stunts</h3><div class="mute small" style="margin:-6px 0 8px">Winst op tegenstander met hogere rating</div><ol class="top10">${A.upsets.map((r, i) => `<li><span class="rk">${i + 1}</span><span class="nm">${pl(r.id)} <span class="mute small">won van</span> ${pl(r.opp)}</span><span class="vl">+${r.diff}</span></li>`).join("")}</ol></div>
   </div>`;
 };
@@ -404,11 +413,11 @@ views.seizoenen = () => `<h1>Seizoenen</h1><p class="mute">Eindstanden van eerde
   ${s.standings.map((r) => `<tr class="${r.team === myTeam() ? "me" : ""}"><td class="n">${r.pos}</td><td>${T[r.team] ? tl(r.team).replace(/>[^<]*</, ">" + esc(r.name) + "<") : esc(r.name)}</td><td class="n">${r.played}</td><td class="n">${r.fw}-${r.fl}</td><td class="n bold">${r.pts}</td></tr>`).join("")}</tbody></table></div>`).join("")}</div>`;
 
 views.over = () => `<h1>Over dit portaal</h1>
-  <div class="grid g2"><div class="card"><h3>Bronnen &amp; updates</h3><p>Alle gegevens komen van <a href="https://cuescore.com" target="_blank" rel="noopener">CueScore</a>: <a href="${D.meta.tournamentUrl}" target="_blank" rel="noopener">de competitie</a>, de MVP-pagina, spelersprofielen en de <a href="${D.meta.ratingUrl}" target="_blank" rel="noopener">KNBB Pool Rating</a>. Elke nacht wordt de data automatisch ververst.</p><p class="mute small">Laatst bijgewerkt: ${new Date(D.meta.updated).toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" })}</p></div>
+  <div class="grid g2"><div class="card"><h3>Bronnen &amp; updates</h3><p>Alle gegevens komen van <a href="https://cuescore.com" target="_blank" rel="noopener">CueScore</a>: <a href="${D.meta.tournamentUrl}" target="_blank" rel="noopener">de competitie</a>, de MVP-pagina, spelersprofielen en de <a href="${D.meta.ratingUrl}" target="_blank" rel="noopener">KNBB Pool Rating</a>. Drie keer per dag (ook 's avonds na de speelavonden) wordt de data automatisch ververst.</p><p class="mute small">Laatst bijgewerkt: ${new Date(D.meta.updated).toLocaleString("nl-NL", { timeZone: "Europe/Amsterdam" })}</p></div>
   <div class="card"><h3>Hoe werken de voorspellingen?</h3><ol class="small"><li>De KNBB-rating is een Elo-rating: kans dat A wint = 1 / (1 + 10<sup>(Rb−Ra)/400</sup>).</li><li>Per spelsoort corrigeren we de rating met de (gekrompen) winstrate van de speler in die spelsoort dit seizoen.</li><li>Een teamwedstrijd bestaat uit 6 partijen. Wie speelt is niet bekend; per partij wegen we spelers naar hoe vaak ze die spelsoort speelden.</li><li>De kans op elke uitslag (0–6 partijen) volgt exact uit de 6 partijkansen: winst = 4 of meer, gelijk = 3.</li><li>Titel/top 3: ${D.meta.sims.toLocaleString("nl-NL")} Monte-Carlo-simulaties van alle resterende wedstrijden.</li></ol><p class="mute small">Een model is geen glazen bol: met weinig gespeelde wedstrijden zijn de kansen onzeker. Ze worden elke ronde scherper.</p></div></div>`;
 
 // ------------------------------------------------------------------ router
-const routes = { "": "dashboard", stand: "stand", programma: "programma", wedstrijd: "wedstrijd", teams: "teams", team: "team", spelers: "spelers", speler: "speler", ranking: "ranking", top10: "top10", voorspel: "voorspel", titelrace: "titelrace", regels: "regels", scorebord: "scorebord", seizoenen: "seizoenen", over: "over" };
+const routes = { "": "dashboard", stand: "stand", programma: "programma", wedstrijd: "wedstrijd", teams: "teams", team: "team", spelers: "spelers", speler: "speler", ranking: "ranking", top10: "top10", mvp: "mvp", voorspel: "voorspel", titelrace: "titelrace", regels: "regels", scorebord: "scorebord", seizoenen: "seizoenen", over: "over" };
 function render() {
   const [r = "", ...args] = location.hash.replace(/^#\/?/, "").split("/");
   const name = routes[r] ?? "dashboard";
@@ -423,7 +432,7 @@ function render() {
   const va = document.getElementById("va"), vb = document.getElementById("vb");
   if (va) { va.onchange = vb.onchange = () => (location.hash = `#/voorspel/${va.value}/${vb.value}`); }
   window.scrollTo(0, 0);
-  document.title = `Pool Portaal – ${{ dashboard: "Dashboard", stand: "Stand", programma: "Programma", wedstrijd: "Wedstrijd", teams: "Teams", team: T[args[0]]?.name ?? "Team", spelers: "Spelers", speler: P[args[0]]?.name ?? "Speler", ranking: "Ranking", top10: "Top 10", voorspel: "Voorspeller", titelrace: "Titelrace", regels: "Poolregels", scorebord: "Scorebord", seizoenen: "Seizoenen", over: "Over" }[name]}`;
+  document.title = `Pool Portaal – ${{ dashboard: "Dashboard", stand: "Stand", programma: "Programma", wedstrijd: "Wedstrijd", teams: "Teams", team: T[args[0]]?.name ?? "Team", spelers: "Spelers", speler: P[args[0]]?.name ?? "Speler", ranking: "Ranking", top10: "Top 10", mvp: "MVP", voorspel: "Voorspeller", titelrace: "Titelrace", regels: "Poolregels", scorebord: "Scorebord", seizoenen: "Seizoenen", over: "Over" }[name]}`;
 }
 
 function init() {

@@ -27,7 +27,7 @@ window.REGELS = {
           "Kies de opstelling slim met de <a href=\"#/voorspel\">Voorspeller</a>: vink aan wie er is en je ziet de beste verdeling.",
         ]},
         { k: "Break", l: [
-          "Standaard geldt <b>alternate break</b>: de spelers breken om en om. De winnaar van de lag kiest wie in de eerste partij breekt.",
+          "Standaard geldt <b>winner breaks</b>: wie de leg wint, mag in de volgende leg weer breken. De winnaar van de lag kiest wie in de eerste leg breekt.",
         ]},
       ],
     },
