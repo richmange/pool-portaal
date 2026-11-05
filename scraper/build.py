@@ -6,10 +6,10 @@ Model in het kort (staat ook uitgelegd op de pagina 'Hoe werkt het?'):
   - Een teamwedstrijd = 6 partijen (dubbel 10-ball, 8-ball, straight pool, 8-ball, 9-ball, 10-ball).
     Wie er speelt is onbekend: per partij wegen we spelers naar hoe vaak ze die spelsoort speelden.
   - De verdeling van het aantal gewonnen partijen volgt exact uit convolutie van de 6 partijkansen.
-  - Titel/degradatie: Monte-Carlo simulatie van alle nog te spelen wedstrijden.
+  - Titel: Monte-Carlo simulatie van alle nog te spelen wedstrijden, met onzekerheid in teamsterkte.
 """
 import html as htmlmod
-import json
+import json, math
 import random
 import re
 from collections import defaultdict
@@ -28,6 +28,10 @@ PAST_W = 0.5      # gewicht van partijen uit eerdere seizoenen in de spelsoort-c
 SLOT_PAST_W = 0.3  # idem voor opstelling-gewichten
 MIN_TOP = 3  # minimaal aantal partijen per spelsoort (en koppel) voor de top 10-lijsten
 MIN_MVP = 5  # minimaal aantal gespeelde potten voor de MVP top 10
+SIGMA_TEAM = 80   # onzekerheid in teamsterkte (ratingpunten) aan het begin van het seizoen; krimpt naarmate er meer gespeeld is
+SIGMA_MATCH = 45  # extra spreiding per wedstrijd (wie er die avond is, dagvorm)
+LEVEL = 25        # stapgrootte (ratingpunten) van het rooster met vooraf berekende wedstrijdverdelingen
+MAXOFF = 250
 K_SHIFT = 120  # ratingpunten per 100% winstrate-verschil t.o.v. eigen gemiddelde
 
 
@@ -334,8 +338,14 @@ def main():
         wcache[key] = pr
         return pr
 
-    def match_dist(ta, tb):
-        return team_dist([slot_prob(ta, tb, d, bool(dbl)) for d, dbl in SLOTS])
+    def match_dist(ta, tb, off=0.0):
+        """Verdeling van het aantal gewonnen partijen; off = extra ratingvoordeel voor team A (logit-verschuiving)."""
+        shift = off * math.log(10) / 400
+        out = []
+        for d, dbl in SLOTS:
+            p = min(max(slot_prob(ta, tb, d, bool(dbl)), 1e-6), 1 - 1e-6)
+            out.append(1 / (1 + math.exp(-(math.log(p / (1 - p)) + shift))))
+        return team_dist(out)
 
     def outcome(dist):
         win = sum(dist[4:]); draw = dist[3]; loss = sum(dist[:3])
@@ -364,13 +374,23 @@ def main():
     n_teams = len(ids)
     pos_counts = {tid: [0] * n_teams for tid in ids}
     pts_sum = defaultdict(float)
-    cum = {k: [sum(v[:i + 1]) for i in range(len(v))] for k, v in mdist.items()}
+    # onzekerheid: per simulatie krijgt elk team een eigen sterkte-afwijking (groot vroeg in het seizoen, kleiner later)
+    # en per wedstrijd komt er extra spreiding bij. Verdelingen staan vooraf op een rooster van ratingverschillen.
+    n_done = sum(1 for mm in matches if mm["status"] == "finished")
+    sigma_team = SIGMA_TEAM * math.sqrt(max(0.15, 1 - n_done / max(1, len(matches))))
+    levels = list(range(-MAXOFF, MAXOFF + 1, LEVEL))
+    cumL = {}
+    for (a, b) in mdist:
+        cumL[(a, b)] = [[sum(v[:i + 1]) for i in range(len(v))] for v in (match_dist(a, b, off) for off in levels)]
     for _ in range(SIMS):
+        dev = {tid: rnd.gauss(0, sigma_team) for tid in ids}
         pts = {tid: table[tid]["pts"] for tid in ids}
         fw = {tid: table[tid]["fw"] for tid in ids}
         wins = {tid: table[tid]["w"] for tid in ids}
         for mm in remaining:
-            c = cum[(mm["home"], mm["away"])]
+            a0, b0 = mm["home"], mm["away"]
+            off = dev[a0] - dev[b0] + rnd.gauss(0, SIGMA_MATCH)
+            c = cumL[(a0, b0)][round(min(max(off, -MAXOFF), MAXOFF) / LEVEL) + MAXOFF // LEVEL]
             u = rnd.random()
             k = next(i for i, x in enumerate(c) if u <= x)
             a, b = mm["home"], mm["away"]

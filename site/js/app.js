@@ -175,7 +175,7 @@ views.stand = () => {
   <div class="card tw"><table class="sortable"><thead><tr><th class="n" data-s>#</th><th data-s>Team</th><th class="n" data-s>Gesp</th><th class="n hide-s" data-s>W</th><th class="n hide-s" data-s>G</th><th class="n hide-s" data-s>V</th><th class="n" data-s>Partijen</th><th class="n" data-s>Pnt</th><th>Vorm</th><th class="n hide-s" data-s>Rating⌀</th><th class="n" data-s>Titel</th><th class="n" data-s>Top 3</th></tr></thead><tbody>
   ${standings().map((t) => { const b = t.table; return `<tr class="${t.id === tid ? "me" : ""}"><td class="n">${b.pos}</td><td>${tl(t.id)}</td><td class="n">${b.played}</td><td class="n hide-s">${b.w}</td><td class="n hide-s">${b.d}</td><td class="n hide-s">${b.l}</td><td class="n nowrap" data-v="${b.fw - b.fl}">${b.fw}-${b.fl}</td><td class="n bold">${b.pts}</td><td>${form(t.form)}</td><td class="n hide-s">${t.strength}</td><td class="n" data-v="${t.race.title}">${pct1(t.race.title)}</td><td class="n" data-v="${t.race.top3}">${pct1(t.race.top3)}</td></tr>`; }).join("")}
   </tbody></table></div>
-  <p class="small mute" style="margin-top:10px">Titel/degradatie: ${D.meta.sims.toLocaleString("nl-NL")} simulaties van de resterende wedstrijden (kampioen = nr. 1 promoveert; geen degradatie). Zie <a href="#/titelrace">Titelrace</a>.</p>`;
+  <p class="small mute" style="margin-top:10px">Titel/degradatie: ${D.meta.sims.toLocaleString("nl-NL")} simulaties van de resterende wedstrijden, inclusief onzekerheid over teamsterkte (kampioen = nr. 1 promoveert; geen degradatie). Zie <a href="#/titelrace">Titelrace</a>.</p>`;
 };
 
 views.programma = (arg) => {
@@ -389,7 +389,7 @@ views.voorspel = (a, b) => {
 views.titelrace = () => {
   const rows = standings().sort((a, b) => b.race.expPts - a.race.expPts);
   const n = D.teams.length;
-  return `<h1>Titelrace</h1><p class="mute">Elk vakje: kans (in %) dat het team op die eindpositie eindigt. Gebaseerd op ${D.meta.sims.toLocaleString("nl-NL")} simulaties van alle nog te spelen wedstrijden met het ratingmodel.</p>
+  return `<h1>Titelrace</h1><p class="mute">Elk vakje: kans (in %) dat het team op die eindpositie eindigt. Gebaseerd op ${D.meta.sims.toLocaleString("nl-NL")} simulaties van alle nog te spelen wedstrijden met het ratingmodel. Het model houdt rekening met onzekerheid: de sterkte van een team is nog niet zeker (vroeg in het seizoen veel, later steeds minder) en elke wedstrijd kan door opstelling of dagvorm anders lopen. Daarom zijn de kansen vroeg in het seizoen bewust niet extreem.</p>
   <div class="card tw"><table class="heat"><thead><tr><th style="text-align:left">Team</th>${Array.from({ length: n }, (_, i) => `<th class="center">${i + 1}</th>`).join("")}<th class="n">Titel</th><th class="n">Top 3</th><th class="n">Verw. pnt</th></tr></thead><tbody>
   ${rows.map((t) => `<tr><td style="text-align:left;white-space:nowrap">${tl(t.id)}</td>${t.race.pos.map((v, i) => `<td style="background:color-mix(in srgb,${i < D.meta.promotion ? "var(--gold)" : "var(--felt)"} ${Math.round(v * 100)}%,transparent)">${v >= 0.005 ? Math.round(v * 100) : ""}</td>`).join("")}<td class="n bold">${pct1(t.race.title)}</td><td class="n">${pct1(t.race.top3)}</td><td class="n">${fmt(t.race.expPts, 0)}</td></tr>`).join("")}</tbody></table></div>
   <p class="note" style="margin-top:14px">Alleen de nummer 1 promoveert; er is geen degradatie.</p>`;
