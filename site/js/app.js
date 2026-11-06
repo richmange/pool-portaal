@@ -83,7 +83,7 @@ const nextMatch = (tid) => D.matches.filter((m) => m.status !== "finished" && (m
 const lastMatch = (tid) => D.matches.filter((m) => m.status === "finished" && (m.home === tid || m.away === tid)).sort((a, b) => b.start.localeCompare(a.start))[0];
 function predFor(m, tid) { // vanuit perspectief van tid
   const p = m.pred;
-  return m.home === tid ? { win: p.win, draw: p.draw, loss: p.loss, ef: p.ef } : { win: p.loss, draw: p.draw, loss: p.win, ef: 6 - p.ef };
+  return m.home === tid ? { win: p.win, draw: p.draw, loss: p.loss, ef: p.ef } : { win: p.loss, draw: p.draw, loss: p.win, ef: D.meta.n - p.ef };
 }
 const pctDisc = (v) => (v && v[0] ? v[1] / v[0] : null);
 
@@ -124,7 +124,7 @@ views.dashboard = () => {
     const opp = nm.home === tid ? nm.away : nm.home, pr = predFor(nm, tid);
     nextHtml = `<div class="mute small">Speelronde ${nm.round} · ${dt(nm.start)} · ${esc(nm.venue)}</div>
     <h3 style="margin-top:6px">${nm.home === tid ? "Thuis tegen" : "Uit bij"} ${tl(opp)}</h3>
-    ${probBar(pr)}<p class="small mute">Verwachte uitslag ${fmt(pr.ef)} – ${fmt(6 - pr.ef)} partijen · <a href="#/wedstrijd/${nm.id}">analyse &amp; opstelling →</a></p>`;
+    ${probBar(pr)}<p class="small mute">Verwachte uitslag ${fmt(pr.ef)} – ${fmt(D.meta.n - pr.ef)} partijen · <a href="#/wedstrijd/${nm.id}">analyse &amp; opstelling →</a></p>`;
   }
   let lastHtml = `<p class="mute">Nog niet gespeeld.</p>`;
   if (lm) {
@@ -199,14 +199,14 @@ views.wedstrijd = (id) => {
   const m = D.matches.find((x) => x.id === Number(id));
   if (!m) return `<p class="empty">Wedstrijd niet gevonden.</p>`;
   const fin = m.status === "finished", pr = m.pred;
-  const dist = pr.dist.map((v, k) => `<tr><td>${k} – ${6 - k}</td><td style="width:60%">${meter(v, k > 3 ? "" : k === 3 ? "gold" : "red")}</td><td class="n">${pct(v)}</td></tr>`).join("");
+  const dist = pr.dist.map((v, k) => `<tr><td>${k} – ${D.meta.n - k}</td><td style="width:60%">${meter(v, 2 * k > D.meta.n ? "" : 2 * k === D.meta.n ? "gold" : "red")}</td><td class="n">${pct(v)}</td></tr>`).join("");
   const games = m.games.map((g) => `<div class="game"><div class="dc">${g.dbl ? "Koppel " : ""}${DN[g.d] ?? g.d}<br>race ${g.r}</div><div class="${g.sa > g.sb ? "bold" : ""} right">${plLinks(g.a)}</div><div class="sc">${g.sa} – ${g.sb}</div><div class="${g.sb > g.sa ? "bold" : ""}">${plLinks(g.b)}</div></div>`).join("");
   return `<p><a href="#/programma">← Programma</a></p>
   <section class="card"><div class="mute small">Speelronde ${m.round} · wedstrijd ${m.no} · ${dt(m.start)} · ${esc(m.venue)}</div>
   <div class="match" style="border:0"><div class="t a" style="font-size:1.2rem"><b>${tl(m.home)}</b></div><div class="sc" style="font-size:1.6rem">${fin ? `${m.sa} – ${m.sb}` : "vs"}</div><div class="t" style="font-size:1.2rem"><b>${tl(m.away)}</b></div></div></section>
   <div class="grid g2" style="margin-top:16px">
     <div class="card"><h3>${fin ? "Voorspelling vooraf" : "Winstkansen"} <small>model</small></h3>${probBar(pr, [esc(T[m.home].name.split(":")[0]) + " wint", "Gelijk", esc(T[m.away].name.split(":")[0]) + " wint"])}
-      <p class="small mute">Verwachte uitslag: ${fmt(pr.ef)} – ${fmt(6 - pr.ef)}. Ratinggemiddelde: ${T[m.home].strength} vs ${T[m.away].strength}.</p>
+      <p class="small mute">Verwachte uitslag: ${fmt(pr.ef)} – ${fmt(D.meta.n - pr.ef)}. Ratinggemiddelde: ${T[m.home].strength} vs ${T[m.away].strength}.</p>
       <table><tbody>${dist}</tbody></table></div>
     <div class="card"><h3>${fin ? "Partijen" : "Opstelling-adviseur"}</h3>${fin ? games || '<p class="mute">Geen partijdetails.</p>' : `<p class="mute small">Bekijk de <a href="#/voorspel/${m.home}/${m.away}">voorspeller</a> om de beste opstelling tegen deze tegenstander te laten berekenen en je eigen opstelling te testen.</p>`}</div>
   </div>
@@ -326,7 +326,7 @@ function teamFactsHtml(id) {
     const avg = rest.reduce((a, x) => a + x.pr.ef, 0) / rest.length;
     const easy = [...rest].sort((x, y) => y.pr.win - x.pr.win)[0], hard = [...rest].sort((x, y) => x.pr.win - y.pr.win)[0];
     const o = (x) => tl(x.m.home === id ? x.m.away : x.m.home);
-    add("📅", `Nog ${rest.length} wedstrijden`, `Verwacht gemiddeld ${fmt(avg)} van de 6 partijen per wedstrijd. Meeste kans op winst: ${o(easy)} (${pct(easy.pr.win)}); lastigste: ${o(hard)} (${pct(hard.pr.win)}).`);
+    add("📅", `Nog ${rest.length} wedstrijden`, `Verwacht gemiddeld ${fmt(avg)} van de ${D.meta.n} partijen per wedstrijd. Meeste kans op winst: ${o(easy)} (${pct(easy.pr.win)}); lastigste: ${o(hard)} (${pct(hard.pr.win)}).`);
   }
   return out.join("") || '<p class="mute small">Nog te weinig gespeelde wedstrijden voor weetjes.</p>';
 }
@@ -458,8 +458,8 @@ views.voorspel = (a, b) => {
       const base = outcome(matchDist(D, A, B, P, T));
       const tag = pa.length || pb.length ? "op basis van aanwezige spelers" : "verwachte opstelling (uit seizoensdata)";
       document.getElementById("pv-odds").innerHTML = `<h3>${esc(T[A].name)} vs ${esc(T[B].name)} <small>${tag}</small></h3>${probBar(o)}
-        <p class="small mute">Verwachte uitslag ${fmt(o.ef)} – ${fmt(6 - o.ef)} partijen.</p>
-        <table><tbody>${o.dist.map((v, k) => `<tr><td class="nowrap">${k} – ${6 - k}</td><td style="width:62%">${meter(v, k > 3 ? "" : k === 3 ? "gold" : "red")}</td><td class="n">${pct(v)}</td></tr>`).join("")}</tbody></table>`;
+        <p class="small mute">Verwachte uitslag ${fmt(o.ef)} – ${fmt(D.meta.n - o.ef)} partijen.</p>
+        <table><tbody>${o.dist.map((v, k) => `<tr><td class="nowrap">${k} – ${D.meta.n - k}</td><td style="width:62%">${meter(v, 2 * k > D.meta.n ? "" : 2 * k === D.meta.n ? "gold" : "red")}</td><td class="n">${pct(v)}</td></tr>`).join("")}</tbody></table>`;
       const slots = D.meta.slots;
       const bestA = bestLineup(D, A, B, P, T, pa, pb);
       document.getElementById("pv-line").innerHTML = bestA

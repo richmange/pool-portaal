@@ -13,7 +13,8 @@ function convolve(ps) {
 }
 
 function outcome(dist) {
-  const win = dist.slice(4).reduce((a, b) => a + b, 0), draw = dist[3], loss = dist.slice(0, 3).reduce((a, b) => a + b, 0);
+  const n = dist.length - 1, sum = (f) => dist.reduce((a, v, k) => a + (f(2 * k, n) ? v : 0), 0);
+  const win = sum((k2, n) => k2 > n), draw = sum((k2, n) => k2 === n), loss = sum((k2, n) => k2 < n);
   return { win, draw, loss, ef: dist.reduce((a, v, k) => a + k * v, 0), dist };
 }
 

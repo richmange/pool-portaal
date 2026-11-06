@@ -66,6 +66,38 @@
           "current": true
         }
       ]
+    },
+    {
+      "key": "tweededivisie",
+      "label": "Pool Tweede Divisie Noord",
+      "short": "Tweede Divisie Noord",
+      "myTeamId": 1172419,
+      "promotionSpots": 1,
+      "relegationSpots": 1,
+      "seasons": [
+        {
+          "label": "2026/2027",
+          "id": 83574889,
+          "slug": "Pool+Tweede+Divisie+Noord+2026%252F2027",
+          "current": true
+        }
+      ]
+    },
+    {
+      "key": "derdedivisie",
+      "label": "Pool Derde Divisie Zuid B",
+      "short": "Derde Divisie Zuid B",
+      "myTeamId": 86035093,
+      "promotionSpots": 1,
+      "relegationSpots": 1,
+      "seasons": [
+        {
+          "label": "2026/2027",
+          "id": 83574910,
+          "slug": "Pool+Derde+Divisie+Zuid+B+2026%252F2027",
+          "current": true
+        }
+      ]
     }
   ],
   "club": {
@@ -77,8 +109,8 @@
     "teams": [
       {
         "name": "Infinity Biedie Biedie",
-        "comp": null,
-        "teamId": null,
+        "comp": "tweededivisie",
+        "teamId": 1172419,
         "day": null,
         "captain": "Sander",
         "roster": [
@@ -92,8 +124,8 @@
       },
       {
         "name": "Infinity (3e divisie)",
-        "comp": null,
-        "teamId": null,
+        "comp": "derdedivisie",
+        "teamId": 86035093,
         "day": null,
         "captain": "Hugo",
         "roster": [

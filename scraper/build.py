@@ -12,7 +12,7 @@ import html as htmlmod
 import json, math
 import random
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -212,10 +212,17 @@ def assemble(season):
 
 def build(comp):
     """Bouwt alle data van één competitie (huidig seizoen + eerdere seizoenen)."""
+    global SLOTS
     seasons = comp["seasons"]
     season = next(s for s in seasons if s.get("current"))
     t, teams, players, matches, mvp_rows = assemble(season)
     standings = t["standings"]["1"]
+    # opstelling (volgorde van spelsoorten) volgt uit de gespeelde wedstrijden; per competitie verschillend
+    seqs = [tuple((g["d"], 2 if g["dbl"] else 0) for g in mm["games"]) for mm in matches if mm["status"] == "finished" and mm["games"]]
+    if seqs:
+        top = max(len(q) for q in seqs)
+        SLOTS = list(Counter(q for q in seqs if len(q) == top).most_common(1)[0][0])
+    NSL = len(SLOTS)
 
     # ---- ratingpagina's
     hist = {}
@@ -350,7 +357,7 @@ def build(comp):
         return team_dist(out)
 
     def outcome(dist):
-        win = sum(dist[4:]); draw = dist[3]; loss = sum(dist[:3])
+        win = sum(v for k, v in enumerate(dist) if 2 * k > NSL); draw = sum(v for k, v in enumerate(dist) if 2 * k == NSL); loss = sum(v for k, v in enumerate(dist) if 2 * k < NSL)
         ef = sum(k * v for k, v in enumerate(dist))
         return {"win": win, "draw": draw, "loss": loss, "ef": ef, "dist": dist}
 
@@ -396,10 +403,10 @@ def build(comp):
             u = rnd.random()
             k = next(i for i, x in enumerate(c) if u <= x)
             a, b = mm["home"], mm["away"]
-            pts[a] += k + (1 if k > 3 else 0)
-            pts[b] += (6 - k) + (1 if k < 3 else 0)
-            fw[a] += k; fw[b] += 6 - k
-            wins[a] += k > 3; wins[b] += k < 3
+            pts[a] += k + (1 if 2 * k > NSL else 0)
+            pts[b] += (NSL - k) + (1 if 2 * k < NSL else 0)
+            fw[a] += k; fw[b] += NSL - k
+            wins[a] += 2 * k > NSL; wins[b] += 2 * k < NSL
         order = sorted(ids, key=lambda x: (pts[x], fw[x], wins[x], rnd.random()), reverse=True)
         for i, tid in enumerate(order):
             pos_counts[tid][i] += 1
@@ -536,7 +543,7 @@ def build(comp):
                  "ratingUrl": f"https://cuescore.com/rating/{CONFIG['rating']['slug']}/{CONFIG['rating']['id']}",
                  "meanRating": mean_rating, "relegation": rel, "promotion": prom, "sims": SIMS,
                  "seasons": [s["label"] for s in seasons], "disc": {str(k): v for k, v in DISC.items()},
-                 "slots": [[d, bool(dbl)] for d, dbl in SLOTS], "kShift": K_SHIFT},
+                 "slots": [[d, bool(dbl)] for d, dbl in SLOTS], "n": NSL, "kShift": K_SHIFT},
         "teams": list(teams.values()),
         "players": players,
         "matches": matches,
