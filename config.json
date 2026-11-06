@@ -1,31 +1,8 @@
 {
-  "title": "Pool Portaal",
-  "competition": "Pool Gelderland Tweede klasse",
-  "myTeamId": 31035910,
   "rating": {
     "slug": "KNBB+Pool+Rating",
     "id": 20655568
   },
-  "relegationSpots": 0,
-  "promotionSpots": 1,
-  "seasons": [
-    {
-      "label": "2024/2025",
-      "id": 46283338,
-      "slug": "Pool+Gelderland+Tweede+klasse+2024%252F2025"
-    },
-    {
-      "label": "2025/2026",
-      "id": 61204774,
-      "slug": "Pool+Gelderland+Tweede+klasse+2025%252F2026"
-    },
-    {
-      "label": "2026/2027",
-      "id": 83574409,
-      "slug": "Pool+Gelderland+Tweede+klasse+2026%252F2027",
-      "current": true
-    }
-  ],
   "nameFixes": {
     "InfinlTy": "Infinity"
   },
@@ -34,6 +11,159 @@
       47037808,
       64348228,
       86084932
+    ]
+  },
+  "title": "Pool Portaal",
+  "competitions": [
+    {
+      "key": "tweede",
+      "label": "Pool Gelderland Tweede klasse",
+      "short": "Gelderland Tweede klasse",
+      "myTeamId": 31035910,
+      "promotionSpots": 1,
+      "relegationSpots": 0,
+      "seasons": [
+        {
+          "label": "2024/2025",
+          "id": 46283338,
+          "slug": "Pool+Gelderland+Tweede+klasse+2024%252F2025"
+        },
+        {
+          "label": "2025/2026",
+          "id": 61204774,
+          "slug": "Pool+Gelderland+Tweede+klasse+2025%252F2026"
+        },
+        {
+          "label": "2026/2027",
+          "id": 83574409,
+          "slug": "Pool+Gelderland+Tweede+klasse+2026%252F2027",
+          "current": true
+        }
+      ]
+    },
+    {
+      "key": "eerste",
+      "label": "Pool Gelderland Eerste klasse",
+      "short": "Gelderland Eerste klasse",
+      "myTeamId": 9201200,
+      "promotionSpots": 1,
+      "relegationSpots": 0,
+      "seasons": [
+        {
+          "label": "2024/2025",
+          "id": 46283344,
+          "slug": "Pool+Gelderland+Eerste+klasse+2024%252F2025"
+        },
+        {
+          "label": "2025/2026",
+          "id": 61204768,
+          "slug": "Pool+Gelderland+Eerste+klasse+2025%252F2026"
+        },
+        {
+          "label": "2026/2027",
+          "id": 83574406,
+          "slug": "Pool+Gelderland+Eerste+klasse+2026%252F2027",
+          "current": true
+        }
+      ]
+    }
+  ],
+  "club": {
+    "label": "Infinity",
+    "name": "Poolcafe Infinity",
+    "venueName": "Infinity, Poolcafe",
+    "venueId": 1168038,
+    "venueSlug": "Infinity%2C+Poolcafe",
+    "teams": [
+      {
+        "name": "Infinity Biedie Biedie",
+        "comp": null,
+        "teamId": null,
+        "day": null,
+        "captain": "Sander",
+        "roster": [
+          "Sander",
+          "Wilko",
+          "Henk",
+          "Ed",
+          "Edward",
+          "Gerrit"
+        ]
+      },
+      {
+        "name": "Infinity (3e divisie)",
+        "comp": null,
+        "teamId": null,
+        "day": null,
+        "captain": "Hugo",
+        "roster": [
+          "Hugo",
+          "Gerben Bonsma",
+          "Erik S",
+          "Berry",
+          "Peter B",
+          "Joost",
+          "Robert"
+        ]
+      },
+      {
+        "name": "Infinity and Beyond",
+        "comp": "eerste",
+        "teamId": 9201200,
+        "day": "maandag",
+        "captain": null,
+        "roster": [
+          "Alistair",
+          "Berry",
+          "Freek",
+          "Megan",
+          "Bas",
+          "Maria",
+          "Erik S"
+        ]
+      },
+      {
+        "name": "Infinity Ted van de Parre's Dreamteam",
+        "comp": "tweede",
+        "teamId": 1176588,
+        "day": "woensdag",
+        "captain": "Frank",
+        "roster": [
+          "Frank",
+          "Gerben",
+          "Dick",
+          "Pieter"
+        ]
+      },
+      {
+        "name": "InfinlTy & CTS Masters",
+        "comp": "tweede",
+        "teamId": 31035910,
+        "day": "dinsdag",
+        "captain": "Fabio",
+        "roster": [
+          "Luc",
+          "Richard",
+          "Desiree",
+          "Fabio",
+          "Erwin"
+        ]
+      },
+      {
+        "name": "Infinity 7",
+        "comp": "tweede",
+        "teamId": 31035883,
+        "day": "woensdag",
+        "captain": "Hans",
+        "roster": [
+          "Hans",
+          "Mo",
+          "Pascal",
+          "Rik",
+          "Tijmen",
+          "Anthony"
+        ]
+      }
     ]
   }
 }

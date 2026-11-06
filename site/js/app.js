@@ -16,7 +16,7 @@ const sgn = (n) => (n > 0 ? "+" + n : String(n));
 const dtf = new Intl.DateTimeFormat("nl-NL", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Amsterdam" });
 const dtl = new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "short", year: "numeric", timeZone: "Europe/Amsterdam" });
 const dt = (iso) => dtf.format(new Date(iso));
-const myTeam = () => Number(localStorage.getItem("myTeam")) || D.meta.myTeam;
+const myTeam = () => Number(localStorage.getItem("myTeam_" + D.meta.key) || (D.meta.key === "tweede" && localStorage.getItem("myTeam"))) || D.meta.myTeam;
 const tl = (id) => `<a href="#/team/${id}">${esc(T[id]?.name ?? id)}</a>`;
 const pl = (id, name) => (P[id] ? `<a href="#/speler/${id}">${esc(P[id].name)}</a>` : esc(name ?? D.names[id] ?? id));
 const plName = (x) => (typeof x === "number" ? P[x]?.name ?? D.names[x] : x);
@@ -535,7 +535,7 @@ const routes = { "": "dashboard", stand: "stand", programma: "programma", wedstr
 // bezoekersstatistieken (GoatCounter, zonder cookies): elke tab telt als eigen paginaweergave
 let lastTracked = null;
 function track() {
-  const path = "/" + location.hash.replace(/^#\/?/, "");
+  const path = "/" + (curComp || "") + "/" + location.hash.replace(/^#\/?/, "");
   if (path === lastTracked) return;
   lastTracked = path;
   let tries = 0;
@@ -546,11 +546,75 @@ function track() {
   send();
 }
 
-function render() {
-  const [r = "", ...args] = location.hash.replace(/^#\/?/, "").split("/");
-  const name = routes[r] ?? "dashboard";
+// ------------------------------------------------------------------ competities laden
+const COMPS = window.POOL_COMPS;
+const CLUB_KEY = COMPS.club.key;
+const KEYS = [...COMPS.comps.map((c) => c.key), CLUB_KEY];
+let curComp = null;
+const loaded = {};
+const stored = () => { try { return localStorage.getItem("comp"); } catch (e) { return null; } };
+const store = (k) => { try { localStorage.setItem("comp", k); } catch (e) {} };
+function loadData(key) {
+  const v = key === CLUB_KEY ? "POOL_CLUB" : "POOL_DATA_" + key;
+  if (window[v]) return Promise.resolve(window[v]);
+  return new Promise((ok, fail) => {
+    const sc = document.createElement("script");
+    sc.src = `data/${key}.js?v=${encodeURIComponent(COMPS.updated)}`;
+    sc.onload = () => (window[v] ? ok(window[v]) : fail(new Error("geen data voor " + key)));
+    sc.onerror = () => fail(new Error("data/" + key + ".js kon niet worden geladen"));
+    document.head.appendChild(sc);
+  });
+}
+const navHtml = { comp: null, tab: null };
+async function useComp(key) {
+  const data = await loadData(key);
+  const club = key === CLUB_KEY;
+  if (club) C = data;
+  else {
+    D = data;
+    for (const k of Object.keys(T)) delete T[k];
+    for (const k of Object.keys(P)) delete P[k];
+    D.teams.forEach((t) => (T[t.id] = t));
+    Object.values(D.players).forEach((p) => (P[p.id] = p));
+  }
+  curComp = key;
+  const nav = document.getElementById("nav"), tab = document.getElementById("tabbar");
+  navHtml.comp ??= nav.innerHTML; navHtml.tab ??= tab.innerHTML;
+  nav.innerHTML = club ? CLUB_NAV : navHtml.comp;
+  tab.innerHTML = club ? CLUB_TABBAR : navHtml.tab;
+  document.getElementById("more").onclick = (e) => { e.preventDefault(); nav.classList.toggle("open"); window.scrollTo(0, 0); };
+  document.getElementById("seasonLabel").textContent = club ? C.meta.name : D.meta.name.replace(/^Pool /, "");
+  document.getElementById("updated").textContent = "Bijgewerkt " + dtl.format(new Date((club ? C.meta : D.meta).updated));
+  document.getElementById("comp").value = key;
+  document.querySelector("label.myteam.mt").style.display = club ? "none" : "";
+  if (!club) {
+    const sel = document.getElementById("myTeam");
+    sel.innerHTML = D.teams.map((t) => `<option value="${t.id}">${esc(t.name)}</option>`).join("");
+    sel.value = myTeam();
+    sel.onchange = () => { try { localStorage.setItem("myTeam_" + D.meta.key, sel.value); } catch (e) {} render(); };
+  }
+}
+
+async function render() {
+  let segs = location.hash.replace(/^#\/?/, "").split("/");
+  let key = stored();
+  if (KEYS.includes(segs[0])) { // #/eerste/team/123 -> competitie kiezen en voorvoegsel weghalen
+    key = segs[0];
+    segs = segs.slice(1);
+    history.replaceState(null, "", "#/" + segs.join("/"));
+  }
+  if (!KEYS.includes(key)) key = COMPS.comps[0].key;
+  store(key);
+  if (key !== curComp) {
+    try { await useComp(key); } catch (e) { console.error(e); $app.innerHTML = `<p class="empty">Data kon niet worden geladen: ${esc(e.message)}</p>`; return; }
+  }
+  const club = key === CLUB_KEY;
+  const [r = "", ...args] = segs;
+  const table = club ? CLUB_ROUTES : routes;
+  const name = table[r] ?? (club ? "overzicht" : "dashboard");
+  const vs = club && clubViews[name] ? clubViews : views;
   if (window.SCOREBORD) SCOREBORD.release();
-  try { $app.innerHTML = views[name](...args); } catch (e) { console.error(e); $app.innerHTML = `<p class="empty">Er ging iets mis bij het weergeven van deze pagina.</p>`; }
+  try { $app.innerHTML = vs[name](...args); } catch (e) { console.error(e); $app.innerHTML = `<p class="empty">Er ging iets mis bij het weergeven van deze pagina.</p>`; }
   document.querySelectorAll("#tabbar a").forEach((a) => a.classList.toggle("on", a.dataset.r.split(" ").includes(r)));
   document.querySelectorAll("#nav a").forEach((a) => a.classList.toggle("on", a.dataset.r.split(" ").includes(r)));
   document.getElementById("nav").classList.remove("open");
@@ -560,25 +624,18 @@ function render() {
   const va = document.getElementById("va"), vb = document.getElementById("vb");
   if (va) { va.onchange = vb.onchange = () => (location.hash = `#/voorspel/${va.value}/${vb.value}`); }
   window.scrollTo(0, 0);
-  document.title = `Pool Portaal – ${{ dashboard: "Dashboard", stand: "Stand", programma: "Programma", wedstrijd: "Wedstrijd", teams: "Teams", team: T[args[0]]?.name ?? "Team", spelers: "Spelers", speler: P[args[0]]?.name ?? "Speler", ranking: "Ranking", top10: "Top 10", mvp: "MVP", voorspel: "Voorspeller", titelrace: "Titelrace", regels: "Poolregels", scorebord: "Scorebord", seizoenen: "Seizoenen", over: "Over" }[name]}`;
+  const label = club ? { overzicht: "Infinity", standen: "Standen Infinity", mvp: "MVP Infinity", spelers: "Top spelers Infinity", weetjes: "Weetjes Infinity", toernooien: "Toernooien Infinity", lucky9: "Lucky 9", scorebord: "Scorebord", regels: "Regels" }[name] ?? "Infinity" : null;
+  document.title = "Pool Portaal – " + (club ? label : { dashboard: "Dashboard", stand: "Stand", programma: "Programma", wedstrijd: "Wedstrijd", teams: "Teams", team: T[args[0]]?.name ?? "Team", spelers: "Spelers", speler: P[args[0]]?.name ?? "Speler", ranking: "Ranking", top10: "Top 10", mvp: "MVP", voorspel: "Voorspeller", titelrace: "Titelrace", regels: "Poolregels", scorebord: "Scorebord", seizoenen: "Seizoenen", over: "Over" }[name]);
   track();
 }
 
 function init() {
-  D = window.POOL_DATA;
-  if (!D) throw new Error("data/data.js ontbreekt");
-  D.teams.forEach((t) => (T[t.id] = t));
-  Object.values(D.players).forEach((p) => (P[p.id] = p));
-  document.getElementById("seasonLabel").textContent = `${D.meta.name.replace(/^Pool /, "")}`;
-  document.getElementById("updated").textContent = "Bijgewerkt " + dtl.format(new Date(D.meta.updated));
-  const sel = document.getElementById("myTeam");
-  sel.innerHTML = D.teams.map((t) => `<option value="${t.id}">${esc(t.name)}</option>`).join("");
-  sel.value = myTeam();
-  sel.onchange = () => { localStorage.setItem("myTeam", sel.value); render(); };
+  const c = document.getElementById("comp");
+  c.innerHTML = `<option value="${CLUB_KEY}">${esc(COMPS.club.label)} (vereniging)</option>` + COMPS.comps.map((x) => `<option value="${x.key}">${esc(x.short)}</option>`).join("");
+  c.onchange = () => { store(c.value); if (location.hash === "#/" || location.hash === "" ) render(); else location.hash = "#/"; };
   const th = document.getElementById("theme");
   th.value = document.documentElement.dataset.theme || "blue";
   th.onchange = () => { document.documentElement.dataset.theme = th.value; try { localStorage.setItem("theme", th.value); } catch (e) {} };
-  document.getElementById("more").onclick = (e) => { e.preventDefault(); document.getElementById("nav").classList.toggle("open"); window.scrollTo(0, 0); };
   document.getElementById("burger").onclick = () => document.getElementById("nav").classList.toggle("open");
   window.addEventListener("hashchange", render);
   render();

@@ -1,0 +1,1 @@
+window.POOL_COMPS={"updated": "2026-11-06T11:58:12+00:00", "comps": [{"key": "tweede", "label": "Pool Gelderland Tweede klasse", "short": "Gelderland Tweede klasse"}, {"key": "eerste", "label": "Pool Gelderland Eerste klasse", "short": "Gelderland Eerste klasse"}], "club": {"key": "infinity", "label": "Infinity"}};

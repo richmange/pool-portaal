@@ -210,8 +210,10 @@ def assemble(season):
     return t, teams, players, matches, mvp_rows
 
 
-def main():
-    season = next(s for s in CONFIG["seasons"] if s.get("current"))
+def build(comp):
+    """Bouwt alle data van één competitie (huidig seizoen + eerdere seizoenen)."""
+    seasons = comp["seasons"]
+    season = next(s for s in seasons if s.get("current"))
     t, teams, players, matches, mvp_rows = assemble(season)
     standings = t["standings"]["1"]
 
@@ -257,7 +259,7 @@ def main():
     cid = lambda i: canon.get(i, i)
     history = {"seasons": [], "teamHist": defaultdict(list), "meetings": [], "teamNames": defaultdict(dict)}
     pseasons = defaultdict(dict)
-    for sn in CONFIG["seasons"]:
+    for sn in seasons:
         if sn.get("current"):
             ts, tms, pls, mts, mvr = t, teams, players, matches, mvp_rows
         else:
@@ -403,7 +405,7 @@ def main():
             pos_counts[tid][i] += 1
             pts_sum[tid] += pts[tid]
     race = {}
-    prom, rel = CONFIG["promotionSpots"], CONFIG["relegationSpots"]
+    prom, rel = comp["promotionSpots"], comp["relegationSpots"]
     for tid in ids:
         pc = [c / SIMS for c in pos_counts[tid]]
         race[tid] = {"pos": [round(x, 4) for x in pc], "title": round(sum(pc[:prom]), 4),
@@ -529,11 +531,11 @@ def main():
 
     out = {
         "meta": {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "season": season["label"],
-                 "name": t["name"], "myTeam": CONFIG["myTeamId"], "tournamentId": season["id"],
+                 "name": t["name"], "key": comp["key"], "short": comp["short"], "myTeam": comp["myTeamId"], "tournamentId": season["id"],
                  "tournamentUrl": f"https://cuescore.com/tournament/{season.get('slug','')}/{season['id']}",
                  "ratingUrl": f"https://cuescore.com/rating/{CONFIG['rating']['slug']}/{CONFIG['rating']['id']}",
                  "meanRating": mean_rating, "relegation": rel, "promotion": prom, "sims": SIMS,
-                 "seasons": [s["label"] for s in CONFIG["seasons"]], "disc": {str(k): v for k, v in DISC.items()},
+                 "seasons": [s["label"] for s in seasons], "disc": {str(k): v for k, v in DISC.items()},
                  "slots": [[d, bool(dbl)] for d, dbl in SLOTS], "kShift": K_SHIFT},
         "teams": list(teams.values()),
         "players": players,
@@ -546,15 +548,36 @@ def main():
                     "teamNames": {str(k): v for k, v in history["teamNames"].items()}, "meetings": history["meetings"]},
         "leagueDisc": {str(d): v for d, v in league_disc.items()},
     }
-    OUT.mkdir(parents=True, exist_ok=True)
-    blob = json.dumps(out, ensure_ascii=False, separators=(",", ":"))
+    print(f"{comp['key']}: {len(teams)} teams, {len(players)} spelers, {len(matches)} wedstrijden "
+          f"({sum(1 for m in matches if m['games'])} met partijdetails)")
+    return out
+
+
+def write_js(name, var, obj):
+    """Schrijft <name>.json en <name>.js (die laatste laat de site ook via file:// werken)."""
+    blob = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
     for wrong, right in CONFIG.get("nameFixes", {}).items():  # schrijffouten in CueScore-namen
         blob = blob.replace(wrong, right)
-    (OUT / "data.json").write_text(blob, encoding="utf-8")
-    # data.js laat de site ook werken als je index.html direct opent (file://)
-    (OUT / "data.js").write_text("window.POOL_DATA=" + blob + ";", encoding="utf-8")
-    print(f"data.json geschreven: {len(teams)} teams, {len(players)} spelers, {len(matches)} wedstrijden "
-          f"({sum(1 for m in matches if m['games'])} met partijdetails)")
+    (OUT / f"{name}.json").write_text(blob, encoding="utf-8")
+    (OUT / f"{name}.js").write_text(f"window.{var}=" + blob + ";", encoding="utf-8")
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    outs, comps = {}, []
+    for comp in CONFIG["competitions"]:
+        cur = next((s for s in comp["seasons"] if s.get("current")), None)
+        if not cur or not (RAW / "seasons" / str(cur["id"]) / "tournament.json").exists():
+            print(f"{comp['key']}: geen data, overgeslagen")
+            continue
+        outs[comp["key"]] = build(comp)
+        write_js(comp["key"], "POOL_DATA_" + comp["key"], outs[comp["key"]])
+        comps.append({"key": comp["key"], "label": comp["label"], "short": comp["short"]})
+    from club import build_club
+    club = build_club(CONFIG, outs)
+    write_js("infinity", "POOL_CLUB", club)
+    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    (OUT / "comps.js").write_text("window.POOL_COMPS=" + json.dumps({"updated": stamp, "comps": comps, "club": {"key": "infinity", "label": CONFIG["club"]["label"]}}, ensure_ascii=False) + ";", encoding="utf-8")
 
 
 if __name__ == "__main__":

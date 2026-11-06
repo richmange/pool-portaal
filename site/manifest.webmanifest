@@ -1,7 +1,7 @@
 {
   "name": "Pool Portaal",
   "short_name": "Pool Portaal",
-  "description": "Statistieken, ranking en voorspellingen voor de Pool Gelderland Tweede klasse.",
+  "description": "Statistieken, ranking en voorspellingen voor pool-competities in Gelderland (met overzicht voor Poolcafe Infinity).",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

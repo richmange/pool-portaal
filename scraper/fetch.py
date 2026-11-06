@@ -99,10 +99,38 @@ def player_ids_from_mvp():
     return ids
 
 
+def fetch_club():
+    """Toernooien die bij de vereniging (locatie) horen: lijst van CueScore + details per toernooi."""
+    c = CONFIG["club"]
+    h = get(f"https://cuescore.com/venue/{c['venueSlug']}/{c['venueId']}/tournaments")
+    if not h:
+        return
+    ids = []
+    for slug, tid in re.findall(r'href="(?:https?:)?(?://cuescore\.com)?/tournament/([^"?#/]+)/(\d+)"', h):
+        if tid not in [i for _, i in ids]:
+            ids.append((slug, tid))
+    out = []
+    for slug, tid in ids:
+        txt = get(f"https://api.cuescore.com/tournament/?id={tid}")
+        if not txt:
+            continue
+        try:
+            j = json.loads(txt)
+        except ValueError:
+            continue
+        out.append({"id": int(tid), "slug": slug, "name": j.get("name"), "status": j.get("status"), "start": j.get("starttime"),
+                    "end": j.get("stoptime"), "discipline": j.get("discipline"), "players": len(j.get("standings") or []) if isinstance(j.get("standings"), list) else 0})
+    save(RAW / "club" / "tournaments.json", json.dumps(out, ensure_ascii=False))
+    print(f"Verenigingstoernooien: {len(out)}")
+
+
 def main():
-    for season in CONFIG["seasons"]:
-        fetch_season(season)
+    for comp in CONFIG["competitions"]:
+        print(f"== {comp['label']}")
+        for season in comp["seasons"]:
+            fetch_season(season)
     fetch_ratings(player_ids_from_mvp())
+    fetch_club()
 
 
 if __name__ == "__main__":
