@@ -43,16 +43,16 @@ clubViews.overzicht = () => {
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="pill ${POS_CLS(t)}">plek ${t.table.pos}/${t.nTeams}</span><b>${t.table.pts} pt</b><span class="mute small">${t.table.played} gespeeld</span>${form(t.form)}</div>
       <div class="mute small" style="margin-top:8px">Kans op titel ${pct1(t.race.title)} · top 3 ${pct1(t.race.top3)}${t.captain ? ` · aanvoerder ${esc(t.captain)}` : ""}</div></div>`;
   }).join("");
-  const nextRows = C.upcoming.slice(0, 6).map((m) => `<tr><td class="nowrap small">${dt(m.start)}</td><td>${esc(m.team)}</td><td>${m.home ? "–" : "@"} ${esc(m.opp)}</td><td class="n small">${m.win != null ? pct(m.win) : ""}</td></tr>`).join("");
-  const lastRows = C.recent.slice(0, 6).map((m) => `<tr><td class="nowrap small">${dtl.format(new Date(m.start))}</td><td>${esc(m.team)}</td><td>${m.home ? "–" : "@"} ${esc(m.opp)}</td><td class="n bold ${m.s > m.o ? "win" : m.s < m.o ? "lose" : ""}">${m.s}–${m.o}</td></tr>`).join("");
+  const nextRows = C.upcoming.slice(0, 6).map((m) => `<tr><td class="small">${dt(m.start)}</td><td>${esc(m.team)}</td><td>${m.home ? "–" : "@"} ${esc(m.opp)}</td><td class="n nowrap small">${m.win != null ? pct(m.win) : ""}</td></tr>`).join("");
+  const lastRows = C.recent.slice(0, 6).map((m) => `<tr><td class="small">${dtl.format(new Date(m.start))}</td><td>${esc(m.team)}</td><td>${m.home ? "–" : "@"} ${esc(m.opp)}</td><td class="n nowrap bold ${m.s > m.o ? "win" : m.s < m.o ? "lose" : ""}">${m.s}–${m.o}</td></tr>`).join("");
   const top3 = C.mvp.slice(0, 3).map((r, i) => `<tr><td class="n">${i + 1}</td><td>${cPl(r.id)}</td><td class="n bold">${fmt(r.v)}%</td></tr>`).join("");
   return `<section class="hero"><div class="mute" style="color:#cfe8d8">Vereniging</div><h1>${esc(C.meta.name)}</h1><div class="sub">Wageningen · ${found.length} teams in competitie · ${C.members.length} spelers</div>
     <div class="kpis"><div class="kpi"><b>${T0.w}-${T0.d}-${T0.l}</b><span>wedstrijden W-G-V</span></div><div class="kpi"><b>${pct(T0.fw / Math.max(1, T0.fw + T0.fl))}</b><span>partijen gewonnen</span></div>
     <div class="kpi"><b>${T0.played}</b><span>wedstrijden gespeeld</span></div><div class="kpi"><b>${C.members.length}</b><span>spelers actief</span></div></div></section>
   <h2>Onze teams</h2><div class="grid g3">${cards}</div>
   <div class="grid g2" style="margin-top:16px">
-    <div class="card"><h3>Eerstvolgende wedstrijden</h3>${nextRows ? `<table><tbody>${nextRows}</tbody></table><p class="mute small">Laatste kolom: kans op winst.</p>` : '<p class="mute">Geen openstaande wedstrijden.</p>'}</div>
-    <div class="card"><h3>Laatste uitslagen</h3>${lastRows ? `<table><tbody>${lastRows}</tbody></table>` : '<p class="mute">Nog niet gespeeld.</p>'}</div>
+    <div class="card"><h3>Eerstvolgende wedstrijden</h3>${nextRows ? `<div class="tw"><table><tbody>${nextRows}</tbody></table></div><p class="mute small">Laatste kolom: kans op winst.</p>` : '<p class="mute">Geen openstaande wedstrijden.</p>'}</div>
+    <div class="card"><h3>Laatste uitslagen</h3>${lastRows ? `<div class="tw"><table><tbody>${lastRows}</tbody></table></div>` : '<p class="mute">Nog niet gespeeld.</p>'}</div>
   </div>
   <div class="grid g2" style="margin-top:16px">
     <div class="card"><h3>MVP-top 3 <small><a href="#/mvp">alles →</a></small></h3>${top3 ? `<table><tbody>${top3}</tbody></table>` : '<p class="mute">Nog te weinig potten gespeeld.</p>'}</div>
@@ -118,7 +118,7 @@ clubViews.spelers = () => {
 };
 
 clubViews.weetjes = () => {
-  const duels = C.derbies.map((d) => `<tr><td class="small">${esc(d.home)} – ${esc(d.away)}</td><td class="nowrap small">${dtl.format(new Date(d.start))}</td><td class="n bold">${d.done ? `${d.sa} – ${d.sb}` : "nog te spelen"}</td></tr>`).join("");
+  const duels = C.derbies.map((d) => `<tr><td class="small">${esc(d.home)} – ${esc(d.away)}</td><td class="nowrap small">${dtl.format(new Date(d.start))}</td><td class="n nowrap bold">${d.done ? `${d.sa} – ${d.sb}` : "nog te spelen"}</td></tr>`).join("");
   return `<h1>Weetjes</h1><p class="mute">Interessante feiten over de Infinity-teams en -spelers.</p>
   <div class="grid g2">${C.facts.map((f) => `<div class="tip ${f.bad ? "bad" : ""}"><span class="ic">${f.ic}</span><div><b>${esc(f.title)}</b><br><span class="mute">${esc(f.text)}</span></div></div>`).join("") || '<p class="mute">Nog te weinig data.</p>'}</div>
   ${duels ? `<h2>Onderlinge duels</h2><div class="card tw"><table><tbody>${duels}</tbody></table></div>` : ""}`;
