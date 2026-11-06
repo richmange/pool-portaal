@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7457HBL56M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7457HBL56M');
+</script>
+
+    <title>Infinity 7</title>
+    <script src="/js/jquery/3.7.1/jquery-3.7.1.min.js"></script>
+    <script defer src="https://js.stripe.com/v3/"></script>
+    <script defer type="text/javascript" src="/js/cs/cs.min-1.93.js"></script>
+<script defer type="text/javascript" src="/js/cs/cs.lang.php?v=1.93"></script>
+<script defer type="text/javascript" src="/js/cs/jquery.cs.min-1.93.js"></script>
+<script type="text/javascript" src="/js/cuescore.min-1.93.js"></script>
+    <script id="cs-code-api-js" data-version="3.99" defer type="text/javascript" src="https://api.cuescore.com/js/CueScore.min-3.99.js"></script>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/favicon16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicon128.png" sizes="128x128" />
+    <link rel="icon" type="image/png" href="/favicon196.png" sizes="196x196" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="verification" content="3ef0e4fc4bf463869ac66ef2a8f70fdb" />
+    <meta name="application-name" content="CueScore"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+    <meta name="theme-color" content="#0E2666">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#0E2666">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0E2666">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+    <link id="cs-code-main-css" data-version="2.04" href="/css/cuescore.min-2.04.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883" hreflang="x-default" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=no" hreflang="no" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=fr" hreflang="fr" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=el" hreflang="el" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=de" hreflang="de" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=nl" hreflang="nl" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=mk" hreflang="mk" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=fi" hreflang="fi" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=es" hreflang="es" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=sq" hreflang="sq" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=ru" hreflang="ru" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=se" hreflang="se" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=pl" hreflang="pl" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=it" hreflang="it" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=pt" hreflang="pt" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=hr" hreflang="hr" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=sk" hreflang="sk" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=ja" hreflang="ja" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=da" hreflang="da" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=zh" hreflang="zh" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=cs" hreflang="cs" /><link rel="alternate" href="//cuescore.com/team/Infinity+7/31035883?lang=hu" hreflang="hu" />
+    <link rel="canonical" href="https://cuescore.com/team/Infinity+7/31035883" /><meta property="fb:app_id" content="339170092957037" /><meta property="og:site_name" content="CueScore"/><meta property="og:type" content="article" /><meta property="og:image" content="https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018" />
+<meta property="og:image:width" content="768" />
+<meta property="og:image:height" content="887" /><meta property="og:url" content="https://cuescore.com/team/Infinity+7/31035883" />
+<meta property="og:title" content="Infinity 7" />
+<meta property="og:description" content="CueScore helps people organize and run billiard tournaments, keep track of events near you, view livescores and checkout your competition.
+Run tournaments for you and your friends, or enter national championships in the same system." />
+<meta property="og:locale" content="en_US" /><meta property="og:locale:alternate" content="no_NO" /><meta property="og:locale:alternate" content="fr_FR" /><meta property="og:locale:alternate" content="el_GR" /><meta property="og:locale:alternate" content="de_DE" /><meta property="og:locale:alternate" content="nl_NL" /><meta property="og:locale:alternate" content="mk_MK" /><meta property="og:locale:alternate" content="fi_FI" /><meta property="og:locale:alternate" content="es_ES" /><meta property="og:locale:alternate" content="sq_AL" /><meta property="og:locale:alternate" content="ru_RU" /><meta property="og:locale:alternate" content="sv_SE" /><meta property="og:locale:alternate" content="pl_PL" /><meta property="og:locale:alternate" content="it_IT" /><meta property="og:locale:alternate" content="pt_BR" /><meta property="og:locale:alternate" content="hr_HR" /><meta property="og:locale:alternate" content="sk_SK" /><meta property="og:locale:alternate" content="ja_JP" /><meta property="og:locale:alternate" content="da_DK" /><meta property="og:locale:alternate" content="zh_CN" /><meta property="og:locale:alternate" content="cs_CZ" /><meta property="og:locale:alternate" content="hu_HU" />
+    <!-- <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" /> -->
+<script defer type="text/javascript" src="/js/zpin/jquery.zSuggest.js"></script>
+
+    <link rel="stylesheet" href="/css/spinners.css" type="text/css">
+
+    
+    <script>
+    /* Only register a service worker if it's supported */
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });      
+    }
+    </script>
+  </head>
+  <body>
+    <div id="Container">
+      <script>
+window.addEventListener('load', function() {
+  try {
+        if (typeof CueScore !== 'undefined' && CueScore.ChatStore) {
+             // 1. Restore popup state
+            var state = localStorage.getItem(CueScore.ChatStore.popupStorageKey);
+            if (state) {
+                state = JSON.parse(state);
+                if (state && state.roomId) {
+                    var container = document.getElementById('cs-chat-popup-container');
+                    if (!container) {
+                        container = document.createElement('div');
+                        container.id = 'cs-chat-popup-container';
+                        document.body.appendChild(container);
+                    }
+                    var popup = document.createElement('cs-chat-popup');
+                    popup.setAttribute('room-id', state.roomId);
+                    if (state.minimized) {
+                        popup.setAttribute('minimized', '');
+                    }
+                    popup.addEventListener('close', function() {
+                       container.remove();
+                    });
+                    container.appendChild(popup);
+                }
+            }
+            
+            // 2. Setup unread count listener
+            var updateUnreadCount = function() {
+                var count = 0;
+                // Use the getter if available, fallback for safety
+                if (CueScore.ChatStore.totalUnreadCount !== undefined) {
+                    count = CueScore.ChatStore.totalUnreadCount;
+                } else if (CueScore.ChatStore.conversations) {
+                     count = CueScore.ChatStore.conversations.reduce(function(acc, c) { return acc + (parseInt(c.unreadCount) || 0); }, 0);
+                }
+                
+                document.querySelectorAll('.chat-icon').forEach(function(icon) {
+                    var badge = icon.querySelector('.count');
+                    if (badge) {
+                        if (count > 0) {
+                            badge.textContent = count > 9 ? '9+' : count;
+                            badge.classList.add('active');
+                            badge.style.display = 'flex';
+                        } else {
+                            badge.classList.remove('active');
+                            badge.style.display = 'none';
+                        }
+                    }
+                      });
+            };
+
+            CueScore.ChatStore.addEventListener('conversations-changed', updateUnreadCount);
+            
+            // Ensure initialized
+            if (CueScore.ChatStore.ensureInitialized) {
+                CueScore.ChatStore.ensureInitialized().then(updateUnreadCount);
+            }
+        }
+    } catch(e) { console.error('Error restoring chat popup', e); }
+});
+</script>
+<script>
+
+var toggleChatList = function(elm) {
+  var id = 'cs-header-chat-list';
+  var existing = document.getElementById(id);
+  
+  // Close if already open
+  if (existing) {
+    existing.remove();
+    return;
+  }
+  
+  // Close other menus (mimicking existing behavior)
+  $('#header .list-1, #header .list, #proLine .list').hide();
+  $('.is-active').removeClass('is-active');
+
+  var container = document.createElement('div');
+  container.id = id;
+  container.style.position = 'fixed';
+  container.style.top = '60px'; // Adjust as needed based on header height
+  container.style.right = '10px'; // Adjust
+  container.style.width = '300px';
+  //container.style.backgroundColor = '#fff';
+  container.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+  container.style.borderRadius = '4px';
+  container.style.border = '1px solid var(--cs-surface-border, #e1e7f4)';
+  container.style.zIndex = '10000';
+  container.style.overflow = 'hidden';
+  
+  // Create the component
+  var list = document.createElement('cs-chat-list');
+  list.setAttribute('simple', 'true');
+  
+  // Handle selection
+  list.addEventListener('room-selected', function(e) {
+      var roomId = e.detail.roomId;
+      if (CueScore && CueScore.ChatStore) {
+            // Select room in store, which should trigger valid listeners (like the popup)
+            CueScore.ChatStore.selectRoom(roomId);
+            
+            // Ensure popup is visible/maximized if needed? 
+            // Usually selecting a room is enough if the popup is listening.
+            // We also want to remove this list probably
+            container.remove();
+      }
+  });
+
+  container.appendChild(list);
+  
+  // Append to body or header? 
+  // The clicked element 'elm' is in the header.
+  // Let's append to body for absolute positioning ensuring z-index works
+  document.body.appendChild(container);
+  
+  // Positioning logic (simple version)
+  var rect = elm.getBoundingClientRect();
+  container.style.top = (rect.bottom + 10) + 'px';
+  container.style.left = (rect.right - 300) + 'px'; // Align right edge
+  
+  // Close when clicking outside
+  var closeHandler = function(e) {
+      if (!container.contains(e.target) && e.target !== elm && !elm.contains(e.target)) {
+          container.remove();
+          document.removeEventListener('click', closeHandler);
+      }
+  };
+  setTimeout(function() {
+      document.addEventListener('click', closeHandler);
+  }, 0);
+};
+
+var toggleList = function(elm) {
+  if ( $(elm).siblings('.list').children('a').length > 1 ) {
+    prevD();
+    stopP();
+    $(elm).siblings('.list').toggle();
+    // Make sure other menus get closed:
+    $('#header .list-1, #header .list, #proLine .list').each( function() {
+      if ( $(this).parent().get(0) != $(elm).parent().get(0) ) {
+        $(this).hide();
+        $(this).parent().removeClass('is-active');
+      }
+    });
+    if ( document.getElementById('cs-header-chat-list') ) {
+      toggleChatList(document.getElementById('cs-header-chat-icon')); // Close chat list if open
+    }
+    
+    // Prevent initial a tag getting fired:
+    return false;
+  }
+};
+var toggleDropdown = function(elm) {
+  stopP(); 
+  $(elm).children('.list-1').toggle();
+  $('#header .list-1, #header .list, #proLine .list').each( function() {
+    if ( $(this).parent().get(0) != elm ) {
+      $(this).hide();
+      $(this).parent().removeClass('is-active');
+    }
+  });
+  if ( document.getElementById('cs-header-chat-list') ) {
+    toggleChatList(document.getElementById('cs-header-chat-icon')); // Close chat list if open
+  }
+  if ( $(elm).hasClass('hamburger') ) {
+    $(elm).toggleClass('is-active');
+  }
+};
+var headerData = {
+    "userId": 0,
+    "firstname": "",
+    "lastname": "",
+    "profileUrl": "",
+    "profileImg": "",
+    "accounts": [],
+    "shop": 0,
+    "language": "en",
+    "notifications": 0,
+    "messages": 0
+};    
+$(document).ready( function() {
+   CS.Header.init(headerData);
+});
+
+// Force light/dark mode toggle (persisted via localStorage, overrides prefers-color-scheme)
+var getSystemThemeMode = function() {
+  return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+};
+var updateThemeToggleIcon = function(mode) {
+  var btn = document.getElementById('cs-theme-toggle');
+  if ( btn ) {
+    // Icon shows the mode you'd switch to, not the current mode
+    btn.textContent = mode === 'dark' ? '☀️' : '🌙';
+  }
+};
+var applyThemeMode = function(mode) {
+  document.body.classList.remove('force-light-mode', 'force-dark-mode');
+  if ( mode === 'light' || mode === 'dark' ) {
+    document.body.classList.add('force-' + mode + '-mode');
+  }
+  updateThemeToggleIcon(mode || getSystemThemeMode());
+};
+var toggleThemeMode = function(elm) {
+  stopP();
+  var current = localStorage.getItem('cs_theme_mode') || getSystemThemeMode();
+  var next = current === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('cs_theme_mode', next);
+  applyThemeMode(next);
+};
+/*
+$(document).ready( function() {
+  // Runs after the button markup below has been parsed into the DOM
+  var saved = localStorage.getItem('cs_theme_mode');
+  if ( saved ) {
+    applyThemeMode(saved);
+  } else {
+    updateThemeToggleIcon(getSystemThemeMode());
+  }
+});
+*/
+</script>
+<style>
+nav.secondary { height: 44px; background: white; display: none; align-items: center; justify-content: space-around; }
+nav.secondary a { display: flex; align-items: center; height: 44px; padding: 0 12px; color: #0E2666; }
+nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
+@media (prefers-color-scheme: dark) {
+  nav.secondary { background: var(--cs-surface-bg); }
+  nav.secondary a { color: var(--cs-link); }
+  nav.secondary a:hover { color: var(--cs-link-hover); background-color: var(--cs-surface-bg); }
+}
+#header { background: #0E2666; display: flex; align-items: center; position: sticky; top: 0; z-index: 9; height: 48px; }
+#header > *:not(.hide) { display: flex; align-items: center; height: 48px; min-width: 48px; padding: 0 16px; color: #BFD0F5; }
+#header > *:hover { text-decoration: none; background-color: #243A74 !important; cursor: pointer; }
+#header div.dash { border-radius: 18px; padding: 0 !important; height: 36px; width: 36px; min-width: 36px; }
+#header a.personal-create { border-radius: 18px; padding: 0 !important; margin-left: 8px; height: 36px; width: 36px; min-width: 36px; background: #467DF7 url(/img/scoreboard-plus.svg) center center / 14px no-repeat; }
+#header a.personal-create:hover { background-color: #4074E8 !important; }
+#header a.home { background: url(/img/cs_pict.svg) center center / 28px no-repeat; }
+#header a.live { margin-left: auto; }
+#header.nouser a.home { background: transparent url(/img/cuescore-logo-white.svg) center center / 72px  no-repeat; width: 104px; }
+
+#header a.selected { border-top: 4px solid transparent; border-bottom: 4px solid #FF9800; }
+.secondary a.selected { border-top: 4px solid transparent; border-bottom: 4px solid #FF9800; font-weight: 600; }
+#header .list-1 a.selected { border: 0; border-left: 4px solid #FF9800; }
+#header .circle { margin: 0 8px; width: 36px; height: 36px; min-width: auto; border-radius: 18px; border: 0 !important; box-shadow: 0px 0px 3px #F3F3F3; }
+#header .circle:hover { background-color: #FFFFFF80; }
+#header #cs-theme-toggle { display: none; /* flex */ margin-left: auto;cursor: pointer; font-size: 16px; align-items: center; justify-content: center; }
+#header a.search { margin-left: auto; background: #51628F url(/img/search-icon.svg) center center / 16px no-repeat; }
+#header a.notif { background: #51628F url(/img/notifications-icon.svg) center center / 16px no-repeat; position: relative;}
+#header a.notif .count,
+#header a.msg .count,
+#header a.shop .count{ position: absolute; top: 0; display: none; right: -7px; font-size: 12px; font-weight: 600; line-height: normal; color: #0e2666; border-radius: 50%; background-color: #32E0A6; width: 14px; height: 14px; padding: 0 4px; text-align: center; align-items: center; justify-content: center; }
+#header a.msg .count { background-color: #3BB0FF;  }
+#header a.notif .count.active,
+#header a.msg .count.active,
+#header a.shop .count.active { display: flex; }
+#header a.shop { background: #51628F url(/img/shop-icon.svg) center center / 20px no-repeat; position: relative;}
+#header a.msg { background: #51628F url(/img/comment-white.svg) center center / 16px no-repeat; position: relative;}
+    
+#header .more { border: 0; padding-right: 30px; background: url(/img/arrow-down-orange.svg) right 16px center / 8px no-repeat; outline: none; font-family: inherit; font-size: inherit; line-height: inherit; position: relative;}
+#header .more:active { outline: none; }
+#header .more .list-1 { left: 0; right: unset; }
+#header .list-1 { display: none; position: absolute; top: 52px; right: 0; background: var(--cs-surface-bg, #243A74); padding: 8px 0; border-radius: 4px; border: 1px solid var(--cs-surface-border, #e1e7f4); box-shadow: 3px 6px 16px #0e266688; }
+#header .list-1 a { display: block; color: var(--cs-foundation-text, #BFD0F5); text-align: left; height: 36px; padding: 0 12px; padding-right: 32px; display: flex; align-items: center; white-space: nowrap; }
+#header .list-1 a:last-child { border-radius: 0 0 4px 4px; }
+#header .list-1 a:hover { text-decoration: none; background-color: var(--cs-row-hover-bg, #3562CB);}
+
+#header.nouser .user { display: none; }
+#header .user { background: #51628F url() center center / 40px no-repeat; }
+#header .user .list-1 a.icon::before { content: ""; width: 18px; height: 18px; margin-right: 10px; flex: 0 0 18px; background: center / 24px no-repeat; filter: var(--cs-svg-darkmode-filter, invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)); }
+#header .user .list-1 a:hover { background-color: var(--cs-row-hover-bg, #3562CB); }
+    
+#header .user .list-1 a.dashboard::before { background-image: url(/img/material/dashboard-icon.svg); }
+#header .user .list-1 a.orders::before { background-image: url(/img/material/shopping-cart-icon.svg); }
+#header .user .list-1 a.subscription::before { background-image: url(/img/material/credit-card-icon.svg); }
+#header .user .list-1 a.settings::before { background-image: url(/img/material/settings-icon.svg); }
+#header .user .list-1 a.profile::before { background-image: url(/img/material/participant-icon.svg); }
+#header .user .list-1 a.scoreboard::before { background-image: url(/img/material/scoreboard-icon.svg);  }
+#header .user .list-1 a.logout { color: #ff5f5f; }
+#header .user .list-1 a.logout::before { background-image: url(/img/menu/logout.svg); }
+
+#header .language { display: none; background: #51628F url(/img/language-icon.svg) center center / 20px no-repeat; position: relative;}
+#header .language .list-1 { top: 42px; }
+#header .language .list-1 a { background: left 16px center no-repeat; padding-left: 56px; }
+#header .language .list-1 a:hover { background-color: #243A74; }
+#header .menu { display: none; }
+
+#header a.signup { display: none; margin-left: auto; height: 36px; border-radius: 18px; background:transparent linear-gradient(180deg, #3BB0FF 0%, #467DF7 100%) 0% 0% no-repeat padding-box; padding: 0 18px; color: #FFF; font-weight: 600; }
+#header a.login { display: none; height: 36px; background: transparent url(/img/key-white.svg) left 12px center / 14px no-repeat; border: 2px solid #5788F6; color: #FFF; font-weight: 600; border-radius: 18px; padding: 0 18px 0 36px; margin-left: 16px;}
+#header.nouser a.signup, #header.nouser a.login, #header.nouser .language { display: flex; }
+#header.nouser .dash, #header.nouser .personal-create, #header.nouser .notif { display: none; }
+#proLine { display: none; position: sticky; top: 0; height: 48px; background: #0E2666; box-shadow: 3px 3px 6px #0325563D; display: flex; justify-content: flex-start; align-items: center; color: #FFF; font: normal normal normal 16px/15px Open Sans; z-index: 10; }  
+#proLine.hide { display: none; }
+#proLine .org-icons> * { height: 36px; width: 36px; border-radius: 18px;  }
+#proLine > *:hover { cursor: pointer; }
+#proLine .homepage { width: 48px; height: 48px; background: transparent url(/img/cs_pict.svg) center center / 28px no-repeat;}
+#proLine .support { background: var(--cs-btn-confirm-bg, #467DF7) url(/img/question-white.svg) center center no-repeat; }
+#proLine .org-icons { display: flex; gap: 8px; margin-left: auto; }
+#proLine .chat-icon { position: relative; background: #467df7 url(/img/comment-white.svg) center center / 16px no-repeat; margin-left: auto; }
+#proLine .chat-icon .count { position: absolute; top: 0; right: -7px; display: none; min-width: 14px; height: 14px; padding: 0 4px; align-items: center; justify-content: center; border-radius: 7px; background-color: #3BB0FF; color: #0E2666; font-size: 12px; font-weight: 600; line-height: normal; }
+.dash { background: #467DF7 url(/img/material/dashboard-icon-white.svg) center center / 24px no-repeat; position: relative; border-radius: 18px;}
+/*.dash.selected { background: #FFF url(/img/pro/dashboard-blue.svg) center center / 28px no-repeat;  }*/
+#header .dash:hover { background-color: #4074E8 !important;}
+.dash > a { width: 36px; height: 36px; display: inline-block; }
+#proLine .list, #header .list, #header .list-1 { display: none; }
+#proLine .dash .list, #header .dash .list { background-color: var(--cs-surface-bg, #FFF); position: absolute; top: 48px; left: 0; width: auto; white-space: nowrap; z-index: 3; padding: 8px 0; box-shadow: 3px 6px 16px #0E266688; border-radius: 4px; border: 1px solid var(--cs-surface-border, #e1e7f4); }
+#proLine .dash .list a, #header .dash .list a { display: flex; align-items: center; gap: 8px; min-height: 36px; color: var(--cs-foundation-text, #0E2666); text-decoration: none; padding: 4px 8px; }
+#proLine .dash .list a .account-logo, #header .dash .list a .account-logo { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 32px; box-shadow: var(--cs-profile-shadow, 0px 0px 3px #F3F3F3); }
+#proLine .dash .list a .account-logo img, #header .dash .list a .account-logo img { width: 100%; height: 100%; object-fit: cover; }
+#proLine .dash .list a .account-name, #header .dash .list a .account-name { line-height: 1.3; }
+#proLine .dash .list a:hover, #header .dash .list a:hover { background-color: var(--cs-row-hover-bg, #F5FBFF); }
+#header .count { animation: notif-blink 3s infinite; }
+@keyframes notif-blink {
+  50%   { transform: scale(1.3); opacity: 1; }
+  100%   { transform: scale(1); opacity: 1; }
+}
+#header > .hamburger { padding: 0 12px; }
+.hamburger.is-active .hamburger-inner,.hamburger.is-active .hamburger-inner:after,.hamburger.is-active .hamburger-inner:before { background-color: #fff; }
+.hamburger-box { position: relative; display: block; width: 20px; height: 24px; }
+.hamburger-inner { top: 50%; display: block; margin-top: 0px; }
+.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before {position: absolute; width: 24px; height: 2px; transition-timing-function: ease; transition-duration: .15s; transition-property: transform; border-radius: 2px; background-color: #fff; }
+.hamburger-inner:after,.hamburger-inner:before { display: block; content: ""; }
+.hamburger-inner:before { top: -10px }
+.hamburger-inner:after { bottom: -10px; }
+.hamburger .hamburger-inner { transition-timing-function: cubic-bezier(.55,.055,.675,.19); transition-duration: 75ms; }
+.hamburger .hamburger-inner:before { transition: top 75ms ease .12s,opacity 75ms ease; }
+.hamburger .hamburger-inner:after { transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19); }
+.hamburger.is-active .hamburger-inner { transition-delay: .12s; transition-timing-function: cubic-bezier(.215,.61,.355,1); transform: rotate(45deg); }
+.hamburger.is-active .hamburger-inner:before { top: 0; transition: top 75ms ease,opacity 75ms ease .12s; opacity: 0; }
+.hamburger.is-active .hamburger-inner:after { bottom: 0; transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s; transform: rotate(-90deg); }
+
+@media only screen and (max-width: 960px) {
+  #proLine { height: 48px; }
+  #proLine .dash .select { width: 100vw; left: -48px; }
+  #header .list-1 a { height: 44px; }
+  #header .home { display: flex; width: 48px; }
+  #header .menu { display: flex; }
+  #header .dash { display: flex; }
+  #header .profiles { display: flex; }
+  #header .circle { margin: 0 4px; }
+  #header .user { margin-right: 4px; }
+  #proLine .dash .list, #header .dash .list, #header .list, #header .list-1 { position: fixed; top: 52px !important; left: unset; width: fit-content; max-width: 90vw; overflow-y: scroll; }
+  #header > .live,
+  #header > .tournaments,
+  #header > .leagues, 
+  #header > .challenges,
+  #header > .news, 
+  #header > .upgrade,
+  #header > .more,
+  #header.nouser > a.signup { display: none; }
+  #header.nouser a.login { margin-left: auto; }
+  nav.secondary { display: flex; }
+}
+</style>
+<div id="cookie-notice">
+  <div style="display: flex; justify-content: space-between; width: 960px;  align-items: center;">
+    <div class="desc">This site uses cookies! By continuing to browse this site you are agreeing to our use of cookies. <a href="/policy/cookie">Read more..</a></div>
+    <div class="ok" onclick="CS.Cookie.OK();"></div>
+  </div>
+</div>
+
+<nav id="proLine" class="hide">
+  <a class="homepage" href="/"></a>
+  <div class="dash">
+    <a href="" onclick="toggleList(this);"></a>
+    <div class="list hideOnDocClick"></div>
+  </div>
+  <div class="org-icons" style="margin-left: auto;">
+    
+    <a class="support" href="/support/" style="margin-right: 8px;" title="Support"></a>
+  </div>
+  <!--
+  <div class="profiles">
+    <a href="" onclick="toggleList(this);"></a>
+    <div class="list hideOnDocClick"></div>
+  </div>
+  -->
+</nav>
+<nav id="header" class="noPrint nouser">
+  <a class="home" href="/"></a>
+  <div class="dash">
+    <a href="" onclick="toggleList(this);"></a>
+    <div class="list hideOnDocClick"></div>
+  </div>
+  <a class="personal-create" href="#" title="Personal options" onclick="CueScore.ModalLoader.openSrc('/ajax/player/create-dialog.php'); return false;"></a>
+  <a class="live " href="/live">Live</a>
+  <a class="tournaments " href="/tournaments">Tournaments</a>
+  <a class="leagues " href="/leagues">Leagues</a>
+  <a class="challenges " href="/challenges">Challenges</a>
+  <a class="news " href="/posts">Posts</a>
+  <a class="upgrade " href="/upgrade/">Upgrade</a>
+  <div class="more" onclick="toggleDropdown(this);">More
+    <nav class="list-1 hideOnDocClick">
+      <a class="h2h " href="/h2h/">Head to head</a>
+      <a class="organizations " href="/organizations/">Organizations</a>
+      <a class="venues " href="/venues/">Venues</a>
+      <a class="schema " href="/schema/">Brackets</a>
+      <a href="/scoreboard/">Scoreboard</a>
+      <a href="https://api.cuescore.com/">API</a>
+      <a class="" href="/support/">Support</a>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+  
+  <a class="signup" href="/signup">Join for free</a>
+  <a class="login" href="/login">Sign in</a>
+      
+  <div id="cs-theme-toggle" class="circle" onclick="toggleThemeMode(this);" title="Toggle light/dark mode"></div>
+  <a class="search circle " href="/search"></a>
+  <a class="notif circle " href="/notifications/"><div class="count">!</div></a>
+  
+  <a class="shop circle hide" href="javascript:void(0);"><div class="count active">!</div></a>
+  <div class="language circle unselectable" onclick="toggleDropdown(this);">
+    <nav class="list-1 hideOnDocClick">
+      <a href="/language/?lang=cs" title="Czech" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/cz.png);"> čeština</a>
+      <a href="/language/?lang=da" title="Danish" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/dk.png);"> Dansk</a>  
+      <a href="/language/?lang=de" title="German" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/de.png);"> Deutsch</a>
+      <a href="/language/?lang=el" title="Greek" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/gr.png);"> Ελληνικά</a>
+      <a href="/language/?lang=en" title="English (US)" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/us.png);"> English</a>
+      <a href="/language/?lang=es" title="Spanish" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/es.png);"> Español</a>
+      <a href="/language/?lang=fi" title="Finnish" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/fi.png);"> Suomi</a>
+      <a href="/language/?lang=fr" title="French" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/fr.png);"> Français</a>
+      <a href="/language/?lang=hr" title="Croatian" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/hr.png);"> Hrvatski</a>
+      <a href="/language/?lang=hu" title="Hungarian" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/hu.png);"> Magyar</a>
+      <a href="/language/?lang=it" title="Italian" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/it.png);"> Italiano</a>
+      <a href="/language/?lang=ja" title="Japanese" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/jp.png);"> 日本語</a>
+      <a href="/language/?lang=mk" title="Macedonian" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/mk.png);"> македонски</a>
+      <a href="/language/?lang=no" title="Norwegian" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/no.png);"> Norsk bokmål</a>
+      <a href="/language/?lang=nl" title="Dutch" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/nl.png);"> Nederlands</a>
+      <a href="/language/?lang=pl" title="Polish" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/pl.png);"> Polski</a>
+      <a href="/language/?lang=pt" title="Brazilian portuguese" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/br.png);"> Português</a>
+      <a href="/language/?lang=ru" title="Russian" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/ru.png);"> русский</a>
+      <a href="/language/?lang=sk" title="Slovak" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/sk.png);"> Slovenčina</a>
+      <a href="/language/?lang=sq" title="Albanian" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/al.png);"> Shqip</a>  
+      <a href="/language/?lang=se" title="Swedish" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/se.png);"> Svenska</a>  
+      <a href="/language/?lang=zh" title="Chinese" style="background-image: url(/img/flags/png-country-4x2-none/res-28x21/cn.png);"> 中文</a>
+    </nav>
+  </div>
+  <div class="user circle" onclick="toggleDropdown(this);">
+    <nav class="list-1 hideOnDocClick">
+      <a class="scoreboard icon" href="/scoreboard/?code=personal">Personal scoreboard</a>
+      <a class="dashboard icon" href="javascript:void(0);" onclick="toggleList($('#header .dash a').get(0));">Dashboard</a>
+      <a class="profile icon" href="">Edit player profile</a>
+      <a class="orders icon" href="/home/orders">Orders</a>
+      <a class="subscription icon" href="/user/account/">Account</a>
+      <a class="settings icon" href="/home/settings">Settings</a>
+      <a class="logout icon" href="/login/?logout">Log out</a>
+    </nav>
+  </div>
+  
+  <div class="menu hamburger" onclick="toggleDropdown(this);">
+    <div class="hamburgerbox">
+      <div class="hamburger-inner"></div>
+    </div>
+    <nav class="list-1 hideOnDocClick">
+      <a class="live " href="/live">Live</a>
+      <a class="tournaments " href="/tournaments">Tournaments</a>
+      <a class="leagues " href="/leagues">Leagues</a>
+      <a class="challenges " href="/challenges">Challenges</a>
+      <a class="news " href="/posts">Posts</a>
+      <a class="upgrade " href="/upgrade/">Upgrade</a>
+      <a class="h2h " href="/h2h/">Head to head</a>
+      <a class="organizations " href="/organizations/">Organizations</a>
+      <a class="venues " href="/venues/">Venues</a>
+      <a class="schema " href="/schema/">Brackets</a>
+      <a href="/scoreboard/">Scoreboard</a>
+      <a href="https://api.cuescore.com/">API</a>
+      <a class="" href="/support/">Support</a>
+    </nav>
+  </div>
+</nav>
+<nav class="secondary">
+  <a class="live " href="/live">Live</a>
+  <a class="tournaments " href="/tournaments">Tournaments</a>
+  <a class="leagues " href="/leagues">Leagues</a>
+  <a class="upgrade " href="/upgrade/">Upgrade</a>
+</nav>
+
+<div id="Shop" class="CSModalBtn" style="height: 0;">
+  <div id="OrderBox" class="CSModalBox Order dropshadow">
+    <h2>Shopping cart</h2>
+    <div id="Cart"></div>
+  </div>
+</div>
+      <div id="Content">
+        
+        <style>
+#Content { padding-top: 0 !important; }
+div.headerBackdrop { background-color: #dddddd; }
+header.team div.HEADER { background-color: #dddddd; background-image: url(//img.cuescore.com/image/3/7/3ffddc38af1e7763cb8a09f5da7b6059.png?t=1696000067) }
+</style>
+<div class="profileBackground" style="position: relative;">
+  <div class="headerBackdrop"></div>
+  <div class="headerBackdropOverlay"></div>
+  <div class="headerMenuBackground"></div>
+</div>
+<header class="profilePage team">
+  <!--<div class="pagetype">Team</div>-->
+  <div class="HEADER  CSGallery" data-parent-id="31035883" data-custom-id="HEADER" data-caption="Update cover image" data-image-id="33247975" data-pin-id="31035883" onclick="stopP(event);"></div>
+  <div class="PROFILE  CSGallery" data-parent-id="31035883" data-custom-id="PROFILE" data-image-id="33247972" data-pin-id="31035883"><img src="//img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018" alt="" /></div>
+  <div class="profileShadow"></div>
+  <div class="editButton"></div>
+  <div class="titleScreen"></div>
+  <h1 class="name">Infinity 7 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""  title="" /></h1>
+  <div class="subTitle"><a href="//cuescore.com/team/Infinity+7/31035883#map">   </a></div>
+  <div class="menu">
+    <a class="active" href="//cuescore.com/team/Infinity+7/31035883"><img src="/img/home-icon.svg" alt="" style="margin-left: 15px; margin-right: 15px;" /></a>
+    <!--<a class="" href="//cuescore.com/team/Infinity+7/31035883/tournaments">Tournaments</a>
+    <a class="" href="//cuescore.com/team/Infinity+7/31035883/rankings">Rankings</a>
+    <a class="" href="//cuescore.com/team/Infinity+7/31035883/articles">Posts</a>
+    <a class="" href="//cuescore.com/team/Infinity+7/31035883/about">About</a>-->
+  </div>
+</header>
+<style>
+.participant span.teamCaptain { color: #475a65; }
+.participant span.teamCaptain img { height: 20px; position: static; }    
+div.teamTournamentStandings { margin-bottom: 40px; }
+/*.Team .participantSelector { height: 40px; width: 40px; margin-bottom: 10px; background: #475a65 url(/img/list-box-white.svg) center center no-repeat; }
+.Team .participantSelector.box { background-image: url(/img/list-white.svg); }
+.Team .participantSelector.list { background-image: url(/img/list-box-white.svg); }
+.Team .participantSelector:hover { background-color: #76858c; }
+*/
+div.teamDetails { padding: 16px; text-align: center;  border: 1px solid var(--cs-row-separator, #E1E7F4); border-radius: 4px; padding: 16px; }
+div.teamInfo { display: flex; flex-flow: row wrap; justify-content: space-around; gap: 16px; }
+div.teamInfo div {  flex-basis: 45%; flex-shrink: 0; }
+div.nextTeamMatch { text-align: center;  border: 1px solid var(--cs-row-separator, #E1E7F4); border-radius: 4px; padding: 16px; }
+div.nextTeamMatch div { line-height: 10px; margin: 4px; margin-left: 0; margin-bottom: 20px; }
+div.nextTeamMatch img { height: 20px; }
+div.nextTeamMatch h2 { margin-top: 0; }
+div.nextTeamMatch h3, div.teamDetails h3 { margin: 4px 0;}
+div.nextTeamMatch a, div.teamDetails a {  }
+div.nextTeamMatch .date { color: #415159; font-weight: 700; margin-bottom: 5px; }
+div.nextTeamMatch .date img { height: 20px; vertical-align: top; padding-top: 2px; margin-right: 8px; }
+
+</style>
+<script>
+function loadParticipantsView (id) {
+  var view = '';
+  var boxView = $('.Team .participantSelector').hasClass('box');
+  if ( boxView ) {
+    view = '&view=list';
+  }
+  $('.Team .participants').html('<div style="text-align: center;"><div class="throbber-loader"></div></div>');
+  $('.Team .participants').load('/ajax/team/participants.php?id='+id+view, function() {
+    if ( boxView ) {
+      $('.Team .participantSelector').removeClass('box').addClass('list');
+    } else {
+      $('.Team .participantSelector').removeClass('list').addClass('box');
+    }
+  });
+};
+</script>
+<div class="profilePage Team content">
+  <div class="likesharecontainer"><div id="LikeBtn" class="noPrint ">
+  <span>Follow</span>
+  <form method="post" onsubmit="return false;">
+  <input type="hidden" name="like" value="1" />
+  <div id="dislike" class="disabled hide hideOnDocClick">You need to log in to perform this action</div>
+</form>
+</div><div id="ShareBtn" class="CSModalBtn noPrint">
+  <div></div>
+  <div></div>
+  <div id="ShareBox" class="CSModalBox">
+    <h2>Share this page</h2>
+    <div>
+      <div><input name="url" value="https://cuescore.com/team/Infinity+7/31035883" class="sharelink fullWidth" onclick="$(this).select();" /></div>
+    </div>
+      
+  </div>
+</div></div>
+  
+  <div style="margin-top: 64px;">
+  
+    <div class="participants">
+      <div class="participantList">  <div id="participant-1162192" class="participant noPrint">
+    <a href="//cuescore.com/player/Pascal+Some/1162192"><img src="//img.cuescore.com/image/f/3/f2a539b99d4728fd88f84bebbb21b5a9.png?t=1772012336" /></a>
+    <img class="flag" src="/img/flags/png-country-4x2-none/res-40x30/nl.png" alt="Countryflag" title="Netherlands" />
+    <div class="desc">
+      <span class="name"><a href="//cuescore.com/player/Pascal+Some/1162192">Pascal Some</a></span>
+      <div></div>
+      <div>&nbsp;</div>
+    </div>
+  </div>
+  <div id="participant-31460974" class="participant noPrint">
+    <a href="//cuescore.com/player/Hans+Wentholt/31460974"><img src="//img.cuescore.com/image/6/3/67bc87a0807ae4b555f82c162b750ead.png?t=1757103479" /></a>
+    <img class="flag" src="/img/flags/png-country-4x2-none/res-40x30/nl.png" alt="Countryflag" title="Netherlands" />
+    <div class="desc">
+      <span class="name"><a href="//cuescore.com/player/Hans+Wentholt/31460974">Hans Wentholt</a></span>
+      <div></div>
+      <div><span class="teamCaptain">Captain <img src="/img/captain.svg" alt="Captain" title="Captain" /></span></div>
+    </div>
+  </div>
+  <div id="participant-62332255" class="participant noPrint">
+    <a href="//cuescore.com/player/Anthony+Lichtenberg/62332255"><img src="//img.cuescore.com/image/8/3/862c792ba8eb7f97e626fbe6cbcc59f6.png" /></a>
+    <img class="flag" src="/img/flags/png-country-4x2-none/res-40x30/nl.png" alt="Countryflag" title="Netherlands" />
+    <div class="desc">
+      <span class="name"><a href="//cuescore.com/player/Anthony+Lichtenberg/62332255">Anthony Lichtenberg</a></span>
+      <div></div>
+      <div>&nbsp;</div>
+    </div>
+  </div>
+  <div id="participant-66061930" class="participant noPrint">
+    <a href="//cuescore.com/player/Rik+van+der+Laan/66061930"><img src="//img.cuescore.com/image/8/3/862c792ba8eb7f97e626fbe6cbcc59f6.png" /></a>
+    <img class="flag" src="/img/flags/png-country-4x2-none/res-40x30/nl.png" alt="Countryflag" title="Netherlands" />
+    <div class="desc">
+      <span class="name"><a href="//cuescore.com/player/Rik+van+der+Laan/66061930">Rik van der Laan</a></span>
+      <div></div>
+      <div>&nbsp;</div>
+    </div>
+  </div>
+  <div id="participant-66061939" class="participant noPrint">
+    <a href="//cuescore.com/player/Tijmen+van+Dijk/66061939"><img src="//img.cuescore.com/image/8/3/862c792ba8eb7f97e626fbe6cbcc59f6.png" /></a>
+    <img class="flag" src="/img/flags/png-country-4x2-none/res-40x30/nl.png" alt="Countryflag" title="Netherlands" />
+    <div class="desc">
+      <span class="name"><a href="//cuescore.com/player/Tijmen+van+Dijk/66061939">Tijmen van Dijk</a></span>
+      <div></div>
+      <div>&nbsp;</div>
+    </div>
+  </div>
+  <div id="participant-86751748" class="participant noPrint">
+    <a href="//cuescore.com/player/Dimitrios+Firfilionis/86751748"><img src="//img.cuescore.com/image/0/3/0430f9a89bf4545db6d0ac765342a9b5.png?t=1791839114" /></a>
+    <img class="flag" src="/img/flags/png-country-4x2-none/res-40x30/gr.png" alt="Countryflag" title="Greece" />
+    <div class="desc">
+      <span class="name"><a href="//cuescore.com/player/Dimitrios+Firfilionis/86751748">Dimitrios Firfilionis</a></span>
+      <div></div>
+      <div>&nbsp;</div>
+    </div>
+  </div>
+  <div id="participant-9201657" class="participant noPrint">
+    <a href="//cuescore.com/player/Mohammed+Fortass/9201657"><img src="//img.cuescore.com/image/8/3/862c792ba8eb7f97e626fbe6cbcc59f6.png" /></a>
+    <img class="flag" src="/img/flags/png-country-4x2-none/res-40x30/nl.png" alt="Countryflag" title="Netherlands" />
+    <div class="desc">
+      <span class="name"><a href="//cuescore.com/player/Mohammed+Fortass/9201657">Mohammed Fortass</a></span>
+      <div></div>
+      <div>&nbsp;</div>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="clear">
+  <div>
+    <div class="content teamInfo">
+      <div class="teamDetails">
+        <h3>Venue</h3>
+<div><a href="//cuescore.com/venue/Infinity%2C+Poolcafe/1168038">Infinity, Poolcafe</a></div>
+        
+        
+        <h3>Day / Time</h3>
+<div>Tuesday 20:00</div>
+      </div>
+      <div class="nextTeamMatch" style=" background-color: #0E2666; padding: 20px;">
+        <h2 style="color: #FFF;">Next match</h2>
+            <img src="/img/calendar-white.svg" alt="" /> &nbsp;Nov 11, 2026, 8:00 PM
+  <h3>Opponent</h3>
+  <div><a class="opponent" href="//cuescore.com/team/Poolseye/85118323">Poolseye</a></div>
+  <h3>Venue</h3>
+<div><a href="//cuescore.com/venue/Hob+Nijmegen/1172305">Hob Nijmegen</a></div>         
+  <h3>Tournament</h3>
+  <div><a href="//cuescore.com/tournament/Pool+Gelderland+Tweede+klasse+2026%252F2027/83574409">Pool Gelderland Tweede klasse 2026/2027</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="profilePage Team content" style="margin-top: 20px;">
+  <div class="teamTournamentStandings">
+  <h2>Round-robin standings</h2>
+  <h3>Pool Gelderland Tweede klasse 2026/2027</h3>
+  <div class="date" style="line-height: 24px;"><img src="/img/calendar-grey.svg" alt="" style="vertical-align: top; height: 20px;" /> &nbsp; August 31 - June 27, 2027</div>
+  
+<div class="clear" style="max-width: 100%; overflow-x: auto;">
+<table id="standingTableRR" class="standard">  <thead>
+    <tr>
+      <th class="header center" rel="tooltip" title="Position">Pos</th>
+      <th class="header">Name</th>
+      <th class="header center number played" title="Matches played" rel="tooltip">Played</th>
+      <th class="header center number won" title="Matches won" rel="tooltip">Win</th>
+      <th class="header center number ties" title="Tied matches" rel="tooltip">Tie</th>
+      <th class="header center number losses" title="Matches lost" rel="tooltip">Lose</th>
+      
+      <th class="header center frameWins" rel="tooltip" title="Win score">ws</th>
+      <th class="header center frameLosses" rel="tooltip" title="Lose score">ls</th>
+      <th class="header center frameScore" rel="tooltip" title="Score difference (+/-)">sd</th>
+      <th class="header center runouts" rel="tooltip" title="Runouts">RO</th>
+      <th class="header center lagWins" rel="tooltip" title="Lags won">Lags</th>
+      <th class="header center bonus" rel="tooltip" title="">Bonus</th>
+      <th class="header right average" rel="tooltip" title="Average">avg</th>
+      <th class="header center points">Pts</th>
+      <!--<th class="header right">Rank</th>-->
+    </tr>
+    </thead><tbody>    <tr class="">
+      <th class="center">1</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Get Racked 8: De Gulden Tip</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">6</td>
+      <td class="center ties">1</td>
+      <td class="center losses">0</td>
+      
+      
+      <td class="center frameWins">37</td>
+      <td class="center frameLosses">5</td>
+      <td class="center frameScore">32</td>
+      <td class="center runouts">1</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">6</td>
+      <td class="right average">0.881</td>
+      <td class="center points">43</td>
+      <!--<td class="center points">0-0 (6.5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">2</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Goed Opgelost</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">6</td>
+      <td class="center ties">0</td>
+      <td class="center losses">1</td>
+      
+      
+      <td class="center frameWins">32</td>
+      <td class="center frameLosses">10</td>
+      <td class="center frameScore">22</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">6</td>
+      <td class="right average">0.762</td>
+      <td class="center points">38</td>
+      <!--<td class="center points">0-0 (6)</td>-->
+  </tr>    <tr class="">
+      <th class="center">3</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Poolseye</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">4</td>
+      <td class="center ties">2</td>
+      <td class="center losses">1</td>
+      
+      
+      <td class="center frameWins">28</td>
+      <td class="center frameLosses">14</td>
+      <td class="center frameScore">14</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">4</td>
+      <td class="right average">0.667</td>
+      <td class="center points">32</td>
+      <!--<td class="center points">0-0 (5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">4</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">InfinlTy & CTS Masters</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">3</td>
+      <td class="center ties">3</td>
+      <td class="center losses">1</td>
+      
+      
+      <td class="center frameWins">25</td>
+      <td class="center frameLosses">17</td>
+      <td class="center frameScore">8</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">3</td>
+      <td class="right average">0.595</td>
+      <td class="center points">28</td>
+      <!--<td class="center points">0-0 (4.5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">5</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Teflon Titans</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">3</td>
+      <td class="center ties">1</td>
+      <td class="center losses">3</td>
+      
+      
+      <td class="center frameWins">23</td>
+      <td class="center frameLosses">19</td>
+      <td class="center frameScore">4</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">3</td>
+      <td class="right average">0.548</td>
+      <td class="center points">26</td>
+      <!--<td class="center points">0-0 (3.5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">6</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Chalk Dirty To Me</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">1</td>
+      <td class="center ties">3</td>
+      <td class="center losses">3</td>
+      
+      
+      <td class="center frameWins">18</td>
+      <td class="center frameLosses">24</td>
+      <td class="center frameScore">-6</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">1</td>
+      <td class="right average">0.429</td>
+      <td class="center points">19</td>
+      <!--<td class="center points">0-0 (2.5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">7</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Infinity 7</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">2</td>
+      <td class="center ties">2</td>
+      <td class="center losses">3</td>
+      
+      
+      <td class="center frameWins">17</td>
+      <td class="center frameLosses">25</td>
+      <td class="center frameScore">-8</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">2</td>
+      <td class="right average">0.405</td>
+      <td class="center points">19</td>
+      <!--<td class="center points">0-0 (3)</td>-->
+  </tr>    <tr class="">
+      <th class="center">8</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Tetra Hydros</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">1</td>
+      <td class="center ties">1</td>
+      <td class="center losses">5</td>
+      
+      
+      <td class="center frameWins">13</td>
+      <td class="center frameLosses">29</td>
+      <td class="center frameScore">-16</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">1</td>
+      <td class="right average">0.31</td>
+      <td class="center points">14</td>
+      <!--<td class="center points">0-0 (1.5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">9</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Infinity Ted van de Parre's Dreamteam</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">1</td>
+      <td class="center ties">2</td>
+      <td class="center losses">4</td>
+      
+      
+      <td class="center frameWins">12</td>
+      <td class="center frameLosses">30</td>
+      <td class="center frameScore">-18</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">1</td>
+      <td class="right average">0.286</td>
+      <td class="center points">13</td>
+      <!--<td class="center points">0-0 (2)</td>-->
+  </tr>    <tr class="">
+      <th class="center">10</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Breaking Baddies</span></td>
+      <td class="center played">7</td>
+      <td class="center wins">0</td>
+      <td class="center ties">1</td>
+      <td class="center losses">6</td>
+      
+      
+      <td class="center frameWins">5</td>
+      <td class="center frameLosses">37</td>
+      <td class="center frameScore">-32</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">0</td>
+      <td class="right average">0.119</td>
+      <td class="center points">5</td>
+      <!--<td class="center points">0-0 (0.5)</td>-->
+  </tr></tbody></table></div>
+
+  <p><a style="" href="//cuescore.com/tournament/Pool+Gelderland+Tweede+klasse+2026%252F2027/83574409">Show tournament page</a></p>
+</div>
+</div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <style>
+#cs-feedback-container { margin: 8px auto; text-align: center; }
+button.feedback { background: #467df7 url(/img/material/feedback-icon-white.svg) left 8px center/ 20px no-repeat; border-radius: 4px; color: #fff; padding: 8px 16px 8px 32px; border: 0; font-weight: 600; cursor: pointer; }
+button.feedback:hover { opacity: 0.8; }
+</style>
+<div id="cs-feedback-container">
+  <button class="save feedback" onclick="CueScore.ModalLoader.open('<cs-feedback></cs-feedback>','top');">Feedback</button>
+</div>
+<div id="Footer">
+  
+    <div class="logo center"><a href="/about"><img src="/img/cuescore-logo-white.svg" alt="CueScore Logo"></a></div>
+    <div class="copyright"><a href="/about">© 2015-2026 CueScore International</a></div>
+  
+  <div class="policies" style="padding: 10px; margin-top: 20px;">
+    <div style="display: flex; justify-content: space-between; max-width: 450px; margin: 0 auto;">
+      <a href="/policy/cookie">Cookie policy</a>
+      <a href="/policy/privacy">Privacy policy</a>
+      <a href="/tos/">Terms of service</a>
+    </div>
+  </div>
+</div>
+    <div data-fuse="23202285760" style="position: sticky; bottom: 0; z-index: 1000;"></div>
+
+    
+    
+  </body>
+</html>

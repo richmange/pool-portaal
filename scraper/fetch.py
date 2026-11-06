@@ -96,6 +96,8 @@ def player_ids_from_mvp():
     ids = set()
     for f in (RAW / "seasons").glob("*/mvp.html"):
         ids |= set(re.findall(r"/player/[^/]+/(\d+)", f.read_text(encoding="utf-8")))
+    for f in (RAW / "club").glob("team_*.html"):
+        ids |= set(re.findall(r"/player/[^/]+/(\d+)", f.read_text(encoding="utf-8")))
     return ids
 
 
@@ -120,6 +122,11 @@ def fetch_club():
             continue
         out.append({"id": int(tid), "slug": slug, "name": j.get("name"), "status": j.get("status"), "start": j.get("starttime"),
                     "end": j.get("stoptime"), "discipline": j.get("discipline"), "players": len(j.get("standings") or []) if isinstance(j.get("standings"), list) else 0})
+    for t in c["teams"]:  # spelerslijst per team (ook spelers die nog geen partij speelden)
+        if t.get("teamId"):
+            th = get(f"https://cuescore.com/team/t/{t['teamId']}")
+            if th:
+                save(RAW / "club" / f"team_{t['teamId']}.html", th)
     save(RAW / "club" / "tournaments.json", json.dumps(out, ensure_ascii=False))
     print(f"Verenigingstoernooien: {len(out)}")
 
@@ -129,8 +136,8 @@ def main():
         print(f"== {comp['label']}")
         for season in comp["seasons"]:
             fetch_season(season)
-    fetch_ratings(player_ids_from_mvp())
     fetch_club()
+    fetch_ratings(player_ids_from_mvp())
 
 
 if __name__ == "__main__":

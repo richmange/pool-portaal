@@ -1,17 +1,16 @@
 // Verenigingspagina's (Infinity): overzicht over alle teams van de vereniging, in alle competities.
 // Gebruikt de helpers uit app.js (esc, pct, fmt, dt, dtl, form, ...) en de data uit data/infinity.js (window.POOL_CLUB).
 
-const CLUB_ROUTES = { "": "overzicht", standen: "standen", mvp: "mvp", spelers: "spelers", weetjes: "weetjes", toernooien: "toernooien", lucky9: "lucky9", scorebord: "scorebord", regels: "regels", over: "over" };
+const CLUB_ROUTES = { "": "overzicht", standen: "standen", mvp: "mvp", ranking: "ranking", spelers: "spelers", weetjes: "weetjes", toernooien: "toernooien", lucky9: "lucky9" };
 const CLUB_NAV = `
     <a href="#/" data-r="">Overzicht</a>
     <a href="#/standen" data-r="standen">Standen</a>
     <a href="#/mvp" data-r="mvp">MVP</a>
+    <a href="#/ranking" data-r="ranking">Ranking</a>
     <a href="#/spelers" data-r="spelers">Top spelers</a>
     <a href="#/weetjes" data-r="weetjes">Weetjes</a>
     <a href="#/toernooien" data-r="toernooien">Toernooien</a>
-    <a href="#/lucky9" data-r="lucky9">Lucky 9</a>
-    <a href="#/scorebord" data-r="scorebord">Scorebord</a>
-    <a href="#/regels" data-r="regels">Regels</a>`;
+    <a href="#/lucky9" data-r="lucky9">Lucky 9</a>`;
 const CLUB_TABBAR = `
   <a href="#/" data-r=""><span>🏠</span>Home</a>
   <a href="#/standen" data-r="standen"><span>📊</span>Standen</a>
@@ -23,7 +22,12 @@ const clubViews = {};
 let C; // club-data
 const cName = (id) => C.members.find((m) => m.id === id)?.name ?? id;
 const cComp = (id) => C.members.find((m) => m.id === id)?.classes[0]?.comp;
-const cPl = (id) => { const c = cComp(id); return c ? `<a href="#/${c}/speler/${id}">${esc(cName(id))}</a>` : esc(cName(id)); };
+const cPl = (id) => {
+  const m = C.members.find((x) => x.id === id), c = cComp(id);
+  if (!m) return esc(id);
+  if (m.inComp && c) return `<a href="#/${c}/speler/${id}">${esc(m.name)}</a>`;
+  return `<a href="https://cuescore.com/player/${encodeURIComponent(m.name).replace(/%20/g, "+")}/${id}" target="_blank" rel="noopener">${esc(m.name)}</a>`;
+};
 const cTeamLink = (t) => (t.found ? `<a href="#/${t.comp}/team/${t.teamId}">${esc(t.name)}</a>` : esc(t.name));
 const memberTeams = (m) => m.teams.map((t) => esc(t.name)).join(" + ");
 const POS_CLS = (t) => (t.table.pos <= t.promotion ? "green" : t.relegation && t.table.pos > t.nTeams - t.relegation ? "red" : "");
@@ -81,6 +85,15 @@ clubViews.mvp = () => {
   <div class="card tw"><table class="sortable"><thead><tr><th class="n" data-s>#</th><th data-s>Speler</th><th data-s>Team</th><th class="n" data-s>MVP%</th><th class="n" data-s>Potten</th><th class="n hide-s" data-s>Plek in klasse</th><th class="n hide-s" data-s>Rating</th></tr></thead><tbody>
   ${ranked.map((r, i) => { const m = byId[r.id], c = m.classes.find((x) => x.mvpPos != null) || m.classes[0]; return `<tr><td class="n">${i + 1}</td><td>${cPl(r.id)}</td><td class="small">${memberTeams(m)}</td><td class="n bold" data-v="${r.v}">${fmt(r.v)}%</td><td class="n">${r.mp}</td><td class="n hide-s" data-v="${c.mvpPos ?? 999}">${c.mvpPos ?? "–"} <span class="mute small">van ${c.of} · ${esc(c.compLabel.replace("Gelderland ", ""))}</span></td><td class="n hide-s">${m.rating}</td></tr>`; }).join("")}</tbody></table></div>
   ${ranked.length ? "" : '<p class="empty">Nog te weinig potten gespeeld voor een MVP-lijst.</p>'}`;
+};
+
+clubViews.ranking = () => {
+  const rows = C.members.filter((m) => m.rated).sort((a, b) => b.rating - a.rating);
+  const un = C.members.filter((m) => !m.rated);
+  return `<h1>Ranking Infinity</h1><p class="mute">Alle Infinity-spelers op persoonlijke KNBB Pool Rating (Elo-systeem), over alle competities heen. Het pijltje toont het verloop over de laatste 15 partijen.</p>
+  <div class="card tw"><table class="sortable"><thead><tr><th class="n" data-s>#</th><th data-s>Speler</th><th data-s>Team</th><th class="n" data-s>Rating</th><th class="n hide-s" data-s>Seizoen ±</th><th class="hide-s">Verloop</th><th class="n hide-s" data-s>Totaal W-V</th></tr></thead><tbody>
+  ${rows.map((m, i) => `<tr><td class="n">${i + 1}</td><td>${cPl(m.id)}</td><td class="small">${memberTeams(m)}</td><td class="n bold">${m.rating}</td><td class="n hide-s ${m.delta >= 0 ? "win" : "lose"}" data-v="${m.delta}">${m.matches ? sgn(m.delta) : "–"}</td><td class="hide-s">${spark(m.trend)}</td><td class="n hide-s" data-v="${m.career[0]}">${m.career[0]}–${m.career[1]}</td></tr>`).join("")}</tbody></table></div>
+  ${un.length ? `<p class="small mute" style="margin-top:10px">Nog geen rating: ${un.map((m) => esc(m.name)).join(", ")}.</p>` : ""}`;
 };
 
 clubViews.spelers = () => {

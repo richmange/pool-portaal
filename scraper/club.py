@@ -4,6 +4,8 @@ Invoer: de resultaten van build.build() per competitie (dict `outs`) en config["
 Uitvoer: één dict voor site/data/infinity.json.
 """
 import json
+import re
+import urllib.parse
 from collections import defaultdict
 from pathlib import Path
 
@@ -87,7 +89,9 @@ def build_club(cfg, outs):
                 continue
             ordered_rating = sorted((x["rating"] for x in o["players"].values()), reverse=True)
             m = members.setdefault(pid, {"id": pid, "name": p["name"], "teams": [], "disc": {}, "dbl": [0, 0, 0, 0], "rating": p["rating"],
-                                         "rated": p["rated"], "streak": p["streak"], "delta": 0, "matches": 0, "mvp": None, "mp": 0, "classes": []})
+                                         "rated": p["rated"], "streak": p["streak"], "delta": 0, "matches": 0, "mvp": None, "mp": 0, "classes": [], "inComp": True,
+                                         "career": [(p["career"] or {}).get("wins", 0), (p["career"] or {}).get("losses", 0)],
+                                         "trend": [r["r"] for r in p["hist"][:15]][::-1]})
             m["teams"].append({"name": ct["name"], "comp": ct["comp"]})
             for d, v in p["disc"].items():
                 a = m["disc"].setdefault(d, [0, 0, 0, 0])
@@ -104,6 +108,27 @@ def build_club(cfg, outs):
             if p["mvp"] is not None and (m["mvp"] is None or p["mvp"] > m["mvp"]):
                 m["mvp"] = p["mvp"]
             m["mp"] += r["mp"] if r else 0
+
+    # ----- spelers die in de teamlijst staan maar nog geen partij speelden
+    from build import parse_rating_page
+    for ct in club["teams"]:
+        f = RAW / "club" / f"team_{ct.get('teamId')}.html"
+        if not f.exists():
+            continue
+        for slug, pid in sorted(set(re.findall(r'/player/([^/"]+)/(\d+)', f.read_text(encoding="utf-8")))):
+            pid = int(pid)
+            name = urllib.parse.unquote_plus(slug)
+            m = members.get(pid)
+            if m is None:
+                rp = RAW / "rating_players" / f"{pid}.html"
+                h = parse_rating_page(rp.read_text(encoding="utf-8")) if rp.exists() else {"rating": None, "wins": 0, "losses": 0, "hist": []}
+                m = members[pid] = {"id": pid, "name": name, "teams": [], "disc": {}, "dbl": [0, 0, 0, 0], "rating": h["rating"] or 0, "rated": bool(h["rating"]),
+                                    "streak": 0, "delta": 0, "matches": 0, "mvp": None, "mp": 0, "classes": [], "inComp": False,
+                                    "career": [h["wins"], h["losses"]], "trend": [r["r"] for r in h["hist"][:15]][::-1]}
+            if not any(t["name"] == ct["name"] for t in m["teams"]):
+                m["teams"].append({"name": ct["name"], "comp": ct.get("comp")})
+            if not m["classes"]:
+                m["classes"].append({"comp": ct.get("comp"), "compLabel": "", "mvpPos": None, "of": 0, "ratingPos": None, "players": 0, "team": ct["name"]})
 
     # ----- ranglijsten
     ml = list(members.values())
