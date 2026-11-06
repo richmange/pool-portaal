@@ -535,7 +535,7 @@ const routes = { "": "dashboard", stand: "stand", programma: "programma", wedstr
 // bezoekersstatistieken (GoatCounter, zonder cookies): elke tab telt als eigen paginaweergave
 let lastTracked = null;
 function track() {
-  const path = "/" + (curComp || "") + "/" + location.hash.replace(/^#\/?/, "");
+  const path = "/" + location.hash.replace(/^#\/?/, "");
   if (path === lastTracked) return;
   lastTracked = path;
   let tries = 0;
@@ -602,10 +602,10 @@ async function render() {
   if (KEYS.includes(segs[0])) { // #/eerste/team/123 -> competitie kiezen en voorvoegsel weghalen
     key = segs[0];
     segs = segs.slice(1);
-    history.replaceState(null, "", "#/" + segs.join("/"));
   }
-  if (!KEYS.includes(key)) key = COMPS.comps[0].key;
+  if (!KEYS.includes(key)) key = CLUB_KEY; // eerste bezoek: Infinity-pagina
   store(key);
+  history.replaceState(null, "", "#/" + key + "/" + segs.join("/")); // adresbalk is altijd een deelbare link
   if (key !== curComp) {
     try { await useComp(key); } catch (e) { console.error(e); $app.innerHTML = `<p class="empty">Data kon niet worden geladen: ${esc(e.message)}</p>`; return; }
   }
@@ -633,7 +633,7 @@ async function render() {
 function init() {
   const c = document.getElementById("comp");
   c.innerHTML = `<option value="${CLUB_KEY}">${esc(COMPS.club.label)} (vereniging)</option>` + COMPS.comps.map((x) => `<option value="${x.key}">${esc(x.short)}</option>`).join("");
-  c.onchange = () => { store(c.value); if (location.hash === "#/" || location.hash === "" ) render(); else location.hash = "#/"; };
+  c.onchange = () => { store(c.value); location.hash = "#/" + c.value + "/"; };
   const th = document.getElementById("theme");
   th.value = document.documentElement.dataset.theme || "blue";
   th.onchange = () => { document.documentElement.dataset.theme = th.value; try { localStorage.setItem("theme", th.value); } catch (e) {} };
