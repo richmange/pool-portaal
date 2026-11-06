@@ -582,6 +582,7 @@ async function useComp(key) {
   navHtml.comp ??= nav.innerHTML; navHtml.tab ??= tab.innerHTML;
   nav.innerHTML = club ? CLUB_NAV : navHtml.comp;
   tab.innerHTML = club ? CLUB_TABBAR : navHtml.tab;
+  if (!club && key !== "tweede") nav.querySelectorAll('a[data-r="regels"]').forEach((a) => a.remove()); // regels gelden alleen voor de Tweede klasse
   document.getElementById("more").onclick = (e) => { e.preventDefault(); nav.classList.toggle("open"); window.scrollTo(0, 0); };
   document.getElementById("seasonLabel").textContent = club ? C.meta.name : D.meta.name.replace(/^Pool /, "");
   document.getElementById("updated").textContent = "Bijgewerkt " + dtl.format(new Date((club ? C.meta : D.meta).updated));
@@ -611,7 +612,7 @@ async function render() {
   const club = key === CLUB_KEY;
   const [r = "", ...args] = segs;
   const table = club ? CLUB_ROUTES : routes;
-  const name = table[r] ?? (club ? "overzicht" : "dashboard");
+  const name = (!club && r === "regels" && key !== "tweede" ? null : table[r]) ?? (club ? "overzicht" : "dashboard");
   const vs = club && clubViews[name] ? clubViews : views;
   if (window.SCOREBORD) SCOREBORD.release();
   try { $app.innerHTML = vs[name](...args); } catch (e) { console.error(e); $app.innerHTML = `<p class="empty">Er ging iets mis bij het weergeven van deze pagina.</p>`; }
