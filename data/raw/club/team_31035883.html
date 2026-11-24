@@ -12,11 +12,11 @@
     <title>Infinity 7</title>
     <script src="/js/jquery/3.7.1/jquery-3.7.1.min.js"></script>
     <script defer src="https://js.stripe.com/v3/"></script>
-    <script defer type="text/javascript" src="/js/cs/cs.min-1.93.js"></script>
-<script defer type="text/javascript" src="/js/cs/cs.lang.php?v=1.93"></script>
-<script defer type="text/javascript" src="/js/cs/jquery.cs.min-1.93.js"></script>
-<script type="text/javascript" src="/js/cuescore.min-1.93.js"></script>
-    <script id="cs-code-api-js" data-version="3.99" defer type="text/javascript" src="https://api.cuescore.com/js/CueScore.min-3.99.js"></script>
+    <script defer type="text/javascript" src="/js/cs/cs.min-1.94.js"></script>
+<script defer type="text/javascript" src="/js/cs/cs.lang.php?v=1.94"></script>
+<script defer type="text/javascript" src="/js/cs/jquery.cs.min-1.94.js"></script>
+<script type="text/javascript" src="/js/cuescore.min-1.94.js"></script>
+    <script id="cs-code-api-js" data-version="4.08" defer type="text/javascript" src="https://api.cuescore.com/js/CueScore.min-4.08.js"></script>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
@@ -314,7 +314,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 #header a.personal-create { border-radius: 18px; padding: 0 !important; margin-left: 8px; height: 36px; width: 36px; min-width: 36px; background: #467DF7 url(/img/scoreboard-plus.svg) center center / 14px no-repeat; }
 #header a.personal-create:hover { background-color: #4074E8 !important; }
 #header a.home { background: url(/img/cs_pict.svg) center center / 28px no-repeat; }
-#header a.live { margin-left: auto; }
+#header a.tournaments { margin-left: auto; }
 #header.nouser a.home { background: transparent url(/img/cuescore-logo-white.svg) center center / 72px  no-repeat; width: 104px; }
 
 #header a.selected { border-top: 4px solid transparent; border-bottom: 4px solid #FF9800; }
@@ -349,6 +349,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 #header .user .list-1 a:hover { background-color: var(--cs-row-hover-bg, #3562CB); }
     
 #header .user .list-1 a.dashboard::before { background-image: url(/img/material/dashboard-icon.svg); }
+#header .user .list-1 a.following::before { background-image: url(/img/material/check-icon.svg); }
 #header .user .list-1 a.orders::before { background-image: url(/img/material/shopping-cart-icon.svg); }
 #header .user .list-1 a.subscription::before { background-image: url(/img/material/credit-card-icon.svg); }
 #header .user .list-1 a.settings::before { background-image: url(/img/material/settings-icon.svg); }
@@ -418,9 +419,9 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   #header .circle { margin: 0 4px; }
   #header .user { margin-right: 4px; }
   #proLine .dash .list, #header .dash .list, #header .list, #header .list-1 { position: fixed; top: 52px !important; left: unset; width: fit-content; max-width: 90vw; overflow-y: scroll; }
-  #header > .live,
   #header > .tournaments,
   #header > .leagues, 
+  #header > .video,
   #header > .challenges,
   #header > .news, 
   #header > .upgrade,
@@ -461,14 +462,15 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <div class="list hideOnDocClick"></div>
   </div>
   <a class="personal-create" href="#" title="Personal options" onclick="CueScore.ModalLoader.openSrc('/ajax/player/create-dialog.php'); return false;"></a>
-  <a class="live " href="/live">Live</a>
   <a class="tournaments " href="/tournaments">Tournaments</a>
   <a class="leagues " href="/leagues">Leagues</a>
+  <a class="video " href="/videos">Video</a>
   <a class="challenges " href="/challenges">Challenges</a>
   <a class="news " href="/posts">Posts</a>
   <a class="upgrade " href="/upgrade/">Upgrade</a>
   <div class="more" onclick="toggleDropdown(this);">More
     <nav class="list-1 hideOnDocClick">
+      <a class="live " href="/live">Live</a>
       <a class="h2h " href="/h2h/">Head to head</a>
       <a class="organizations " href="/organizations/">Organizations</a>
       <a class="venues " href="/venues/">Venues</a>
@@ -518,6 +520,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <nav class="list-1 hideOnDocClick">
       <a class="scoreboard icon" href="/scoreboard/?code=personal">Personal scoreboard</a>
       <a class="dashboard icon" href="javascript:void(0);" onclick="toggleList($('#header .dash a').get(0));">Dashboard</a>
+      <a class="following icon" href="/following">Following</a>
       <a class="profile icon" href="">Edit player profile</a>
       <a class="orders icon" href="/home/orders">Orders</a>
       <a class="subscription icon" href="/user/account/">Account</a>
@@ -531,12 +534,13 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
       <div class="hamburger-inner"></div>
     </div>
     <nav class="list-1 hideOnDocClick">
-      <a class="live " href="/live">Live</a>
       <a class="tournaments " href="/tournaments">Tournaments</a>
       <a class="leagues " href="/leagues">Leagues</a>
+      <a class="video " href="/videos">Video</a>
       <a class="challenges " href="/challenges">Challenges</a>
       <a class="news " href="/posts">Posts</a>
       <a class="upgrade " href="/upgrade/">Upgrade</a>
+      <a class="live " href="/live">Live</a>
       <a class="h2h " href="/h2h/">Head to head</a>
       <a class="organizations " href="/organizations/">Organizations</a>
       <a class="venues " href="/venues/">Venues</a>
@@ -548,9 +552,9 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   </div>
 </nav>
 <nav class="secondary">
-  <a class="live " href="/live">Live</a>
   <a class="tournaments " href="/tournaments">Tournaments</a>
   <a class="leagues " href="/leagues">Leagues</a>
+  <a class="video " href="/videos">Video</a>
   <a class="upgrade " href="/upgrade/">Upgrade</a>
 </nav>
 
@@ -731,11 +735,11 @@ function loadParticipantsView (id) {
       </div>
       <div class="nextTeamMatch" style=" background-color: #0E2666; padding: 20px;">
         <h2 style="color: #FFF;">Next match</h2>
-            <img src="/img/calendar-white.svg" alt="" /> &nbsp;Nov 11, 2026, 8:00 PM
+            <img src="/img/calendar-white.svg" alt="" /> &nbsp;Nov 24, 2026, 8:00 PM
   <h3>Opponent</h3>
-  <div><a class="opponent" href="//cuescore.com/team/Poolseye/85118323">Poolseye</a></div>
+  <div><a class="opponent" href="//cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910">InfinlTy &amp; CTS Masters</a></div>
   <h3>Venue</h3>
-<div><a href="//cuescore.com/venue/Hob+Nijmegen/1172305">Hob Nijmegen</a></div>         
+<div><a href="//cuescore.com/venue/Infinity%2C+Poolcafe/1168038">Infinity, Poolcafe</a></div>         
   <h3>Tournament</h3>
   <div><a href="//cuescore.com/tournament/Pool+Gelderland+Tweede+klasse+2026%252F2027/83574409">Pool Gelderland Tweede klasse 2026/2027</a></div>
       </div>
@@ -771,182 +775,182 @@ function loadParticipantsView (id) {
     </thead><tbody>    <tr class="">
       <th class="center">1</th>
       <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Get Racked 8: De Gulden Tip</span></td>
-      <td class="center played">7</td>
-      <td class="center wins">6</td>
+      <td class="center played">8</td>
+      <td class="center wins">7</td>
       <td class="center ties">1</td>
       <td class="center losses">0</td>
       
       
-      <td class="center frameWins">37</td>
+      <td class="center frameWins">43</td>
       <td class="center frameLosses">5</td>
-      <td class="center frameScore">32</td>
+      <td class="center frameScore">38</td>
       <td class="center runouts">1</td>
       <td class="center lagWins">0</td>
-      <td class="center bonus">6</td>
-      <td class="right average">0.881</td>
-      <td class="center points">43</td>
-      <!--<td class="center points">0-0 (6.5)</td>-->
+      <td class="center bonus">7</td>
+      <td class="right average">0.896</td>
+      <td class="center points">50</td>
+      <!--<td class="center points">0-0 (7.5)</td>-->
   </tr>    <tr class="">
       <th class="center">2</th>
       <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Goed Opgelost</span></td>
-      <td class="center played">7</td>
+      <td class="center played">8</td>
       <td class="center wins">6</td>
       <td class="center ties">0</td>
+      <td class="center losses">2</td>
+      
+      
+      <td class="center frameWins">34</td>
+      <td class="center frameLosses">14</td>
+      <td class="center frameScore">20</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">6</td>
+      <td class="right average">0.708</td>
+      <td class="center points">40</td>
+      <!--<td class="center points">0-0 (6)</td>-->
+  </tr>    <tr class="">
+      <th class="center">3</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Teflon Titans</span></td>
+      <td class="center played">9</td>
+      <td class="center wins">5</td>
+      <td class="center ties">1</td>
+      <td class="center losses">3</td>
+      
+      
+      <td class="center frameWins">34</td>
+      <td class="center frameLosses">20</td>
+      <td class="center frameScore">14</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">5</td>
+      <td class="right average">0.63</td>
+      <td class="center points">39</td>
+      <!--<td class="center points">0-0 (5.5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">4</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Poolseye</span></td>
+      <td class="center played">8</td>
+      <td class="center wins">5</td>
+      <td class="center ties">2</td>
       <td class="center losses">1</td>
       
       
       <td class="center frameWins">32</td>
-      <td class="center frameLosses">10</td>
-      <td class="center frameScore">22</td>
+      <td class="center frameLosses">16</td>
+      <td class="center frameScore">16</td>
       <td class="center runouts">0</td>
       <td class="center lagWins">0</td>
-      <td class="center bonus">6</td>
-      <td class="right average">0.762</td>
-      <td class="center points">38</td>
+      <td class="center bonus">5</td>
+      <td class="right average">0.667</td>
+      <td class="center points">37</td>
       <!--<td class="center points">0-0 (6)</td>-->
   </tr>    <tr class="">
-      <th class="center">3</th>
-      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Poolseye</span></td>
-      <td class="center played">7</td>
+      <th class="center">5</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">InfinlTy & CTS Masters</span></td>
+      <td class="center played">8</td>
       <td class="center wins">4</td>
-      <td class="center ties">2</td>
+      <td class="center ties">3</td>
       <td class="center losses">1</td>
       
       
-      <td class="center frameWins">28</td>
-      <td class="center frameLosses">14</td>
-      <td class="center frameScore">14</td>
+      <td class="center frameWins">30</td>
+      <td class="center frameLosses">18</td>
+      <td class="center frameScore">12</td>
       <td class="center runouts">0</td>
       <td class="center lagWins">0</td>
       <td class="center bonus">4</td>
-      <td class="right average">0.667</td>
-      <td class="center points">32</td>
-      <!--<td class="center points">0-0 (5)</td>-->
-  </tr>    <tr class="">
-      <th class="center">4</th>
-      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">InfinlTy & CTS Masters</span></td>
-      <td class="center played">7</td>
-      <td class="center wins">3</td>
-      <td class="center ties">3</td>
-      <td class="center losses">1</td>
-      
-      
-      <td class="center frameWins">25</td>
-      <td class="center frameLosses">17</td>
-      <td class="center frameScore">8</td>
-      <td class="center runouts">0</td>
-      <td class="center lagWins">0</td>
-      <td class="center bonus">3</td>
-      <td class="right average">0.595</td>
-      <td class="center points">28</td>
-      <!--<td class="center points">0-0 (4.5)</td>-->
-  </tr>    <tr class="">
-      <th class="center">5</th>
-      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Teflon Titans</span></td>
-      <td class="center played">7</td>
-      <td class="center wins">3</td>
-      <td class="center ties">1</td>
-      <td class="center losses">3</td>
-      
-      
-      <td class="center frameWins">23</td>
-      <td class="center frameLosses">19</td>
-      <td class="center frameScore">4</td>
-      <td class="center runouts">0</td>
-      <td class="center lagWins">0</td>
-      <td class="center bonus">3</td>
-      <td class="right average">0.548</td>
-      <td class="center points">26</td>
-      <!--<td class="center points">0-0 (3.5)</td>-->
+      <td class="right average">0.625</td>
+      <td class="center points">34</td>
+      <!--<td class="center points">0-0 (5.5)</td>-->
   </tr>    <tr class="">
       <th class="center">6</th>
       <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Chalk Dirty To Me</span></td>
-      <td class="center played">7</td>
-      <td class="center wins">1</td>
-      <td class="center ties">3</td>
-      <td class="center losses">3</td>
-      
-      
-      <td class="center frameWins">18</td>
-      <td class="center frameLosses">24</td>
-      <td class="center frameScore">-6</td>
-      <td class="center runouts">0</td>
-      <td class="center lagWins">0</td>
-      <td class="center bonus">1</td>
-      <td class="right average">0.429</td>
-      <td class="center points">19</td>
-      <!--<td class="center points">0-0 (2.5)</td>-->
-  </tr>    <tr class="">
-      <th class="center">7</th>
-      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Infinity 7</span></td>
-      <td class="center played">7</td>
+      <td class="center played">9</td>
       <td class="center wins">2</td>
-      <td class="center ties">2</td>
-      <td class="center losses">3</td>
+      <td class="center ties">3</td>
+      <td class="center losses">4</td>
       
       
-      <td class="center frameWins">17</td>
-      <td class="center frameLosses">25</td>
-      <td class="center frameScore">-8</td>
+      <td class="center frameWins">22</td>
+      <td class="center frameLosses">32</td>
+      <td class="center frameScore">-10</td>
       <td class="center runouts">0</td>
       <td class="center lagWins">0</td>
       <td class="center bonus">2</td>
-      <td class="right average">0.405</td>
-      <td class="center points">19</td>
-      <!--<td class="center points">0-0 (3)</td>-->
+      <td class="right average">0.407</td>
+      <td class="center points">24</td>
+      <!--<td class="center points">0-0 (3.5)</td>-->
   </tr>    <tr class="">
-      <th class="center">8</th>
-      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Tetra Hydros</span></td>
-      <td class="center played">7</td>
-      <td class="center wins">1</td>
-      <td class="center ties">1</td>
-      <td class="center losses">5</td>
-      
-      
-      <td class="center frameWins">13</td>
-      <td class="center frameLosses">29</td>
-      <td class="center frameScore">-16</td>
-      <td class="center runouts">0</td>
-      <td class="center lagWins">0</td>
-      <td class="center bonus">1</td>
-      <td class="right average">0.31</td>
-      <td class="center points">14</td>
-      <!--<td class="center points">0-0 (1.5)</td>-->
-  </tr>    <tr class="">
-      <th class="center">9</th>
-      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Infinity Ted van de Parre's Dreamteam</span></td>
-      <td class="center played">7</td>
-      <td class="center wins">1</td>
+      <th class="center">7</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Infinity 7</span></td>
+      <td class="center played">8</td>
+      <td class="center wins">2</td>
       <td class="center ties">2</td>
       <td class="center losses">4</td>
       
       
-      <td class="center frameWins">12</td>
-      <td class="center frameLosses">30</td>
-      <td class="center frameScore">-18</td>
+      <td class="center frameWins">19</td>
+      <td class="center frameLosses">29</td>
+      <td class="center frameScore">-10</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">2</td>
+      <td class="right average">0.396</td>
+      <td class="center points">21</td>
+      <!--<td class="center points">0-0 (3)</td>-->
+  </tr>    <tr class="">
+      <th class="center">8</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Infinity Ted van de Parre's Dreamteam</span></td>
+      <td class="center played">8</td>
+      <td class="center wins">1</td>
+      <td class="center ties">2</td>
+      <td class="center losses">5</td>
+      
+      
+      <td class="center frameWins">13</td>
+      <td class="center frameLosses">35</td>
+      <td class="center frameScore">-22</td>
       <td class="center runouts">0</td>
       <td class="center lagWins">0</td>
       <td class="center bonus">1</td>
-      <td class="right average">0.286</td>
-      <td class="center points">13</td>
+      <td class="right average">0.271</td>
+      <td class="center points">14</td>
       <!--<td class="center points">0-0 (2)</td>-->
   </tr>    <tr class="">
-      <th class="center">10</th>
-      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Breaking Baddies</span></td>
-      <td class="center played">7</td>
-      <td class="center wins">0</td>
+      <th class="center">8</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Tetra Hydros</span></td>
+      <td class="center played">8</td>
+      <td class="center wins">1</td>
       <td class="center ties">1</td>
       <td class="center losses">6</td>
       
       
-      <td class="center frameWins">5</td>
-      <td class="center frameLosses">37</td>
-      <td class="center frameScore">-32</td>
+      <td class="center frameWins">13</td>
+      <td class="center frameLosses">35</td>
+      <td class="center frameScore">-22</td>
+      <td class="center runouts">0</td>
+      <td class="center lagWins">0</td>
+      <td class="center bonus">1</td>
+      <td class="right average">0.271</td>
+      <td class="center points">14</td>
+      <!--<td class="center points">0-0 (1.5)</td>-->
+  </tr>    <tr class="">
+      <th class="center">10</th>
+      <td onclick="Cue.Match.selectPlayer(this);"><span class="name">Breaking Baddies</span></td>
+      <td class="center played">8</td>
+      <td class="center wins">0</td>
+      <td class="center ties">1</td>
+      <td class="center losses">7</td>
+      
+      
+      <td class="center frameWins">6</td>
+      <td class="center frameLosses">42</td>
+      <td class="center frameScore">-36</td>
       <td class="center runouts">0</td>
       <td class="center lagWins">0</td>
       <td class="center bonus">0</td>
-      <td class="right average">0.119</td>
-      <td class="center points">5</td>
+      <td class="right average">0.125</td>
+      <td class="center points">6</td>
       <!--<td class="center points">0-0 (0.5)</td>-->
   </tr></tbody></table></div>
 

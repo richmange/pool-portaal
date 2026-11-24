@@ -35,7 +35,7 @@
             "firstname": "Twan",
             "lastname": "Paap",
             "url": "https://cuescore.com/player/Twan+Paap/1164444",
-            "image": "https://img.cuescore.com/image/d/4/d278ef1983f30d0203c041f30b62527b.png?t=1782465571",
+            "image": "https://img.cuescore.com/image/d/3/d278ef1983f30d0203c041f30b62527b.png?t=1782465571",
             "badge": "claimed",
             "badgeDesc": "Verified user",
             "country": {
@@ -57,7 +57,7 @@
             "firstname": "Erik",
             "lastname": "Eltink",
             "url": "https://cuescore.com/player/Erik+Eltink/1665991",
-            "image": "https://img.cuescore.com/image/8/4/897fa22637ae2515c7f59acbf63106ad.png?t=1505217894",
+            "image": "https://img.cuescore.com/image/8/3/897fa22637ae2515c7f59acbf63106ad.png?t=1505217894",
             "badge": "claimed",
             "badgeDesc": "Verified user",
             "country": {
@@ -173,7 +173,7 @@
                     "teamId": 46644538,
                     "name": "Poolhall Junkies 2",
                     "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                    "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                    "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -228,6 +228,7 @@
                 "frameAvg": 0.667,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 84,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -238,6 +239,7 @@
                 "individualScoreLosses": 982,
                 "individualScoreDiff": 124,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 99
@@ -248,7 +250,7 @@
                     "teamId": 30621658,
                     "name": "Goed Opgelost",
                     "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                    "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                    "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -303,6 +305,7 @@
                 "frameAvg": 0.603,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 76,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -313,6 +316,7 @@
                 "individualScoreLosses": 894,
                 "individualScoreDiff": 147,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 87
@@ -323,7 +327,7 @@
                     "teamId": 47037808,
                     "name": "Get Racked 3! de Gulden Snede",
                     "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                    "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                    "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -378,6 +382,7 @@
                 "frameAvg": 0.563,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 71,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -388,6 +393,7 @@
                 "individualScoreLosses": 922,
                 "individualScoreDiff": 233,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 80
@@ -398,7 +404,7 @@
                     "teamId": 31035910,
                     "name": "InfinlTy & CTS Masters",
                     "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                    "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                    "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -453,6 +459,7 @@
                 "frameAvg": 0.524,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 66,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -463,6 +470,7 @@
                 "individualScoreLosses": 1020,
                 "individualScoreDiff": -3,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 75
@@ -473,7 +481,7 @@
                     "teamId": 31035883,
                     "name": "Infinity 7",
                     "url": "https://cuescore.com/team/Infinity+7/31035883",
-                    "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                    "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -528,6 +536,7 @@
                 "frameAvg": 0.5,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 63,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -538,6 +547,7 @@
                 "individualScoreLosses": 1107,
                 "individualScoreDiff": -195,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 70
@@ -548,7 +558,7 @@
                     "teamId": 31041787,
                     "name": "Hobsaké",
                     "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                    "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                    "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -603,6 +613,7 @@
                 "frameAvg": 0.484,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 61,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -613,6 +624,7 @@
                 "individualScoreLosses": 958,
                 "individualScoreDiff": 117,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 66
@@ -623,7 +635,7 @@
                     "teamId": 1176588,
                     "name": "Infinity Ted van de Parre's Dreamteam",
                     "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                    "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                    "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -678,6 +690,7 @@
                 "frameAvg": 0.468,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 59,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -688,6 +701,7 @@
                 "individualScoreLosses": 1066,
                 "individualScoreDiff": -56,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 65
@@ -698,7 +712,7 @@
                     "teamId": 17412007,
                     "name": "Chalk Dirty To Me",
                     "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                    "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                    "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -753,6 +767,7 @@
                 "frameAvg": 0.19,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 24,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -763,6 +778,7 @@
                 "individualScoreLosses": 1169,
                 "individualScoreDiff": -367,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 25
@@ -794,6 +810,7 @@
     "matches": [
         {
             "matchId": 48615901,
+            "url": "https://cuescore.com/match/?matchId=48615901",
             "matchno": 1,
             "roundName": "Round 1",
             "roundCode": "roundX",
@@ -802,7 +819,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -847,7 +864,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -931,6 +948,7 @@
         },
         {
             "matchId": 48615904,
+            "url": "https://cuescore.com/match/?matchId=48615904",
             "matchno": 2,
             "roundName": "Round 1",
             "roundCode": "roundX",
@@ -939,7 +957,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -984,7 +1002,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1068,6 +1086,7 @@
         },
         {
             "matchId": 48615907,
+            "url": "https://cuescore.com/match/?matchId=48615907",
             "matchno": 3,
             "roundName": "Round 1",
             "roundCode": "roundX",
@@ -1076,7 +1095,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1121,7 +1140,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1205,6 +1224,7 @@
         },
         {
             "matchId": 48615910,
+            "url": "https://cuescore.com/match/?matchId=48615910",
             "matchno": 4,
             "roundName": "Round 1",
             "roundCode": "roundX",
@@ -1213,7 +1233,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1258,7 +1278,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1342,6 +1362,7 @@
         },
         {
             "matchId": 48615913,
+            "url": "https://cuescore.com/match/?matchId=48615913",
             "matchno": 5,
             "roundName": "Round 2",
             "roundCode": "roundX",
@@ -1350,7 +1371,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1395,7 +1416,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1479,6 +1500,7 @@
         },
         {
             "matchId": 48615916,
+            "url": "https://cuescore.com/match/?matchId=48615916",
             "matchno": 6,
             "roundName": "Round 2",
             "roundCode": "roundX",
@@ -1487,7 +1509,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1532,7 +1554,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1616,6 +1638,7 @@
         },
         {
             "matchId": 48615919,
+            "url": "https://cuescore.com/match/?matchId=48615919",
             "matchno": 7,
             "roundName": "Round 2",
             "roundCode": "roundX",
@@ -1624,7 +1647,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1669,7 +1692,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1753,6 +1776,7 @@
         },
         {
             "matchId": 48615922,
+            "url": "https://cuescore.com/match/?matchId=48615922",
             "matchno": 8,
             "roundName": "Round 2",
             "roundCode": "roundX",
@@ -1761,7 +1785,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1806,7 +1830,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1890,6 +1914,7 @@
         },
         {
             "matchId": 48615925,
+            "url": "https://cuescore.com/match/?matchId=48615925",
             "matchno": 9,
             "roundName": "Round 3",
             "roundCode": "roundX",
@@ -1898,7 +1923,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1943,7 +1968,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2027,6 +2052,7 @@
         },
         {
             "matchId": 48615928,
+            "url": "https://cuescore.com/match/?matchId=48615928",
             "matchno": 10,
             "roundName": "Round 3",
             "roundCode": "roundX",
@@ -2035,7 +2061,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2080,7 +2106,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2164,6 +2190,7 @@
         },
         {
             "matchId": 48615931,
+            "url": "https://cuescore.com/match/?matchId=48615931",
             "matchno": 11,
             "roundName": "Round 3",
             "roundCode": "roundX",
@@ -2172,7 +2199,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2217,7 +2244,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2301,6 +2328,7 @@
         },
         {
             "matchId": 48615934,
+            "url": "https://cuescore.com/match/?matchId=48615934",
             "matchno": 12,
             "roundName": "Round 3",
             "roundCode": "roundX",
@@ -2309,7 +2337,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2354,7 +2382,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2438,6 +2466,7 @@
         },
         {
             "matchId": 48615937,
+            "url": "https://cuescore.com/match/?matchId=48615937",
             "matchno": 13,
             "roundName": "Round 4",
             "roundCode": "roundX",
@@ -2446,7 +2475,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2491,7 +2520,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2575,6 +2604,7 @@
         },
         {
             "matchId": 48615940,
+            "url": "https://cuescore.com/match/?matchId=48615940",
             "matchno": 14,
             "roundName": "Round 4",
             "roundCode": "roundX",
@@ -2583,7 +2613,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2628,7 +2658,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2712,6 +2742,7 @@
         },
         {
             "matchId": 48615943,
+            "url": "https://cuescore.com/match/?matchId=48615943",
             "matchno": 15,
             "roundName": "Round 4",
             "roundCode": "roundX",
@@ -2720,7 +2751,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2765,7 +2796,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2849,6 +2880,7 @@
         },
         {
             "matchId": 48615946,
+            "url": "https://cuescore.com/match/?matchId=48615946",
             "matchno": 16,
             "roundName": "Round 4",
             "roundCode": "roundX",
@@ -2857,7 +2889,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2902,7 +2934,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2986,6 +3018,7 @@
         },
         {
             "matchId": 48615949,
+            "url": "https://cuescore.com/match/?matchId=48615949",
             "matchno": 17,
             "roundName": "Round 5",
             "roundCode": "roundX",
@@ -2994,7 +3027,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3039,7 +3072,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3123,6 +3156,7 @@
         },
         {
             "matchId": 48615952,
+            "url": "https://cuescore.com/match/?matchId=48615952",
             "matchno": 18,
             "roundName": "Round 5",
             "roundCode": "roundX",
@@ -3131,7 +3165,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3176,7 +3210,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3260,6 +3294,7 @@
         },
         {
             "matchId": 48615955,
+            "url": "https://cuescore.com/match/?matchId=48615955",
             "matchno": 19,
             "roundName": "Round 5",
             "roundCode": "roundX",
@@ -3268,7 +3303,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3313,7 +3348,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3397,6 +3432,7 @@
         },
         {
             "matchId": 48615958,
+            "url": "https://cuescore.com/match/?matchId=48615958",
             "matchno": 20,
             "roundName": "Round 5",
             "roundCode": "roundX",
@@ -3405,7 +3441,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3450,7 +3486,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3534,6 +3570,7 @@
         },
         {
             "matchId": 48615961,
+            "url": "https://cuescore.com/match/?matchId=48615961",
             "matchno": 21,
             "roundName": "Round 6",
             "roundCode": "roundX",
@@ -3542,7 +3579,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3587,7 +3624,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3671,6 +3708,7 @@
         },
         {
             "matchId": 48615964,
+            "url": "https://cuescore.com/match/?matchId=48615964",
             "matchno": 22,
             "roundName": "Round 6",
             "roundCode": "roundX",
@@ -3679,7 +3717,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3724,7 +3762,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3808,6 +3846,7 @@
         },
         {
             "matchId": 48615967,
+            "url": "https://cuescore.com/match/?matchId=48615967",
             "matchno": 23,
             "roundName": "Round 6",
             "roundCode": "roundX",
@@ -3816,7 +3855,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3861,7 +3900,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3945,6 +3984,7 @@
         },
         {
             "matchId": 48615970,
+            "url": "https://cuescore.com/match/?matchId=48615970",
             "matchno": 24,
             "roundName": "Round 6",
             "roundCode": "roundX",
@@ -3953,7 +3993,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3998,7 +4038,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4082,6 +4122,7 @@
         },
         {
             "matchId": 48615973,
+            "url": "https://cuescore.com/match/?matchId=48615973",
             "matchno": 25,
             "roundName": "Round 7",
             "roundCode": "roundX",
@@ -4090,7 +4131,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4135,7 +4176,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4219,6 +4260,7 @@
         },
         {
             "matchId": 48615976,
+            "url": "https://cuescore.com/match/?matchId=48615976",
             "matchno": 26,
             "roundName": "Round 7",
             "roundCode": "roundX",
@@ -4227,7 +4269,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4272,7 +4314,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4356,6 +4398,7 @@
         },
         {
             "matchId": 48615979,
+            "url": "https://cuescore.com/match/?matchId=48615979",
             "matchno": 27,
             "roundName": "Round 7",
             "roundCode": "roundX",
@@ -4364,7 +4407,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4409,7 +4452,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4493,6 +4536,7 @@
         },
         {
             "matchId": 48615982,
+            "url": "https://cuescore.com/match/?matchId=48615982",
             "matchno": 28,
             "roundName": "Round 7",
             "roundCode": "roundX",
@@ -4501,7 +4545,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4546,7 +4590,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4630,6 +4674,7 @@
         },
         {
             "matchId": 48615985,
+            "url": "https://cuescore.com/match/?matchId=48615985",
             "matchno": 29,
             "roundName": "Round 8",
             "roundCode": "roundX",
@@ -4638,7 +4683,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4683,7 +4728,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4767,6 +4812,7 @@
         },
         {
             "matchId": 48615988,
+            "url": "https://cuescore.com/match/?matchId=48615988",
             "matchno": 30,
             "roundName": "Round 8",
             "roundCode": "roundX",
@@ -4775,7 +4821,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4820,7 +4866,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4904,6 +4950,7 @@
         },
         {
             "matchId": 48615991,
+            "url": "https://cuescore.com/match/?matchId=48615991",
             "matchno": 31,
             "roundName": "Round 8",
             "roundCode": "roundX",
@@ -4912,7 +4959,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4957,7 +5004,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5041,6 +5088,7 @@
         },
         {
             "matchId": 48615994,
+            "url": "https://cuescore.com/match/?matchId=48615994",
             "matchno": 32,
             "roundName": "Round 8",
             "roundCode": "roundX",
@@ -5049,7 +5097,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5094,7 +5142,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5178,6 +5226,7 @@
         },
         {
             "matchId": 48615997,
+            "url": "https://cuescore.com/match/?matchId=48615997",
             "matchno": 33,
             "roundName": "Round 9",
             "roundCode": "roundX",
@@ -5186,7 +5235,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5231,7 +5280,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5315,6 +5364,7 @@
         },
         {
             "matchId": 48616000,
+            "url": "https://cuescore.com/match/?matchId=48616000",
             "matchno": 34,
             "roundName": "Round 9",
             "roundCode": "roundX",
@@ -5323,7 +5373,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5368,7 +5418,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5452,6 +5502,7 @@
         },
         {
             "matchId": 48616003,
+            "url": "https://cuescore.com/match/?matchId=48616003",
             "matchno": 35,
             "roundName": "Round 9",
             "roundCode": "roundX",
@@ -5460,7 +5511,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5505,7 +5556,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5589,6 +5640,7 @@
         },
         {
             "matchId": 48616006,
+            "url": "https://cuescore.com/match/?matchId=48616006",
             "matchno": 36,
             "roundName": "Round 9",
             "roundCode": "roundX",
@@ -5597,7 +5649,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5642,7 +5694,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5726,6 +5778,7 @@
         },
         {
             "matchId": 48616009,
+            "url": "https://cuescore.com/match/?matchId=48616009",
             "matchno": 37,
             "roundName": "Round 10",
             "roundCode": "roundX",
@@ -5734,7 +5787,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5779,7 +5832,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5863,6 +5916,7 @@
         },
         {
             "matchId": 48616012,
+            "url": "https://cuescore.com/match/?matchId=48616012",
             "matchno": 38,
             "roundName": "Round 10",
             "roundCode": "roundX",
@@ -5871,7 +5925,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5916,7 +5970,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6000,6 +6054,7 @@
         },
         {
             "matchId": 48616015,
+            "url": "https://cuescore.com/match/?matchId=48616015",
             "matchno": 39,
             "roundName": "Round 10",
             "roundCode": "roundX",
@@ -6008,7 +6063,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6053,7 +6108,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6137,6 +6192,7 @@
         },
         {
             "matchId": 48616018,
+            "url": "https://cuescore.com/match/?matchId=48616018",
             "matchno": 40,
             "roundName": "Round 10",
             "roundCode": "roundX",
@@ -6145,7 +6201,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6190,7 +6246,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6274,6 +6330,7 @@
         },
         {
             "matchId": 48616021,
+            "url": "https://cuescore.com/match/?matchId=48616021",
             "matchno": 41,
             "roundName": "Round 11",
             "roundCode": "roundX",
@@ -6282,7 +6339,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6327,7 +6384,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6411,6 +6468,7 @@
         },
         {
             "matchId": 48616024,
+            "url": "https://cuescore.com/match/?matchId=48616024",
             "matchno": 42,
             "roundName": "Round 11",
             "roundCode": "roundX",
@@ -6419,7 +6477,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6464,7 +6522,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6548,6 +6606,7 @@
         },
         {
             "matchId": 48616027,
+            "url": "https://cuescore.com/match/?matchId=48616027",
             "matchno": 43,
             "roundName": "Round 11",
             "roundCode": "roundX",
@@ -6556,7 +6615,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6601,7 +6660,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6685,6 +6744,7 @@
         },
         {
             "matchId": 48616030,
+            "url": "https://cuescore.com/match/?matchId=48616030",
             "matchno": 44,
             "roundName": "Round 11",
             "roundCode": "roundX",
@@ -6693,7 +6753,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6738,7 +6798,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6822,6 +6882,7 @@
         },
         {
             "matchId": 48616033,
+            "url": "https://cuescore.com/match/?matchId=48616033",
             "matchno": 45,
             "roundName": "Round 12",
             "roundCode": "roundX",
@@ -6830,7 +6891,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6875,7 +6936,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6959,6 +7020,7 @@
         },
         {
             "matchId": 48616036,
+            "url": "https://cuescore.com/match/?matchId=48616036",
             "matchno": 46,
             "roundName": "Round 12",
             "roundCode": "roundX",
@@ -6967,7 +7029,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7012,7 +7074,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7096,6 +7158,7 @@
         },
         {
             "matchId": 48616039,
+            "url": "https://cuescore.com/match/?matchId=48616039",
             "matchno": 47,
             "roundName": "Round 12",
             "roundCode": "roundX",
@@ -7104,7 +7167,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7149,7 +7212,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7233,6 +7296,7 @@
         },
         {
             "matchId": 48616042,
+            "url": "https://cuescore.com/match/?matchId=48616042",
             "matchno": 48,
             "roundName": "Round 12",
             "roundCode": "roundX",
@@ -7241,7 +7305,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7286,7 +7350,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7370,6 +7434,7 @@
         },
         {
             "matchId": 48616045,
+            "url": "https://cuescore.com/match/?matchId=48616045",
             "matchno": 49,
             "roundName": "Round 13",
             "roundCode": "roundX",
@@ -7378,7 +7443,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7423,7 +7488,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7507,6 +7572,7 @@
         },
         {
             "matchId": 48616048,
+            "url": "https://cuescore.com/match/?matchId=48616048",
             "matchno": 50,
             "roundName": "Round 13",
             "roundCode": "roundX",
@@ -7515,7 +7581,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7560,7 +7626,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7644,6 +7710,7 @@
         },
         {
             "matchId": 48616051,
+            "url": "https://cuescore.com/match/?matchId=48616051",
             "matchno": 51,
             "roundName": "Round 13",
             "roundCode": "roundX",
@@ -7652,7 +7719,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7697,7 +7764,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7781,6 +7848,7 @@
         },
         {
             "matchId": 48616054,
+            "url": "https://cuescore.com/match/?matchId=48616054",
             "matchno": 52,
             "roundName": "Round 13",
             "roundCode": "roundX",
@@ -7789,7 +7857,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7834,7 +7902,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7918,6 +7986,7 @@
         },
         {
             "matchId": 48616057,
+            "url": "https://cuescore.com/match/?matchId=48616057",
             "matchno": 53,
             "roundName": "Round 14",
             "roundCode": "roundX",
@@ -7926,7 +7995,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7971,7 +8040,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8055,6 +8124,7 @@
         },
         {
             "matchId": 48616060,
+            "url": "https://cuescore.com/match/?matchId=48616060",
             "matchno": 54,
             "roundName": "Round 14",
             "roundCode": "roundX",
@@ -8063,7 +8133,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8108,7 +8178,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8193,6 +8263,7 @@
         },
         {
             "matchId": 48616063,
+            "url": "https://cuescore.com/match/?matchId=48616063",
             "matchno": 55,
             "roundName": "Round 14",
             "roundCode": "roundX",
@@ -8201,7 +8272,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8246,7 +8317,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8330,6 +8401,7 @@
         },
         {
             "matchId": 48616066,
+            "url": "https://cuescore.com/match/?matchId=48616066",
             "matchno": 56,
             "roundName": "Round 14",
             "roundCode": "roundX",
@@ -8338,7 +8410,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8383,7 +8455,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8467,6 +8539,7 @@
         },
         {
             "matchId": 48616069,
+            "url": "https://cuescore.com/match/?matchId=48616069",
             "matchno": 57,
             "roundName": "Round 15",
             "roundCode": "roundX",
@@ -8475,7 +8548,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8520,7 +8593,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8604,6 +8677,7 @@
         },
         {
             "matchId": 48616072,
+            "url": "https://cuescore.com/match/?matchId=48616072",
             "matchno": 58,
             "roundName": "Round 15",
             "roundCode": "roundX",
@@ -8612,7 +8686,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8657,7 +8731,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8741,6 +8815,7 @@
         },
         {
             "matchId": 48616075,
+            "url": "https://cuescore.com/match/?matchId=48616075",
             "matchno": 59,
             "roundName": "Round 15",
             "roundCode": "roundX",
@@ -8749,7 +8824,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8794,7 +8869,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8878,6 +8953,7 @@
         },
         {
             "matchId": 48616078,
+            "url": "https://cuescore.com/match/?matchId=48616078",
             "matchno": 60,
             "roundName": "Round 15",
             "roundCode": "roundX",
@@ -8886,7 +8962,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8931,7 +9007,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9015,6 +9091,7 @@
         },
         {
             "matchId": 48616081,
+            "url": "https://cuescore.com/match/?matchId=48616081",
             "matchno": 61,
             "roundName": "Round 16",
             "roundCode": "roundX",
@@ -9023,7 +9100,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9068,7 +9145,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9152,6 +9229,7 @@
         },
         {
             "matchId": 48616084,
+            "url": "https://cuescore.com/match/?matchId=48616084",
             "matchno": 62,
             "roundName": "Round 16",
             "roundCode": "roundX",
@@ -9160,7 +9238,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9205,7 +9283,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9289,6 +9367,7 @@
         },
         {
             "matchId": 48616087,
+            "url": "https://cuescore.com/match/?matchId=48616087",
             "matchno": 63,
             "roundName": "Round 16",
             "roundCode": "roundX",
@@ -9297,7 +9376,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9342,7 +9421,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9426,6 +9505,7 @@
         },
         {
             "matchId": 48616090,
+            "url": "https://cuescore.com/match/?matchId=48616090",
             "matchno": 64,
             "roundName": "Round 16",
             "roundCode": "roundX",
@@ -9434,7 +9514,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9479,7 +9559,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9563,6 +9643,7 @@
         },
         {
             "matchId": 48616093,
+            "url": "https://cuescore.com/match/?matchId=48616093",
             "matchno": 65,
             "roundName": "Round 17",
             "roundCode": "roundX",
@@ -9571,7 +9652,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9616,7 +9697,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9700,6 +9781,7 @@
         },
         {
             "matchId": 48616096,
+            "url": "https://cuescore.com/match/?matchId=48616096",
             "matchno": 66,
             "roundName": "Round 17",
             "roundCode": "roundX",
@@ -9708,7 +9790,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9753,7 +9835,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9837,6 +9919,7 @@
         },
         {
             "matchId": 48616099,
+            "url": "https://cuescore.com/match/?matchId=48616099",
             "matchno": 67,
             "roundName": "Round 17",
             "roundCode": "roundX",
@@ -9845,7 +9928,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9890,7 +9973,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9974,6 +10057,7 @@
         },
         {
             "matchId": 48616102,
+            "url": "https://cuescore.com/match/?matchId=48616102",
             "matchno": 68,
             "roundName": "Round 17",
             "roundCode": "roundX",
@@ -9982,7 +10066,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10027,7 +10111,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10111,6 +10195,7 @@
         },
         {
             "matchId": 48616105,
+            "url": "https://cuescore.com/match/?matchId=48616105",
             "matchno": 69,
             "roundName": "Round 18",
             "roundCode": "roundX",
@@ -10119,7 +10204,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10164,7 +10249,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10248,6 +10333,7 @@
         },
         {
             "matchId": 48616108,
+            "url": "https://cuescore.com/match/?matchId=48616108",
             "matchno": 70,
             "roundName": "Round 18",
             "roundCode": "roundX",
@@ -10256,7 +10342,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10301,7 +10387,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10385,6 +10471,7 @@
         },
         {
             "matchId": 48616111,
+            "url": "https://cuescore.com/match/?matchId=48616111",
             "matchno": 71,
             "roundName": "Round 18",
             "roundCode": "roundX",
@@ -10393,7 +10480,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10438,7 +10525,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10522,6 +10609,7 @@
         },
         {
             "matchId": 48616114,
+            "url": "https://cuescore.com/match/?matchId=48616114",
             "matchno": 72,
             "roundName": "Round 18",
             "roundCode": "roundX",
@@ -10530,7 +10618,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10575,7 +10663,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10659,6 +10747,7 @@
         },
         {
             "matchId": 48616117,
+            "url": "https://cuescore.com/match/?matchId=48616117",
             "matchno": 73,
             "roundName": "Round 19",
             "roundCode": "roundX",
@@ -10667,7 +10756,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10712,7 +10801,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10796,6 +10885,7 @@
         },
         {
             "matchId": 48616120,
+            "url": "https://cuescore.com/match/?matchId=48616120",
             "matchno": 74,
             "roundName": "Round 19",
             "roundCode": "roundX",
@@ -10804,7 +10894,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10849,7 +10939,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10933,6 +11023,7 @@
         },
         {
             "matchId": 48616123,
+            "url": "https://cuescore.com/match/?matchId=48616123",
             "matchno": 75,
             "roundName": "Round 19",
             "roundCode": "roundX",
@@ -10941,7 +11032,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10986,7 +11077,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11070,6 +11161,7 @@
         },
         {
             "matchId": 48616126,
+            "url": "https://cuescore.com/match/?matchId=48616126",
             "matchno": 76,
             "roundName": "Round 19",
             "roundCode": "roundX",
@@ -11078,7 +11170,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11123,7 +11215,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11207,6 +11299,7 @@
         },
         {
             "matchId": 48616129,
+            "url": "https://cuescore.com/match/?matchId=48616129",
             "matchno": 77,
             "roundName": "Round 20",
             "roundCode": "roundX",
@@ -11215,7 +11308,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11260,7 +11353,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11389,6 +11482,7 @@
         },
         {
             "matchId": 48616132,
+            "url": "https://cuescore.com/match/?matchId=48616132",
             "matchno": 78,
             "roundName": "Round 20",
             "roundCode": "roundX",
@@ -11397,7 +11491,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11442,7 +11536,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11570,6 +11664,7 @@
         },
         {
             "matchId": 48616135,
+            "url": "https://cuescore.com/match/?matchId=48616135",
             "matchno": 79,
             "roundName": "Round 20",
             "roundCode": "roundX",
@@ -11578,7 +11673,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11623,7 +11718,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11751,6 +11846,7 @@
         },
         {
             "matchId": 48616138,
+            "url": "https://cuescore.com/match/?matchId=48616138",
             "matchno": 80,
             "roundName": "Round 20",
             "roundCode": "roundX",
@@ -11759,7 +11855,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11804,7 +11900,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11932,6 +12028,7 @@
         },
         {
             "matchId": 48616141,
+            "url": "https://cuescore.com/match/?matchId=48616141",
             "matchno": 81,
             "roundName": "Round 21",
             "roundCode": "roundX",
@@ -11940,7 +12037,7 @@
                 "teamId": 46644538,
                 "name": "Poolhall Junkies 2",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+2/46644538",
-                "image": "https://img.cuescore.com/image/c/4/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
+                "image": "https://img.cuescore.com/image/c/3/c76125664cd9e16abacb12ce456db2cf.png?t=1724143322",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11985,7 +12082,7 @@
                 "teamId": 31035883,
                 "name": "Infinity 7",
                 "url": "https://cuescore.com/team/Infinity+7/31035883",
-                "image": "https://img.cuescore.com/image/a/4/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
+                "image": "https://img.cuescore.com/image/a/3/a1cd413191dfeefa288a9fa4123dde22.png?t=1696000018",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -12113,6 +12210,7 @@
         },
         {
             "matchId": 48616144,
+            "url": "https://cuescore.com/match/?matchId=48616144",
             "matchno": 82,
             "roundName": "Round 21",
             "roundCode": "roundX",
@@ -12121,7 +12219,7 @@
                 "teamId": 47037808,
                 "name": "Get Racked 3! de Gulden Snede",
                 "url": "https://cuescore.com/team/Get+Racked+3%21+de+Gulden+Snede/47037808",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -12166,7 +12264,7 @@
                 "teamId": 17412007,
                 "name": "Chalk Dirty To Me",
                 "url": "https://cuescore.com/team/Chalk+Dirty+To+Me/17412007",
-                "image": "https://img.cuescore.com/image/1/4/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
+                "image": "https://img.cuescore.com/image/1/3/16a04f1f42baf96247aea0edd0077992.png?t=1662046800",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -12294,6 +12392,7 @@
         },
         {
             "matchId": 48616147,
+            "url": "https://cuescore.com/match/?matchId=48616147",
             "matchno": 83,
             "roundName": "Round 21",
             "roundCode": "roundX",
@@ -12302,7 +12401,7 @@
                 "teamId": 1176588,
                 "name": "Infinity Ted van de Parre's Dreamteam",
                 "url": "https://cuescore.com/team/Infinity+Ted+van+de+Parre%27s+Dreamteam/1176588",
-                "image": "https://img.cuescore.com/image/4/4/4832da54c10272092531d769af92e399.png?t=1567149229",
+                "image": "https://img.cuescore.com/image/4/3/4832da54c10272092531d769af92e399.png?t=1567149229",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -12347,7 +12446,7 @@
                 "teamId": 31035910,
                 "name": "InfinlTy & CTS Masters",
                 "url": "https://cuescore.com/team/InfinlTy+%2526+CTS+Masters/31035910",
-                "image": "https://img.cuescore.com/image/4/4/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
+                "image": "https://img.cuescore.com/image/4/3/4dfcbfd371e736721abdf4b349817743.png?t=1724708326",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -12475,6 +12574,7 @@
         },
         {
             "matchId": 48616150,
+            "url": "https://cuescore.com/match/?matchId=48616150",
             "matchno": 84,
             "roundName": "Round 21",
             "roundCode": "roundX",
@@ -12483,7 +12583,7 @@
                 "teamId": 31041787,
                 "name": "Hobsaké",
                 "url": "https://cuescore.com/team/Hobsak%C3%A9/31041787",
-                "image": "https://img.cuescore.com/image/c/4/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
+                "image": "https://img.cuescore.com/image/c/3/cca8b0ab4c4b1a29a1776f010f417abd.png?t=1731428428",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -12528,7 +12628,7 @@
                 "teamId": 30621658,
                 "name": "Goed Opgelost",
                 "url": "https://cuescore.com/team/Goed+Opgelost/30621658",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",

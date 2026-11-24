@@ -12,11 +12,11 @@
     <title>Pool Gelderland Eerste klasse 2025/2026</title>
     <script src="/js/jquery/3.7.1/jquery-3.7.1.min.js"></script>
     <script defer src="https://js.stripe.com/v3/"></script>
-    <script defer type="text/javascript" src="/js/cs/cs.min-1.93.js"></script>
-<script defer type="text/javascript" src="/js/cs/cs.lang.php?v=1.93"></script>
-<script defer type="text/javascript" src="/js/cs/jquery.cs.min-1.93.js"></script>
-<script type="text/javascript" src="/js/cuescore.min-1.93.js"></script>
-    <script id="cs-code-api-js" data-version="3.99" defer type="text/javascript" src="https://api.cuescore.com/js/CueScore.min-3.99.js"></script>
+    <script defer type="text/javascript" src="/js/cs/cs.min-1.94.js"></script>
+<script defer type="text/javascript" src="/js/cs/cs.lang.php?v=1.94"></script>
+<script defer type="text/javascript" src="/js/cs/jquery.cs.min-1.94.js"></script>
+<script type="text/javascript" src="/js/cuescore.min-1.94.js"></script>
+    <script id="cs-code-api-js" data-version="4.08" defer type="text/javascript" src="https://api.cuescore.com/js/CueScore.min-4.08.js"></script>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
@@ -315,7 +315,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 #header a.personal-create { border-radius: 18px; padding: 0 !important; margin-left: 8px; height: 36px; width: 36px; min-width: 36px; background: #467DF7 url(/img/scoreboard-plus.svg) center center / 14px no-repeat; }
 #header a.personal-create:hover { background-color: #4074E8 !important; }
 #header a.home { background: url(/img/cs_pict.svg) center center / 28px no-repeat; }
-#header a.live { margin-left: auto; }
+#header a.tournaments { margin-left: auto; }
 #header.nouser a.home { background: transparent url(/img/cuescore-logo-white.svg) center center / 72px  no-repeat; width: 104px; }
 
 #header a.selected { border-top: 4px solid transparent; border-bottom: 4px solid #FF9800; }
@@ -350,6 +350,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 #header .user .list-1 a:hover { background-color: var(--cs-row-hover-bg, #3562CB); }
     
 #header .user .list-1 a.dashboard::before { background-image: url(/img/material/dashboard-icon.svg); }
+#header .user .list-1 a.following::before { background-image: url(/img/material/check-icon.svg); }
 #header .user .list-1 a.orders::before { background-image: url(/img/material/shopping-cart-icon.svg); }
 #header .user .list-1 a.subscription::before { background-image: url(/img/material/credit-card-icon.svg); }
 #header .user .list-1 a.settings::before { background-image: url(/img/material/settings-icon.svg); }
@@ -419,9 +420,9 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   #header .circle { margin: 0 4px; }
   #header .user { margin-right: 4px; }
   #proLine .dash .list, #header .dash .list, #header .list, #header .list-1 { position: fixed; top: 52px !important; left: unset; width: fit-content; max-width: 90vw; overflow-y: scroll; }
-  #header > .live,
   #header > .tournaments,
   #header > .leagues, 
+  #header > .video,
   #header > .challenges,
   #header > .news, 
   #header > .upgrade,
@@ -462,14 +463,15 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <div class="list hideOnDocClick"></div>
   </div>
   <a class="personal-create" href="#" title="Personal options" onclick="CueScore.ModalLoader.openSrc('/ajax/player/create-dialog.php'); return false;"></a>
-  <a class="live " href="/live">Live</a>
   <a class="tournaments " href="/tournaments">Tournaments</a>
   <a class="leagues " href="/leagues">Leagues</a>
+  <a class="video " href="/videos">Video</a>
   <a class="challenges " href="/challenges">Challenges</a>
   <a class="news " href="/posts">Posts</a>
   <a class="upgrade " href="/upgrade/">Upgrade</a>
   <div class="more" onclick="toggleDropdown(this);">More
     <nav class="list-1 hideOnDocClick">
+      <a class="live " href="/live">Live</a>
       <a class="h2h " href="/h2h/">Head to head</a>
       <a class="organizations " href="/organizations/">Organizations</a>
       <a class="venues " href="/venues/">Venues</a>
@@ -519,6 +521,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <nav class="list-1 hideOnDocClick">
       <a class="scoreboard icon" href="/scoreboard/?code=personal">Personal scoreboard</a>
       <a class="dashboard icon" href="javascript:void(0);" onclick="toggleList($('#header .dash a').get(0));">Dashboard</a>
+      <a class="following icon" href="/following">Following</a>
       <a class="profile icon" href="">Edit player profile</a>
       <a class="orders icon" href="/home/orders">Orders</a>
       <a class="subscription icon" href="/user/account/">Account</a>
@@ -532,12 +535,13 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
       <div class="hamburger-inner"></div>
     </div>
     <nav class="list-1 hideOnDocClick">
-      <a class="live " href="/live">Live</a>
       <a class="tournaments " href="/tournaments">Tournaments</a>
       <a class="leagues " href="/leagues">Leagues</a>
+      <a class="video " href="/videos">Video</a>
       <a class="challenges " href="/challenges">Challenges</a>
       <a class="news " href="/posts">Posts</a>
       <a class="upgrade " href="/upgrade/">Upgrade</a>
+      <a class="live " href="/live">Live</a>
       <a class="h2h " href="/h2h/">Head to head</a>
       <a class="organizations " href="/organizations/">Organizations</a>
       <a class="venues " href="/venues/">Venues</a>
@@ -549,9 +553,9 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   </div>
 </nav>
 <nav class="secondary">
-  <a class="live " href="/live">Live</a>
   <a class="tournaments " href="/tournaments">Tournaments</a>
   <a class="leagues " href="/leagues">Leagues</a>
+  <a class="video " href="/videos">Video</a>
   <a class="upgrade " href="/upgrade/">Upgrade</a>
 </nav>
 

@@ -12,11 +12,11 @@
     <title>Pool Gelderland Eerste klasse 2026/2027</title>
     <script src="/js/jquery/3.7.1/jquery-3.7.1.min.js"></script>
     <script defer src="https://js.stripe.com/v3/"></script>
-    <script defer type="text/javascript" src="/js/cs/cs.min-1.93.js"></script>
-<script defer type="text/javascript" src="/js/cs/cs.lang.php?v=1.93"></script>
-<script defer type="text/javascript" src="/js/cs/jquery.cs.min-1.93.js"></script>
-<script type="text/javascript" src="/js/cuescore.min-1.93.js"></script>
-    <script id="cs-code-api-js" data-version="3.99" defer type="text/javascript" src="https://api.cuescore.com/js/CueScore.min-3.99.js"></script>
+    <script defer type="text/javascript" src="/js/cs/cs.min-1.94.js"></script>
+<script defer type="text/javascript" src="/js/cs/cs.lang.php?v=1.94"></script>
+<script defer type="text/javascript" src="/js/cs/jquery.cs.min-1.94.js"></script>
+<script type="text/javascript" src="/js/cuescore.min-1.94.js"></script>
+    <script id="cs-code-api-js" data-version="4.08" defer type="text/javascript" src="https://api.cuescore.com/js/CueScore.min-4.08.js"></script>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
@@ -315,7 +315,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 #header a.personal-create { border-radius: 18px; padding: 0 !important; margin-left: 8px; height: 36px; width: 36px; min-width: 36px; background: #467DF7 url(/img/scoreboard-plus.svg) center center / 14px no-repeat; }
 #header a.personal-create:hover { background-color: #4074E8 !important; }
 #header a.home { background: url(/img/cs_pict.svg) center center / 28px no-repeat; }
-#header a.live { margin-left: auto; }
+#header a.tournaments { margin-left: auto; }
 #header.nouser a.home { background: transparent url(/img/cuescore-logo-white.svg) center center / 72px  no-repeat; width: 104px; }
 
 #header a.selected { border-top: 4px solid transparent; border-bottom: 4px solid #FF9800; }
@@ -350,6 +350,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 #header .user .list-1 a:hover { background-color: var(--cs-row-hover-bg, #3562CB); }
     
 #header .user .list-1 a.dashboard::before { background-image: url(/img/material/dashboard-icon.svg); }
+#header .user .list-1 a.following::before { background-image: url(/img/material/check-icon.svg); }
 #header .user .list-1 a.orders::before { background-image: url(/img/material/shopping-cart-icon.svg); }
 #header .user .list-1 a.subscription::before { background-image: url(/img/material/credit-card-icon.svg); }
 #header .user .list-1 a.settings::before { background-image: url(/img/material/settings-icon.svg); }
@@ -419,9 +420,9 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   #header .circle { margin: 0 4px; }
   #header .user { margin-right: 4px; }
   #proLine .dash .list, #header .dash .list, #header .list, #header .list-1 { position: fixed; top: 52px !important; left: unset; width: fit-content; max-width: 90vw; overflow-y: scroll; }
-  #header > .live,
   #header > .tournaments,
   #header > .leagues, 
+  #header > .video,
   #header > .challenges,
   #header > .news, 
   #header > .upgrade,
@@ -462,14 +463,15 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <div class="list hideOnDocClick"></div>
   </div>
   <a class="personal-create" href="#" title="Personal options" onclick="CueScore.ModalLoader.openSrc('/ajax/player/create-dialog.php'); return false;"></a>
-  <a class="live " href="/live">Live</a>
   <a class="tournaments " href="/tournaments">Tournaments</a>
   <a class="leagues " href="/leagues">Leagues</a>
+  <a class="video " href="/videos">Video</a>
   <a class="challenges " href="/challenges">Challenges</a>
   <a class="news " href="/posts">Posts</a>
   <a class="upgrade " href="/upgrade/">Upgrade</a>
   <div class="more" onclick="toggleDropdown(this);">More
     <nav class="list-1 hideOnDocClick">
+      <a class="live " href="/live">Live</a>
       <a class="h2h " href="/h2h/">Head to head</a>
       <a class="organizations " href="/organizations/">Organizations</a>
       <a class="venues " href="/venues/">Venues</a>
@@ -519,6 +521,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <nav class="list-1 hideOnDocClick">
       <a class="scoreboard icon" href="/scoreboard/?code=personal">Personal scoreboard</a>
       <a class="dashboard icon" href="javascript:void(0);" onclick="toggleList($('#header .dash a').get(0));">Dashboard</a>
+      <a class="following icon" href="/following">Following</a>
       <a class="profile icon" href="">Edit player profile</a>
       <a class="orders icon" href="/home/orders">Orders</a>
       <a class="subscription icon" href="/user/account/">Account</a>
@@ -532,12 +535,13 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
       <div class="hamburger-inner"></div>
     </div>
     <nav class="list-1 hideOnDocClick">
-      <a class="live " href="/live">Live</a>
       <a class="tournaments " href="/tournaments">Tournaments</a>
       <a class="leagues " href="/leagues">Leagues</a>
+      <a class="video " href="/videos">Video</a>
       <a class="challenges " href="/challenges">Challenges</a>
       <a class="news " href="/posts">Posts</a>
       <a class="upgrade " href="/upgrade/">Upgrade</a>
+      <a class="live " href="/live">Live</a>
       <a class="h2h " href="/h2h/">Head to head</a>
       <a class="organizations " href="/organizations/">Organizations</a>
       <a class="venues " href="/venues/">Venues</a>
@@ -549,9 +553,9 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   </div>
 </nav>
 <nav class="secondary">
-  <a class="live " href="/live">Live</a>
   <a class="tournaments " href="/tournaments">Tournaments</a>
   <a class="leagues " href="/leagues">Leagues</a>
+  <a class="video " href="/videos">Video</a>
   <a class="upgrade " href="/upgrade/">Upgrade</a>
 </nav>
 
@@ -627,12 +631,12 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight"></td>
   <td></td>
   <td></td>
-  <td class="divider"></td>  <td>4</td>
-  <td class="highlight">4</td>
-  <td>24</td>
-  <td>12</td>
-  <td class="divider"></td>  <td class="nowrap">4</td>
-  <td>80.0%</td>
+  <td class="divider"></td>  <td>5</td>
+  <td class="highlight">5</td>
+  <td>30</td>
+  <td>16</td>
+  <td class="divider"></td>  <td class="nowrap">5</td>
+  <td>83.3%</td>
 </tr><tr>
   <td class="position">2</td>
   <td class="player">
@@ -641,10 +645,10 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   </td>
   <td class="divider"></td>
   <td class="nowrap">100.0%</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">3</td>
-  <td>18</td>
-  <td>11</td>
+  <td class="divider"></td>  <td>4</td>
+  <td class="highlight">4</td>
+  <td>24</td>
+  <td>16</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
@@ -657,8 +661,8 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">1</td>
   <td>6</td>
   <td>2</td>
-  <td class="divider"></td>  <td class="nowrap">4</td>
-  <td>60.0%</td>
+  <td class="divider"></td>  <td class="nowrap">5</td>
+  <td>66.7%</td>
 </tr><tr>
   <td class="position">3</td>
   <td class="player">
@@ -666,11 +670,11 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <div class="team"><a href="//cuescore.com/team/Team+kleintjeskamp/28858099">Team kleintjeskamp</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">87.5%</td>
-  <td class="divider"></td>  <td>8</td>
-  <td class="highlight">7</td>
-  <td>47</td>
-  <td>18</td>
+  <td class="nowrap">90.0%</td>
+  <td class="divider"></td>  <td>10</td>
+  <td class="highlight">9</td>
+  <td>59</td>
+  <td>23</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
@@ -683,7 +687,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight"></td>
   <td></td>
   <td></td>
-  <td class="divider"></td>  <td class="nowrap">8</td>
+  <td class="divider"></td>  <td class="nowrap">10</td>
   <td>100.0%</td>
 </tr><tr>
   <td class="position">4</td>
@@ -692,7 +696,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <div class="team"><a href="//cuescore.com/team/Keizer+Karel/63913216">Keizer Karel</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">83.3%</td>
+  <td class="nowrap">85.7%</td>
   <td class="divider"></td>  <td>1</td>
   <td class="highlight">1</td>
   <td>6</td>
@@ -701,16 +705,16 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">1</td>
   <td>50</td>
   <td>25</td>
-  <td class="divider"></td>  <td>4</td>
-  <td class="highlight">3</td>
-  <td>18</td>
-  <td>7</td>
+  <td class="divider"></td>  <td>5</td>
+  <td class="highlight">4</td>
+  <td>23</td>
+  <td>8</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
   <td></td>
-  <td class="divider"></td>  <td class="nowrap">6</td>
-  <td>66.7%</td>
+  <td class="divider"></td>  <td class="nowrap">7</td>
+  <td>71.4%</td>
 </tr><tr>
   <td class="position">5</td>
   <td class="player">
@@ -740,63 +744,37 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 </tr><tr>
   <td class="position">6</td>
   <td class="player">
-    <div class="name"><a href="//cuescore.com/player/Tarmon+Rietdijk/1160432">Tarmon Rietdijk</a></div>
-    <div class="team"><a href="//cuescore.com/team/Keizer+Karel/63913216">Keizer Karel</a></div>
-  </td>
-  <td class="divider"></td>
-  <td class="nowrap">66.7%</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">2</td>
-  <td>15</td>
-  <td>14</td>
-  <td class="divider"></td>  <td>1</td>
-  <td class="highlight">1</td>
-  <td>50</td>
-  <td>17</td>
-  <td class="divider"></td>  <td>2</td>
-  <td class="highlight">0</td>
-  <td>4</td>
-  <td>10</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">3</td>
-  <td>18</td>
-  <td>10</td>
-  <td class="divider"></td>  <td class="nowrap">9</td>
-  <td>83.3%</td>
-</tr><tr>
-  <td class="position">7</td>
-  <td class="player">
     <div class="name"><a href="//cuescore.com/player/Frits+Verhaegh/1159744">Frits Verhaegh</a></div>
     <div class="team"><a href="//cuescore.com/team/Team+kleintjeskamp/28858099">Team kleintjeskamp</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">66.7%</td>
+  <td class="nowrap">75.0%</td>
   <td class="divider"></td>  <td>1</td>
   <td class="highlight">1</td>
   <td>6</td>
   <td>0</td>
-  <td class="divider"></td>  <td>2</td>
-  <td class="highlight">0</td>
-  <td>87</td>
-  <td>100</td>
-  <td class="divider"></td>  <td>2</td>
-  <td class="highlight">2</td>
-  <td>10</td>
-  <td>5</td>
+  <td class="divider"></td>  <td>3</td>
+  <td class="highlight">1</td>
+  <td>137</td>
+  <td>121</td>
+  <td class="divider"></td>  <td>3</td>
+  <td class="highlight">3</td>
+  <td>15</td>
+  <td>8</td>
   <td class="divider"></td>  <td>1</td>
   <td class="highlight">1</td>
   <td>6</td>
   <td>4</td>
-  <td class="divider"></td>  <td class="nowrap">6</td>
+  <td class="divider"></td>  <td class="nowrap">8</td>
   <td>100.0%</td>
 </tr><tr>
-  <td class="position">8</td>
+  <td class="position">7</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Peter+Knuever/1159748">Peter Knuever</a></div>
     <div class="team"><a href="//cuescore.com/team/Team+kleintjeskamp/28858099">Team kleintjeskamp</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">66.7%</td>
+  <td class="nowrap">71.4%</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
@@ -809,66 +787,66 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">1</td>
   <td>5</td>
   <td>2</td>
-  <td class="divider"></td>  <td>4</td>
-  <td class="highlight">2</td>
-  <td>20</td>
-  <td>20</td>
-  <td class="divider"></td>  <td class="nowrap">6</td>
-  <td>80.0%</td>
+  <td class="divider"></td>  <td>5</td>
+  <td class="highlight">3</td>
+  <td>26</td>
+  <td>24</td>
+  <td class="divider"></td>  <td class="nowrap">7</td>
+  <td>83.3%</td>
+</tr><tr>
+  <td class="position">8</td>
+  <td class="player">
+    <div class="name"><a href="//cuescore.com/player/Dorus+van+Dijk/1163968">Dorus van Dijk</a></div>
+    <div class="team"><a href="//cuescore.com/team/GO+Customs+3/62135434">GO Customs 3</a></div>
+  </td>
+  <td class="divider"></td>
+  <td class="nowrap">63.6%</td>
+  <td class="divider"></td>  <td>6</td>
+  <td class="highlight">5</td>
+  <td>34</td>
+  <td>19</td>
+  <td class="divider"></td>  <td>2</td>
+  <td class="highlight">1</td>
+  <td>67</td>
+  <td>97</td>
+  <td class="divider"></td>  <td>2</td>
+  <td class="highlight">0</td>
+  <td>4</td>
+  <td>10</td>
+  <td class="divider"></td>  <td>1</td>
+  <td class="highlight">1</td>
+  <td>6</td>
+  <td>2</td>
+  <td class="divider"></td>  <td class="nowrap">11</td>
+  <td>100.0%</td>
 </tr><tr>
   <td class="position">9</td>
   <td class="player">
-    <div class="name"><a href="//cuescore.com/player/Dennis+Velthorst/5563039">Dennis Velthorst</a></div>
-    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
-  </td>
-  <td class="divider"></td>
-  <td class="nowrap">66.7%</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">2</td>
-  <td>13</td>
-  <td>10</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td class="nowrap">3</td>
-  <td>60.0%</td>
-</tr><tr>
-  <td class="position">10</td>
-  <td class="player">
-    <div class="name"><a href="//cuescore.com/player/Erik+van+Battum/1164251">Erik van Battum</a></div>
-    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
+    <div class="name"><a href="//cuescore.com/player/Tarmon+Rietdijk/1160432">Tarmon Rietdijk</a></div>
+    <div class="team"><a href="//cuescore.com/team/Keizer+Karel/63913216">Keizer Karel</a></div>
   </td>
   <td class="divider"></td>
   <td class="nowrap">60.0%</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
+  <td class="divider"></td>  <td>4</td>
+  <td class="highlight">2</td>
+  <td>20</td>
+  <td>20</td>
   <td class="divider"></td>  <td>1</td>
   <td class="highlight">1</td>
   <td>50</td>
-  <td>32</td>
-  <td class="divider"></td>  <td>4</td>
-  <td class="highlight">2</td>
-  <td>12</td>
-  <td>14</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td class="nowrap">5</td>
-  <td>80.0%</td>
+  <td>17</td>
+  <td class="divider"></td>  <td>2</td>
+  <td class="highlight">0</td>
+  <td>4</td>
+  <td>10</td>
+  <td class="divider"></td>  <td>3</td>
+  <td class="highlight">3</td>
+  <td>18</td>
+  <td>10</td>
+  <td class="divider"></td>  <td class="nowrap">10</td>
+  <td>85.7%</td>
 </tr><tr>
-  <td class="position">11</td>
+  <td class="position">10</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Dick+van+Vliet/1164689">Dick van Vliet</a></div>
     <div class="team"><a href="//cuescore.com/team/Genoeg+keus/85540081">Genoeg keus</a></div>
@@ -894,56 +872,82 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="divider"></td>  <td class="nowrap">7</td>
   <td>83.3%</td>
 </tr><tr>
+  <td class="position">11</td>
+  <td class="player">
+    <div class="name"><a href="//cuescore.com/player/Erik+van+Battum/1164251">Erik van Battum</a></div>
+    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
+  </td>
+  <td class="divider"></td>
+  <td class="nowrap">57.1%</td>
+  <td class="divider"></td>  <td>1</td>
+  <td class="highlight">1</td>
+  <td>6</td>
+  <td>3</td>
+  <td class="divider"></td>  <td>1</td>
+  <td class="highlight">1</td>
+  <td>50</td>
+  <td>32</td>
+  <td class="divider"></td>  <td>5</td>
+  <td class="highlight">2</td>
+  <td>13</td>
+  <td>19</td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td class="nowrap">7</td>
+  <td>83.3%</td>
+</tr><tr>
   <td class="position">12</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Niels+Alferink/17796574">Niels Alferink</a></div>
     <div class="team"><a href="//cuescore.com/team/GO+Customs+3/62135434">GO Customs 3</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">55.6%</td>
-  <td class="divider"></td>  <td>2</td>
-  <td class="highlight">1</td>
-  <td>7</td>
-  <td>9</td>
+  <td class="nowrap">54.5%</td>
+  <td class="divider"></td>  <td>3</td>
+  <td class="highlight">2</td>
+  <td>13</td>
+  <td>12</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
   <td></td>
-  <td class="divider"></td>  <td>2</td>
+  <td class="divider"></td>  <td>3</td>
   <td class="highlight">2</td>
-  <td>10</td>
-  <td>4</td>
+  <td>13</td>
+  <td>9</td>
   <td class="divider"></td>  <td>5</td>
   <td class="highlight">2</td>
   <td>21</td>
   <td>26</td>
-  <td class="divider"></td>  <td class="nowrap">9</td>
+  <td class="divider"></td>  <td class="nowrap">11</td>
   <td>100.0%</td>
 </tr><tr>
   <td class="position">13</td>
   <td class="player">
-    <div class="name"><a href="//cuescore.com/player/Dorus+van+Dijk/1163968">Dorus van Dijk</a></div>
-    <div class="team"><a href="//cuescore.com/team/GO+Customs+3/62135434">GO Customs 3</a></div>
+    <div class="name"><a href="//cuescore.com/player/Frank+Keizer/1176696">Frank Keizer</a></div>
+    <div class="team"><a href="//cuescore.com/team/Kings+without+Queens/1176590">Kings without Queens</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">55.6%</td>
-  <td class="divider"></td>  <td>5</td>
-  <td class="highlight">4</td>
-  <td>28</td>
-  <td>16</td>
-  <td class="divider"></td>  <td>2</td>
+  <td class="nowrap">50.0%</td>
+  <td class="divider"></td>  <td>1</td>
   <td class="highlight">1</td>
-  <td>67</td>
-  <td>97</td>
-  <td class="divider"></td>  <td>2</td>
-  <td class="highlight">0</td>
-  <td>4</td>
-  <td>10</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td class="nowrap">9</td>
+  <td>6</td>
+  <td>3</td>
+  <td class="divider"></td>  <td>4</td>
+  <td class="highlight">2</td>
+  <td>157</td>
+  <td>161</td>
+  <td class="divider"></td>  <td>4</td>
+  <td class="highlight">2</td>
+  <td>17</td>
+  <td>15</td>
+  <td class="divider"></td>  <td>3</td>
+  <td class="highlight">1</td>
+  <td>12</td>
+  <td>15</td>
+  <td class="divider"></td>  <td class="nowrap">12</td>
   <td>100.0%</td>
 </tr><tr>
   <td class="position">14</td>
@@ -952,11 +956,11 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <div class="team"><a href="//cuescore.com/team/Kings+without+Queens/1176590">Kings without Queens</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">45.5%</td>
-  <td class="divider"></td>  <td>5</td>
+  <td class="nowrap">38.5%</td>
+  <td class="divider"></td>  <td>6</td>
   <td class="highlight">2</td>
-  <td>19</td>
-  <td>24</td>
+  <td>22</td>
+  <td>30</td>
   <td class="divider"></td>  <td>3</td>
   <td class="highlight">2</td>
   <td>125</td>
@@ -965,40 +969,14 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">1</td>
   <td>7</td>
   <td>6</td>
-  <td class="divider"></td>  <td>1</td>
+  <td class="divider"></td>  <td>2</td>
   <td class="highlight">0</td>
-  <td>3</td>
-  <td>6</td>
-  <td class="divider"></td>  <td class="nowrap">11</td>
+  <td>5</td>
+  <td>12</td>
+  <td class="divider"></td>  <td class="nowrap">13</td>
   <td>100.0%</td>
 </tr><tr>
   <td class="position">15</td>
-  <td class="player">
-    <div class="name"><a href="//cuescore.com/player/Frank+Keizer/1176696">Frank Keizer</a></div>
-    <div class="team"><a href="//cuescore.com/team/Kings+without+Queens/1176590">Kings without Queens</a></div>
-  </td>
-  <td class="divider"></td>
-  <td class="nowrap">40.0%</td>
-  <td class="divider"></td>  <td>1</td>
-  <td class="highlight">1</td>
-  <td>6</td>
-  <td>3</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">1</td>
-  <td>107</td>
-  <td>130</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">1</td>
-  <td>12</td>
-  <td>12</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">1</td>
-  <td>12</td>
-  <td>15</td>
-  <td class="divider"></td>  <td class="nowrap">10</td>
-  <td>100.0%</td>
-</tr><tr>
-  <td class="position">16</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Jelle+Boersma/17973718">Jelle Boersma</a></div>
     <div class="team"><a href="//cuescore.com/team/Genoeg+keus/85540081">Genoeg keus</a></div>
@@ -1024,39 +1002,13 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="divider"></td>  <td class="nowrap">7</td>
   <td>66.7%</td>
 </tr><tr>
-  <td class="position">17</td>
-  <td class="player">
-    <div class="name"><a href="//cuescore.com/player/Erik+Stoel/1186017">Erik Stoel</a></div>
-    <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
-  </td>
-  <td class="divider"></td>
-  <td class="nowrap">20.0%</td>
-  <td class="divider"></td>  <td>1</td>
-  <td class="highlight">0</td>
-  <td>5</td>
-  <td>6</td>
-  <td class="divider"></td>  <td>2</td>
-  <td class="highlight">0</td>
-  <td>53</td>
-  <td>100</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td>2</td>
-  <td class="highlight">1</td>
-  <td>9</td>
-  <td>10</td>
-  <td class="divider"></td>  <td class="nowrap">5</td>
-  <td>75.0%</td>
-</tr><tr>
-  <td class="position">18</td>
+  <td class="position">16</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Bas+Slicher/8124744">Bas Slicher</a></div>
     <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">16.7%</td>
+  <td class="nowrap">14.3%</td>
   <td class="divider"></td>  <td>3</td>
   <td class="highlight">0</td>
   <td>10</td>
@@ -1069,24 +1021,50 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">1</td>
   <td>7</td>
   <td>12</td>
+  <td class="divider"></td>  <td>1</td>
+  <td class="highlight">0</td>
+  <td>4</td>
+  <td>6</td>
+  <td class="divider"></td>  <td class="nowrap">7</td>
+  <td>80.0%</td>
+</tr><tr>
+  <td class="position">17</td>
+  <td class="player">
+    <div class="name"><a href="//cuescore.com/player/Erik+Stoel/1186017">Erik Stoel</a></div>
+    <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
+  </td>
+  <td class="divider"></td>
+  <td class="nowrap">14.3%</td>
+  <td class="divider"></td>  <td>2</td>
+  <td class="highlight">0</td>
+  <td>8</td>
+  <td>12</td>
+  <td class="divider"></td>  <td>3</td>
+  <td class="highlight">0</td>
+  <td>74</td>
+  <td>150</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
   <td></td>
-  <td class="divider"></td>  <td class="nowrap">6</td>
-  <td>75.0%</td>
+  <td class="divider"></td>  <td>2</td>
+  <td class="highlight">1</td>
+  <td>9</td>
+  <td>10</td>
+  <td class="divider"></td>  <td class="nowrap">7</td>
+  <td>80.0%</td>
 </tr><tr>
-  <td class="position">19</td>
+  <td class="position">18</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Sander+Cramer/1163408">Sander Cramer</a></div>
     <div class="team"><a href="//cuescore.com/team/Keizer+Karel/63913216">Keizer Karel</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">16.7%</td>
-  <td class="divider"></td>  <td>5</td>
+  <td class="nowrap">14.3%</td>
+  <td class="divider"></td>  <td>6</td>
   <td class="highlight">1</td>
-  <td>14</td>
-  <td>29</td>
+  <td>17</td>
+  <td>35</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
@@ -1099,24 +1077,24 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">0</td>
   <td>3</td>
   <td>6</td>
-  <td class="divider"></td>  <td class="nowrap">6</td>
-  <td>66.7%</td>
+  <td class="divider"></td>  <td class="nowrap">7</td>
+  <td>71.4%</td>
 </tr><tr>
-  <td class="position">20</td>
+  <td class="position">19</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Winfried+de+Haer/9220063">Winfried de Haer</a></div>
     <div class="team"><a href="//cuescore.com/team/GO+Customs+3/62135434">GO Customs 3</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">12.5%</td>
+  <td class="nowrap">11.1%</td>
   <td class="divider"></td>  <td>4</td>
   <td class="highlight">1</td>
   <td>13</td>
   <td>21</td>
-  <td class="divider"></td>  <td>2</td>
+  <td class="divider"></td>  <td>3</td>
   <td class="highlight">0</td>
-  <td>54</td>
-  <td>100</td>
+  <td>85</td>
+  <td>150</td>
   <td class="divider"></td>  <td>1</td>
   <td class="highlight">0</td>
   <td>2</td>
@@ -1125,20 +1103,20 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">0</td>
   <td>4</td>
   <td>6</td>
-  <td class="divider"></td>  <td class="nowrap">8</td>
-  <td>83.3%</td>
+  <td class="divider"></td>  <td class="nowrap">9</td>
+  <td>85.7%</td>
 </tr><tr>
-  <td class="position">21</td>
+  <td class="position">20</td>
   <td class="player">
     <div class="name"><a href="//cuescore.com/player/Mark+Paap/1164461">Mark Paap</a></div>
     <div class="team"><a href="//cuescore.com/team/Kings+without+Queens/1176590">Kings without Queens</a></div>
   </td>
   <td class="divider"></td>
   <td class="nowrap">0.0%</td>
-  <td class="divider"></td>  <td>2</td>
+  <td class="divider"></td>  <td>3</td>
   <td class="highlight">0</td>
-  <td>3</td>
-  <td>12</td>
+  <td>6</td>
+  <td>18</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
@@ -1151,32 +1129,32 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td class="highlight">0</td>
   <td>4</td>
   <td>12</td>
-  <td class="divider"></td>  <td class="nowrap">5</td>
-  <td>66.7%</td>
+  <td class="divider"></td>  <td class="nowrap">6</td>
+  <td>71.4%</td>
 </tr><tr>
-  <td class="position">22</td>
+  <td class="position">21</td>
   <td class="player">
-    <div class="name"><a href="//cuescore.com/player/Michiel+R/1164004">Michiel R</a></div>
-    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
+    <div class="name"><a href="//cuescore.com/player/Berry+Schreuder/1548887">Berry Schreuder</a></div>
+    <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
   </td>
   <td class="divider"></td>
   <td class="nowrap">0.0%</td>
   <td class="divider"></td>  <td>2</td>
   <td class="highlight">0</td>
-  <td>8</td>
+  <td>5</td>
   <td>12</td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
   <td class="divider"></td>  <td>2</td>
   <td class="highlight">0</td>
-  <td>77</td>
-  <td>100</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
+  <td>8</td>
+  <td>12</td>
   <td class="divider"></td>  <td class="nowrap">4</td>
   <td>60.0%</td>
 </tr><tr><td colspan="99" style="padding-top: 15px;">Players with participation rates below 60%:</td></tr><tr>
@@ -1204,7 +1182,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">4</td>
-  <td>40.0%</td>
+  <td>33.3%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1230,33 +1208,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">3</td>
-  <td>40.0%</td>
-</tr><tr>
-  <td class="position"></td>
-  <td class="player invalid">
-    <div class="name"><a href="//cuescore.com/player/Freek+Ebbelink/4746587">Freek Ebbelink</a></div>
-    <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
-  </td>
-  <td class="divider"></td>
-  <td class="nowrap">100.0%</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td>1</td>
-  <td class="highlight">1</td>
-  <td>5</td>
-  <td>4</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>25.0%</td>
+  <td>33.3%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1282,7 +1234,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>16.7%</td>
+  <td>14.3%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1308,7 +1260,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>16.7%</td>
+  <td>14.3%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1316,24 +1268,50 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
     <div class="team"><a href="//cuescore.com/team/Keizer+Karel/63913216">Keizer Karel</a></div>
   </td>
   <td class="divider"></td>
-  <td class="nowrap">83.3%</td>
+  <td class="nowrap">75.0%</td>
   <td class="divider"></td>  <td>1</td>
   <td class="highlight">0</td>
   <td>4</td>
   <td>6</td>
-  <td class="divider"></td>  <td>3</td>
-  <td class="highlight">3</td>
-  <td>150</td>
-  <td>98</td>
+  <td class="divider"></td>  <td>4</td>
+  <td class="highlight">4</td>
+  <td>200</td>
+  <td>114</td>
   <td class="divider"></td>  <td></td>
   <td class="highlight"></td>
   <td></td>
   <td></td>
-  <td class="divider"></td>  <td>2</td>
+  <td class="divider"></td>  <td>3</td>
   <td class="highlight">2</td>
-  <td>12</td>
-  <td>4</td>
-  <td class="divider"></td>  <td class="nowrap">6</td>
+  <td>16</td>
+  <td>10</td>
+  <td class="divider"></td>  <td class="nowrap">8</td>
+  <td>57.1%</td>
+</tr><tr>
+  <td class="position"></td>
+  <td class="player invalid">
+    <div class="name"><a href="//cuescore.com/player/Dennis+Velthorst/5563039">Dennis Velthorst</a></div>
+    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
+  </td>
+  <td class="divider"></td>
+  <td class="nowrap">66.7%</td>
+  <td class="divider"></td>  <td>3</td>
+  <td class="highlight">2</td>
+  <td>13</td>
+  <td>10</td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td class="nowrap">3</td>
   <td>50.0%</td>
 </tr><tr>
   <td class="position"></td>
@@ -1390,6 +1368,32 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
+    <div class="name"><a href="//cuescore.com/player/Freek+Ebbelink/4746587">Freek Ebbelink</a></div>
+    <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
+  </td>
+  <td class="divider"></td>
+  <td class="nowrap">50.0%</td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td>2</td>
+  <td class="highlight">1</td>
+  <td>8</td>
+  <td>9</td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td class="nowrap">2</td>
+  <td>40.0%</td>
+</tr><tr>
+  <td class="position"></td>
+  <td class="player invalid">
     <div class="name"><a href="//cuescore.com/player/Megan+van+Lier/1163661">Megan van Lier</a></div>
     <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
   </td>
@@ -1412,7 +1416,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">2</td>
-  <td>50.0%</td>
+  <td>40.0%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1464,32 +1468,32 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">4</td>
-  <td>50.0%</td>
+  <td>42.9%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
-    <div class="name"><a href="//cuescore.com/player/Berry+Schreuder/1548887">Berry Schreuder</a></div>
-    <div class="team"><a href="//cuescore.com/team/Infinity+and+Beyond/9201200">Infinity and Beyond</a></div>
+    <div class="name"><a href="//cuescore.com/player/Michiel+R/1164004">Michiel R</a></div>
+    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
   </td>
   <td class="divider"></td>
   <td class="nowrap">0.0%</td>
-  <td class="divider"></td>  <td>1</td>
-  <td class="highlight">0</td>
-  <td>3</td>
-  <td>6</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
   <td class="divider"></td>  <td>2</td>
   <td class="highlight">0</td>
   <td>8</td>
   <td>12</td>
-  <td class="divider"></td>  <td class="nowrap">3</td>
+  <td class="divider"></td>  <td>2</td>
+  <td class="highlight">0</td>
+  <td>77</td>
+  <td>100</td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td class="nowrap">4</td>
   <td>50.0%</td>
 </tr><tr>
   <td class="position"></td>
@@ -1516,7 +1520,33 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">2</td>
-  <td>50.0%</td>
+  <td>40.0%</td>
+</tr><tr>
+  <td class="position"></td>
+  <td class="player invalid">
+    <div class="name"><a href="//cuescore.com/player/Marijn+van+der+Zee/1164044">Marijn van der Zee</a></div>
+    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
+  </td>
+  <td class="divider"></td>
+  <td class="nowrap">0.0%</td>
+  <td class="divider"></td>  <td>1</td>
+  <td class="highlight">0</td>
+  <td>3</td>
+  <td>6</td>
+  <td class="divider"></td>  <td>1</td>
+  <td class="highlight">0</td>
+  <td>16</td>
+  <td>50</td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td></td>
+  <td class="highlight"></td>
+  <td></td>
+  <td></td>
+  <td class="divider"></td>  <td class="nowrap">2</td>
+  <td>33.3%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1542,7 +1572,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">2</td>
-  <td>33.3%</td>
+  <td>28.6%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1568,7 +1598,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">2</td>
-  <td>33.3%</td>
+  <td>28.6%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1594,7 +1624,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>25.0%</td>
+  <td>20.0%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1620,33 +1650,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>20.0%</td>
-</tr><tr>
-  <td class="position"></td>
-  <td class="player invalid">
-    <div class="name"><a href="//cuescore.com/player/Marijn+van+der+Zee/1164044">Marijn van der Zee</a></div>
-    <div class="team"><a href="//cuescore.com/team/Poolhall+Junkies+1/64052491">Poolhall Junkies 1</a></div>
-  </td>
-  <td class="divider"></td>
-  <td class="nowrap">0.0%</td>
-  <td class="divider"></td>  <td>1</td>
-  <td class="highlight">0</td>
-  <td>3</td>
-  <td>6</td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td></td>
-  <td class="highlight"></td>
-  <td></td>
-  <td></td>
-  <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>20.0%</td>
+  <td>16.7%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1672,7 +1676,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>20.0%</td>
+  <td>16.7%</td>
 </tr><tr>
   <td class="position"></td>
   <td class="player invalid">
@@ -1698,7 +1702,7 @@ nav.secondary a:hover { text-decoration: none; background-color: #F3F3F3; }
   <td></td>
   <td></td>
   <td class="divider"></td>  <td class="nowrap">1</td>
-  <td>16.7%</td>
+  <td>14.3%</td>
 </tr></tbody>
 </table>
 </div>

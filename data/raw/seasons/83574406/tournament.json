@@ -35,7 +35,7 @@
             "firstname": "Twan",
             "lastname": "Paap",
             "url": "https://cuescore.com/player/Twan+Paap/1164444",
-            "image": "https://img.cuescore.com/image/d/4/d278ef1983f30d0203c041f30b62527b.png?t=1782465571",
+            "image": "https://img.cuescore.com/image/d/3/d278ef1983f30d0203c041f30b62527b.png?t=1782465571",
             "badge": "claimed",
             "badgeDesc": "Verified user",
             "country": {
@@ -151,7 +151,7 @@
                     "teamId": 28858099,
                     "name": "Team kleintjeskamp",
                     "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                    "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                    "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -192,33 +192,35 @@
                         }
                     }
                 },
-                "played": 5,
-                "wins": 5,
+                "played": 6,
+                "wins": 6,
                 "losses": 0,
                 "ties": 0,
                 "setWins": 0,
                 "setLosses": 0,
                 "setScore": 0,
-                "frameWins": 24,
-                "frameWinAvg": 4.8,
+                "frameWins": 30,
+                "frameWinAvg": 5,
                 "frameLosses": 6,
-                "frameScore": 18,
-                "frameAvg": 0.8,
+                "frameScore": 24,
+                "frameAvg": 0.833,
                 "innings": 0,
                 "inningAvg": 0,
-                "teamMatchPoints": 24,
+                "highestMatchAvg": 0,
+                "teamMatchPoints": 30,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
                 "teamBestInningAvg": 0,
-                "teamIndividualPoints": 369,
-                "individualMatchesWon": 24,
-                "individualScoreWins": 369,
-                "individualScoreLosses": 259,
-                "individualScoreDiff": 110,
+                "teamIndividualPoints": 447,
+                "individualMatchesWon": 30,
+                "individualScoreWins": 447,
+                "individualScoreLosses": 293,
+                "individualScoreDiff": 154,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
-                "points": 29
+                "points": 36
             },
             {
                 "position": 2,
@@ -226,7 +228,7 @@
                     "teamId": 63913216,
                     "name": "Keizer Karel",
                     "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                    "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                    "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -267,33 +269,35 @@
                         }
                     }
                 },
-                "played": 6,
+                "played": 7,
                 "wins": 3,
                 "losses": 2,
-                "ties": 1,
+                "ties": 2,
                 "setWins": 0,
                 "setLosses": 0,
                 "setScore": 0,
-                "frameWins": 23,
-                "frameWinAvg": 3.833,
-                "frameLosses": 13,
+                "frameWins": 26,
+                "frameWinAvg": 3.714,
+                "frameLosses": 16,
                 "frameScore": 10,
-                "frameAvg": 0.639,
+                "frameAvg": 0.619,
                 "innings": 0,
                 "inningAvg": 0,
-                "teamMatchPoints": 23,
+                "highestMatchAvg": 0,
+                "teamMatchPoints": 26,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
                 "teamBestInningAvg": 0,
-                "teamIndividualPoints": 409,
-                "individualMatchesWon": 23,
-                "individualScoreWins": 409,
-                "individualScoreLosses": 300,
-                "individualScoreDiff": 109,
+                "teamIndividualPoints": 481,
+                "individualMatchesWon": 26,
+                "individualScoreWins": 481,
+                "individualScoreLosses": 337,
+                "individualScoreDiff": 144,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 1,
-                "points": 26
+                "points": 29
             },
             {
                 "position": 3,
@@ -301,7 +305,7 @@
                     "teamId": 64052491,
                     "name": "Poolhall Junkies 1",
                     "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                    "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                    "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -342,33 +346,112 @@
                         }
                     }
                 },
-                "played": 5,
+                "played": 6,
                 "wins": 4,
                 "losses": 1,
-                "ties": 0,
+                "ties": 1,
                 "setWins": 0,
                 "setLosses": 0,
                 "setScore": 0,
-                "frameWins": 19,
-                "frameWinAvg": 3.8,
-                "frameLosses": 11,
+                "frameWins": 22,
+                "frameWinAvg": 3.667,
+                "frameLosses": 14,
                 "frameScore": 8,
-                "frameAvg": 0.633,
+                "frameAvg": 0.611,
                 "innings": 0,
                 "inningAvg": 0,
-                "teamMatchPoints": 19,
+                "highestMatchAvg": 0,
+                "teamMatchPoints": 22,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
                 "teamBestInningAvg": 0,
-                "teamIndividualPoints": 335,
-                "individualMatchesWon": 19,
-                "individualScoreWins": 335,
-                "individualScoreLosses": 277,
-                "individualScoreDiff": 58,
+                "teamIndividualPoints": 372,
+                "individualMatchesWon": 22,
+                "individualScoreWins": 372,
+                "individualScoreLosses": 349,
+                "individualScoreDiff": 23,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
-                "points": 23
+                "points": 26
+            },
+            {
+                "position": 4,
+                "player": {
+                    "teamId": 62135434,
+                    "name": "GO Customs 3",
+                    "url": "https://cuescore.com/team/GO+Customs+3/62135434",
+                    "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                    "country": {
+                        "name": "Netherlands",
+                        "alpha3": "NLD",
+                        "image": "https://cuescore.com/img/flags/png-country-4x2-none/res-640x480/nl.png",
+                        "continent": "Europe"
+                    },
+                    "venueId": 32618059,
+                    "venue": {
+                        "venueId": 32618059,
+                        "name": "GO Customs",
+                        "image": "https://img.cuescore.com/image/3/3/3cae891fd6f7117a57bdb1068d428371.png?t=1695154298",
+                        "placename": "Apeldoorn",
+                        "country": {
+                            "name": "Netherlands",
+                            "alpha3": "NLD",
+                            "image": "https://cuescore.com/img/flags/png-country-4x2-none/res-640x480/nl.png",
+                            "continent": "Europe"
+                        },
+                        "address": "Nagelpoelweg 7, 7333 NZ Apeldoorn - Netherlands",
+                        "url": "https://cuescore.com/venue/GO+Customs/32618059",
+                        "owner": {
+                            "organizationId": 1148276,
+                            "stub": "KNBB",
+                            "name": "Koninklijke Nederlandse Biljartbond",
+                            "url": "https://cuescore.com/KNBB",
+                            "logo": "https://img.cuescore.com/image/d/3/d78f8019b525670fa5007071f107e124.png?t=1555513055",
+                            "placename": "Nieuwegein",
+                            "country": {
+                                "name": "Netherlands",
+                                "alpha3": "NLD",
+                                "image": "https://cuescore.com/img/flags/png-country-4x2-none/res-640x480/nl.png",
+                                "continent": "Europe"
+                            },
+                            "seasonStart": 8,
+                            "profileColor": "f7a707",
+                            "accountType": 2,
+                            "accountTypeName": "Network"
+                        }
+                    }
+                },
+                "played": 7,
+                "wins": 2,
+                "losses": 3,
+                "ties": 2,
+                "setWins": 0,
+                "setLosses": 0,
+                "setScore": 0,
+                "frameWins": 18,
+                "frameWinAvg": 2.571,
+                "frameLosses": 24,
+                "frameScore": -6,
+                "frameAvg": 0.429,
+                "innings": 0,
+                "inningAvg": 0,
+                "highestMatchAvg": 0,
+                "teamMatchPoints": 18,
+                "teamInnings": 0,
+                "teamInningAvg": 0,
+                "teamBestInningAvg": 0,
+                "teamIndividualPoints": 377,
+                "individualMatchesWon": 18,
+                "individualScoreWins": 377,
+                "individualScoreLosses": 481,
+                "individualScoreDiff": -104,
+                "highBreak": 0,
+                "secondHighBreak": 0,
+                "runouts": 2,
+                "lagWins": 3,
+                "points": 20
             },
             {
                 "position": 4,
@@ -376,7 +459,7 @@
                     "teamId": 85540081,
                     "name": "Genoeg keus",
                     "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                    "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                    "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -431,6 +514,7 @@
                 "frameAvg": 0.5,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 18,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
@@ -441,84 +525,10 @@
                 "individualScoreLosses": 395,
                 "individualScoreDiff": -40,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 20
-            },
-            {
-                "position": 5,
-                "player": {
-                    "teamId": 62135434,
-                    "name": "GO Customs 3",
-                    "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                    "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
-                    "country": {
-                        "name": "Netherlands",
-                        "alpha3": "NLD",
-                        "image": "https://cuescore.com/img/flags/png-country-4x2-none/res-640x480/nl.png",
-                        "continent": "Europe"
-                    },
-                    "venueId": 32618059,
-                    "venue": {
-                        "venueId": 32618059,
-                        "name": "GO Customs",
-                        "image": "https://img.cuescore.com/image/3/3/3cae891fd6f7117a57bdb1068d428371.png?t=1695154298",
-                        "placename": "Apeldoorn",
-                        "country": {
-                            "name": "Netherlands",
-                            "alpha3": "NLD",
-                            "image": "https://cuescore.com/img/flags/png-country-4x2-none/res-640x480/nl.png",
-                            "continent": "Europe"
-                        },
-                        "address": "Nagelpoelweg 7, 7333 NZ Apeldoorn - Netherlands",
-                        "url": "https://cuescore.com/venue/GO+Customs/32618059",
-                        "owner": {
-                            "organizationId": 1148276,
-                            "stub": "KNBB",
-                            "name": "Koninklijke Nederlandse Biljartbond",
-                            "url": "https://cuescore.com/KNBB",
-                            "logo": "https://img.cuescore.com/image/d/3/d78f8019b525670fa5007071f107e124.png?t=1555513055",
-                            "placename": "Nieuwegein",
-                            "country": {
-                                "name": "Netherlands",
-                                "alpha3": "NLD",
-                                "image": "https://cuescore.com/img/flags/png-country-4x2-none/res-640x480/nl.png",
-                                "continent": "Europe"
-                            },
-                            "seasonStart": 8,
-                            "profileColor": "f7a707",
-                            "accountType": 2,
-                            "accountTypeName": "Network"
-                        }
-                    }
-                },
-                "played": 6,
-                "wins": 2,
-                "losses": 3,
-                "ties": 1,
-                "setWins": 0,
-                "setLosses": 0,
-                "setScore": 0,
-                "frameWins": 15,
-                "frameWinAvg": 2.5,
-                "frameLosses": 21,
-                "frameScore": -6,
-                "frameAvg": 0.417,
-                "innings": 0,
-                "inningAvg": 0,
-                "teamMatchPoints": 15,
-                "teamInnings": 0,
-                "teamInningAvg": 0,
-                "teamBestInningAvg": 0,
-                "teamIndividualPoints": 321,
-                "individualMatchesWon": 15,
-                "individualScoreWins": 321,
-                "individualScoreLosses": 413,
-                "individualScoreDiff": -92,
-                "highBreak": 0,
-                "runouts": 2,
-                "lagWins": 3,
-                "points": 17
             },
             {
                 "position": 6,
@@ -526,7 +536,7 @@
                     "teamId": 1176590,
                     "name": "Kings without Queens",
                     "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                    "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                    "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -567,33 +577,35 @@
                         }
                     }
                 },
-                "played": 6,
+                "played": 7,
                 "wins": 0,
                 "losses": 5,
-                "ties": 1,
+                "ties": 2,
                 "setWins": 0,
                 "setLosses": 0,
                 "setScore": 0,
-                "frameWins": 10,
-                "frameWinAvg": 1.667,
-                "frameLosses": 26,
+                "frameWins": 13,
+                "frameWinAvg": 1.857,
+                "frameLosses": 29,
                 "frameScore": -16,
-                "frameAvg": 0.278,
+                "frameAvg": 0.31,
                 "innings": 0,
                 "inningAvg": 0,
-                "teamMatchPoints": 10,
+                "highestMatchAvg": 0,
+                "teamMatchPoints": 13,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
                 "teamBestInningAvg": 0,
-                "teamIndividualPoints": 333,
-                "individualMatchesWon": 10,
-                "individualScoreWins": 333,
-                "individualScoreLosses": 383,
-                "individualScoreDiff": -50,
+                "teamIndividualPoints": 401,
+                "individualMatchesWon": 13,
+                "individualScoreWins": 401,
+                "individualScoreLosses": 439,
+                "individualScoreDiff": -38,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 3,
-                "points": 10
+                "points": 13
             },
             {
                 "position": 7,
@@ -601,7 +613,7 @@
                     "teamId": 9201200,
                     "name": "Infinity and Beyond",
                     "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                    "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                    "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                     "country": {
                         "name": "Netherlands",
                         "alpha3": "NLD",
@@ -642,30 +654,32 @@
                         }
                     }
                 },
-                "played": 4,
+                "played": 5,
                 "wins": 0,
-                "losses": 3,
+                "losses": 4,
                 "ties": 1,
                 "setWins": 0,
                 "setLosses": 0,
                 "setScore": 0,
                 "frameWins": 5,
-                "frameWinAvg": 1.25,
-                "frameLosses": 19,
-                "frameScore": -14,
-                "frameAvg": 0.208,
+                "frameWinAvg": 1,
+                "frameLosses": 25,
+                "frameScore": -20,
+                "frameAvg": 0.167,
                 "innings": 0,
                 "inningAvg": 0,
+                "highestMatchAvg": 0,
                 "teamMatchPoints": 5,
                 "teamInnings": 0,
                 "teamInningAvg": 0,
                 "teamBestInningAvg": 0,
-                "teamIndividualPoints": 201,
+                "teamIndividualPoints": 235,
                 "individualMatchesWon": 5,
-                "individualScoreWins": 201,
-                "individualScoreLosses": 296,
-                "individualScoreDiff": -95,
+                "individualScoreWins": 235,
+                "individualScoreLosses": 374,
+                "individualScoreDiff": -139,
                 "highBreak": 0,
+                "secondHighBreak": 0,
                 "runouts": 0,
                 "lagWins": 0,
                 "points": 5
@@ -697,6 +711,7 @@
     "matches": [
         {
             "matchId": 86624320,
+            "url": "https://cuescore.com/match/?matchId=86624320",
             "matchno": 1,
             "roundName": "Round 1",
             "roundCode": "roundX",
@@ -705,7 +720,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -750,7 +765,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -823,7 +838,7 @@
                 "lagWinsA": 1
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -834,6 +849,7 @@
         },
         {
             "matchId": 86624323,
+            "url": "https://cuescore.com/match/?matchId=86624323",
             "matchno": 2,
             "roundName": "Round 1",
             "roundCode": "roundX",
@@ -842,7 +858,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -887,7 +903,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -955,7 +971,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -966,6 +982,7 @@
         },
         {
             "matchId": 86624326,
+            "url": "https://cuescore.com/match/?matchId=86624326",
             "matchno": 3,
             "roundName": "Round 1",
             "roundCode": "roundX",
@@ -974,7 +991,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1019,7 +1036,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1092,7 +1109,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -1103,6 +1120,7 @@
         },
         {
             "matchId": 86624329,
+            "url": "https://cuescore.com/match/?matchId=86624329",
             "matchno": 4,
             "roundName": "Round 2",
             "roundCode": "roundX",
@@ -1111,7 +1129,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1156,7 +1174,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1229,7 +1247,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -1240,6 +1258,7 @@
         },
         {
             "matchId": 86624332,
+            "url": "https://cuescore.com/match/?matchId=86624332",
             "matchno": 5,
             "roundName": "Round 2",
             "roundCode": "roundX",
@@ -1248,7 +1267,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1293,7 +1312,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1366,7 +1385,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -1377,6 +1396,7 @@
         },
         {
             "matchId": 86624335,
+            "url": "https://cuescore.com/match/?matchId=86624335",
             "matchno": 6,
             "roundName": "Round 2",
             "roundCode": "roundX",
@@ -1385,7 +1405,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1430,7 +1450,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1503,7 +1523,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -1514,6 +1534,7 @@
         },
         {
             "matchId": 86624338,
+            "url": "https://cuescore.com/match/?matchId=86624338",
             "matchno": 7,
             "roundName": "Round 3",
             "roundCode": "roundX",
@@ -1522,7 +1543,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1567,7 +1588,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1640,7 +1661,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -1651,6 +1672,7 @@
         },
         {
             "matchId": 86624341,
+            "url": "https://cuescore.com/match/?matchId=86624341",
             "matchno": 8,
             "roundName": "Round 3",
             "roundCode": "roundX",
@@ -1659,7 +1681,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1704,7 +1726,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1777,7 +1799,7 @@
                 "lagWinsA": 1
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -1788,6 +1810,7 @@
         },
         {
             "matchId": 86624344,
+            "url": "https://cuescore.com/match/?matchId=86624344",
             "matchno": 9,
             "roundName": "Round 3",
             "roundCode": "roundX",
@@ -1796,7 +1819,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1841,7 +1864,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1914,7 +1937,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -1925,6 +1948,7 @@
         },
         {
             "matchId": 86624347,
+            "url": "https://cuescore.com/match/?matchId=86624347",
             "matchno": 10,
             "roundName": "Round 4",
             "roundCode": "roundX",
@@ -1933,7 +1957,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -1978,7 +2002,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2051,7 +2075,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -2062,6 +2086,7 @@
         },
         {
             "matchId": 86624350,
+            "url": "https://cuescore.com/match/?matchId=86624350",
             "matchno": 11,
             "roundName": "Round 4",
             "roundCode": "roundX",
@@ -2070,7 +2095,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2115,7 +2140,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2188,7 +2213,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -2199,6 +2224,7 @@
         },
         {
             "matchId": 86624353,
+            "url": "https://cuescore.com/match/?matchId=86624353",
             "matchno": 12,
             "roundName": "Round 4",
             "roundCode": "roundX",
@@ -2207,7 +2233,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2252,7 +2278,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2325,7 +2351,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -2336,6 +2362,7 @@
         },
         {
             "matchId": 86624356,
+            "url": "https://cuescore.com/match/?matchId=86624356",
             "matchno": 13,
             "roundName": "Round 5",
             "roundCode": "roundX",
@@ -2344,7 +2371,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2389,7 +2416,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2475,7 +2502,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -2486,6 +2513,7 @@
         },
         {
             "matchId": 86624359,
+            "url": "https://cuescore.com/match/?matchId=86624359",
             "matchno": 14,
             "roundName": "Round 5",
             "roundCode": "roundX",
@@ -2494,7 +2522,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2539,7 +2567,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2612,7 +2640,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -2623,6 +2651,7 @@
         },
         {
             "matchId": 86624362,
+            "url": "https://cuescore.com/match/?matchId=86624362",
             "matchno": 15,
             "roundName": "Round 5",
             "roundCode": "roundX",
@@ -2631,7 +2660,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2676,7 +2705,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2749,7 +2778,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -2760,6 +2789,7 @@
         },
         {
             "matchId": 86624365,
+            "url": "https://cuescore.com/match/?matchId=86624365",
             "matchno": 16,
             "roundName": "Round 6",
             "roundCode": "roundX",
@@ -2768,7 +2798,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2813,7 +2843,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2886,7 +2916,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -2897,6 +2927,7 @@
         },
         {
             "matchId": 86624368,
+            "url": "https://cuescore.com/match/?matchId=86624368",
             "matchno": 17,
             "roundName": "Round 6",
             "roundCode": "roundX",
@@ -2905,7 +2936,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -2950,7 +2981,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3023,7 +3054,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3034,6 +3065,7 @@
         },
         {
             "matchId": 86624371,
+            "url": "https://cuescore.com/match/?matchId=86624371",
             "matchno": 18,
             "roundName": "Round 6",
             "roundCode": "roundX",
@@ -3042,7 +3074,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3087,7 +3119,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3160,7 +3192,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3171,6 +3203,7 @@
         },
         {
             "matchId": 86624374,
+            "url": "https://cuescore.com/match/?matchId=86624374",
             "matchno": 19,
             "roundName": "Round 7",
             "roundCode": "roundX",
@@ -3179,7 +3212,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3224,7 +3257,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3297,7 +3330,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3308,6 +3341,7 @@
         },
         {
             "matchId": 86624377,
+            "url": "https://cuescore.com/match/?matchId=86624377",
             "matchno": 20,
             "roundName": "Round 7",
             "roundCode": "roundX",
@@ -3316,7 +3350,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3361,7 +3395,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3429,7 +3463,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3440,6 +3474,7 @@
         },
         {
             "matchId": 86624380,
+            "url": "https://cuescore.com/match/?matchId=86624380",
             "matchno": 21,
             "roundName": "Round 7",
             "roundCode": "roundX",
@@ -3448,7 +3483,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3493,7 +3528,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3566,7 +3601,7 @@
                 "lagWinsA": 0
             },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3577,6 +3612,7 @@
         },
         {
             "matchId": 86624383,
+            "url": "https://cuescore.com/match/?matchId=86624383",
             "matchno": 22,
             "roundName": "Round 8",
             "roundCode": "roundX",
@@ -3585,7 +3621,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3630,7 +3666,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3671,8 +3707,8 @@
                     }
                 }
             },
-            "scoreA": 0,
-            "scoreB": 0,
+            "scoreA": 3,
+            "scoreB": 3,
             "raceTo": 0,
             "discipline": "Multiball",
             "disciplineId": 10,
@@ -3690,15 +3726,20 @@
             "tournamentId": 83574406,
             "challengeId": 0,
             "starttime": "2026-11-10T19:00:00Z",
-            "stoptime": "",
-            "matchstatus": "waiting",
-            "matchstatusCode": 0,
+            "stoptime": "2026-11-10T23:01:04Z",
+            "matchstatus": "finished",
+            "matchstatusCode": 2,
             "bestOfSets": 0,
             "useInnings": false,
             "frames": [],
-            "properties": [],
+            "properties": {
+                "runoutsB": 0,
+                "runoutsA": 0,
+                "lagWinsB": 0,
+                "lagWinsA": 0
+            },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3709,6 +3750,7 @@
         },
         {
             "matchId": 86624386,
+            "url": "https://cuescore.com/match/?matchId=86624386",
             "matchno": 23,
             "roundName": "Round 8",
             "roundCode": "roundX",
@@ -3717,7 +3759,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3762,7 +3804,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3804,7 +3846,7 @@
                 }
             },
             "scoreA": 0,
-            "scoreB": 0,
+            "scoreB": 6,
             "raceTo": 0,
             "discipline": "Multiball",
             "disciplineId": 10,
@@ -3822,15 +3864,33 @@
             "tournamentId": 83574406,
             "challengeId": 0,
             "starttime": "2026-11-09T19:00:00Z",
-            "stoptime": "",
-            "matchstatus": "waiting",
-            "matchstatusCode": 0,
+            "stoptime": "2026-11-09T22:10:42Z",
+            "matchstatus": "finished",
+            "matchstatusCode": 2,
             "bestOfSets": 0,
             "useInnings": false,
             "frames": [],
-            "properties": [],
+            "properties": {
+                "matchsetup": {
+                    "1": {
+                        "1": [
+                            1548887,
+                            4746587
+                        ],
+                        "2": 1186017,
+                        "3": 1186017,
+                        "4": 4746587,
+                        "5": 1548887,
+                        "6": 8124744
+                    }
+                },
+                "runoutsB": 0,
+                "runoutsA": 0,
+                "lagWinsB": 0,
+                "lagWinsA": 0
+            },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3841,6 +3901,7 @@
         },
         {
             "matchId": 86624389,
+            "url": "https://cuescore.com/match/?matchId=86624389",
             "matchno": 24,
             "roundName": "Round 8",
             "roundCode": "roundX",
@@ -3849,7 +3910,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3894,7 +3955,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -3935,8 +3996,8 @@
                     }
                 }
             },
-            "scoreA": 0,
-            "scoreB": 0,
+            "scoreA": 3,
+            "scoreB": 3,
             "raceTo": 0,
             "discipline": "Multiball",
             "disciplineId": 10,
@@ -3954,15 +4015,20 @@
             "tournamentId": 83574406,
             "challengeId": 0,
             "starttime": "2026-11-11T19:00:00Z",
-            "stoptime": "",
-            "matchstatus": "waiting",
-            "matchstatusCode": 0,
+            "stoptime": "2026-11-12T00:02:09Z",
+            "matchstatus": "finished",
+            "matchstatusCode": 2,
             "bestOfSets": 0,
             "useInnings": false,
             "frames": [],
-            "properties": [],
+            "properties": {
+                "runoutsB": 0,
+                "runoutsA": 0,
+                "lagWinsB": 0,
+                "lagWinsA": 0
+            },
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -3973,6 +4039,7 @@
         },
         {
             "matchId": 86624392,
+            "url": "https://cuescore.com/match/?matchId=86624392",
             "matchno": 25,
             "roundName": "Round 9",
             "roundCode": "roundX",
@@ -3981,7 +4048,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4026,7 +4093,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4094,7 +4161,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -4105,6 +4172,7 @@
         },
         {
             "matchId": 86624395,
+            "url": "https://cuescore.com/match/?matchId=86624395",
             "matchno": 26,
             "roundName": "Round 9",
             "roundCode": "roundX",
@@ -4113,7 +4181,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4158,7 +4226,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4226,7 +4294,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -4237,6 +4305,7 @@
         },
         {
             "matchId": 86624398,
+            "url": "https://cuescore.com/match/?matchId=86624398",
             "matchno": 27,
             "roundName": "Round 9",
             "roundCode": "roundX",
@@ -4245,7 +4314,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4290,7 +4359,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4358,7 +4427,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -4369,6 +4438,7 @@
         },
         {
             "matchId": 86624401,
+            "url": "https://cuescore.com/match/?matchId=86624401",
             "matchno": 28,
             "roundName": "Round 10",
             "roundCode": "roundX",
@@ -4377,7 +4447,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4422,7 +4492,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4490,7 +4560,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -4501,6 +4571,7 @@
         },
         {
             "matchId": 86624404,
+            "url": "https://cuescore.com/match/?matchId=86624404",
             "matchno": 29,
             "roundName": "Round 10",
             "roundCode": "roundX",
@@ -4509,7 +4580,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4554,7 +4625,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4622,7 +4693,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -4633,6 +4704,7 @@
         },
         {
             "matchId": 86624407,
+            "url": "https://cuescore.com/match/?matchId=86624407",
             "matchno": 30,
             "roundName": "Round 10",
             "roundCode": "roundX",
@@ -4641,7 +4713,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4686,7 +4758,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4754,7 +4826,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -4765,6 +4837,7 @@
         },
         {
             "matchId": 86624410,
+            "url": "https://cuescore.com/match/?matchId=86624410",
             "matchno": 31,
             "roundName": "Round 11",
             "roundCode": "roundX",
@@ -4773,7 +4846,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4818,7 +4891,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4886,7 +4959,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -4897,6 +4970,7 @@
         },
         {
             "matchId": 86624413,
+            "url": "https://cuescore.com/match/?matchId=86624413",
             "matchno": 32,
             "roundName": "Round 11",
             "roundCode": "roundX",
@@ -4905,7 +4979,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -4950,7 +5024,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5018,7 +5092,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5029,6 +5103,7 @@
         },
         {
             "matchId": 86624416,
+            "url": "https://cuescore.com/match/?matchId=86624416",
             "matchno": 33,
             "roundName": "Round 11",
             "roundCode": "roundX",
@@ -5037,7 +5112,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5082,7 +5157,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5150,7 +5225,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5161,6 +5236,7 @@
         },
         {
             "matchId": 86624419,
+            "url": "https://cuescore.com/match/?matchId=86624419",
             "matchno": 34,
             "roundName": "Round 12",
             "roundCode": "roundX",
@@ -5169,7 +5245,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5214,7 +5290,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5282,7 +5358,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5293,6 +5369,7 @@
         },
         {
             "matchId": 86624422,
+            "url": "https://cuescore.com/match/?matchId=86624422",
             "matchno": 35,
             "roundName": "Round 12",
             "roundCode": "roundX",
@@ -5301,7 +5378,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5346,7 +5423,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5414,7 +5491,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5425,6 +5502,7 @@
         },
         {
             "matchId": 86624425,
+            "url": "https://cuescore.com/match/?matchId=86624425",
             "matchno": 36,
             "roundName": "Round 12",
             "roundCode": "roundX",
@@ -5433,7 +5511,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5478,7 +5556,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5546,7 +5624,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5557,6 +5635,7 @@
         },
         {
             "matchId": 86624428,
+            "url": "https://cuescore.com/match/?matchId=86624428",
             "matchno": 37,
             "roundName": "Round 13",
             "roundCode": "roundX",
@@ -5565,7 +5644,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5610,7 +5689,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5678,7 +5757,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5689,6 +5768,7 @@
         },
         {
             "matchId": 86624431,
+            "url": "https://cuescore.com/match/?matchId=86624431",
             "matchno": 38,
             "roundName": "Round 13",
             "roundCode": "roundX",
@@ -5697,7 +5777,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5742,7 +5822,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5810,7 +5890,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5821,6 +5901,7 @@
         },
         {
             "matchId": 86624434,
+            "url": "https://cuescore.com/match/?matchId=86624434",
             "matchno": 39,
             "roundName": "Round 13",
             "roundCode": "roundX",
@@ -5829,7 +5910,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5874,7 +5955,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -5942,7 +6023,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -5953,6 +6034,7 @@
         },
         {
             "matchId": 86624437,
+            "url": "https://cuescore.com/match/?matchId=86624437",
             "matchno": 40,
             "roundName": "Round 14",
             "roundCode": "roundX",
@@ -5961,7 +6043,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6006,7 +6088,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6074,7 +6156,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -6085,6 +6167,7 @@
         },
         {
             "matchId": 86624440,
+            "url": "https://cuescore.com/match/?matchId=86624440",
             "matchno": 41,
             "roundName": "Round 14",
             "roundCode": "roundX",
@@ -6093,7 +6176,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6138,7 +6221,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6206,7 +6289,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -6217,6 +6300,7 @@
         },
         {
             "matchId": 86624443,
+            "url": "https://cuescore.com/match/?matchId=86624443",
             "matchno": 42,
             "roundName": "Round 14",
             "roundCode": "roundX",
@@ -6225,7 +6309,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6270,7 +6354,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6338,7 +6422,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -6349,6 +6433,7 @@
         },
         {
             "matchId": 86624446,
+            "url": "https://cuescore.com/match/?matchId=86624446",
             "matchno": 43,
             "roundName": "Round 15",
             "roundCode": "roundX",
@@ -6357,7 +6442,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6402,7 +6487,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6470,7 +6555,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -6481,6 +6566,7 @@
         },
         {
             "matchId": 86624449,
+            "url": "https://cuescore.com/match/?matchId=86624449",
             "matchno": 44,
             "roundName": "Round 15",
             "roundCode": "roundX",
@@ -6489,7 +6575,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6534,7 +6620,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6602,7 +6688,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -6613,6 +6699,7 @@
         },
         {
             "matchId": 86624452,
+            "url": "https://cuescore.com/match/?matchId=86624452",
             "matchno": 45,
             "roundName": "Round 15",
             "roundCode": "roundX",
@@ -6621,7 +6708,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6666,7 +6753,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6734,7 +6821,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -6745,6 +6832,7 @@
         },
         {
             "matchId": 86624455,
+            "url": "https://cuescore.com/match/?matchId=86624455",
             "matchno": 46,
             "roundName": "Round 16",
             "roundCode": "roundX",
@@ -6753,7 +6841,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6798,7 +6886,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6866,7 +6954,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -6877,6 +6965,7 @@
         },
         {
             "matchId": 86624458,
+            "url": "https://cuescore.com/match/?matchId=86624458",
             "matchno": 47,
             "roundName": "Round 16",
             "roundCode": "roundX",
@@ -6885,7 +6974,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6930,7 +7019,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -6998,7 +7087,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7009,6 +7098,7 @@
         },
         {
             "matchId": 86624461,
+            "url": "https://cuescore.com/match/?matchId=86624461",
             "matchno": 48,
             "roundName": "Round 16",
             "roundCode": "roundX",
@@ -7017,7 +7107,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7062,7 +7152,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7130,7 +7220,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7141,6 +7231,7 @@
         },
         {
             "matchId": 86624464,
+            "url": "https://cuescore.com/match/?matchId=86624464",
             "matchno": 49,
             "roundName": "Round 17",
             "roundCode": "roundX",
@@ -7149,7 +7240,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7194,7 +7285,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7262,7 +7353,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7273,6 +7364,7 @@
         },
         {
             "matchId": 86624467,
+            "url": "https://cuescore.com/match/?matchId=86624467",
             "matchno": 50,
             "roundName": "Round 17",
             "roundCode": "roundX",
@@ -7281,7 +7373,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7326,7 +7418,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7394,7 +7486,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7405,6 +7497,7 @@
         },
         {
             "matchId": 86624470,
+            "url": "https://cuescore.com/match/?matchId=86624470",
             "matchno": 51,
             "roundName": "Round 17",
             "roundCode": "roundX",
@@ -7413,7 +7506,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7458,7 +7551,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7526,7 +7619,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7537,6 +7630,7 @@
         },
         {
             "matchId": 86624473,
+            "url": "https://cuescore.com/match/?matchId=86624473",
             "matchno": 52,
             "roundName": "Round 18",
             "roundCode": "roundX",
@@ -7545,7 +7639,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7590,7 +7684,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7658,7 +7752,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7669,6 +7763,7 @@
         },
         {
             "matchId": 86624476,
+            "url": "https://cuescore.com/match/?matchId=86624476",
             "matchno": 53,
             "roundName": "Round 18",
             "roundCode": "roundX",
@@ -7677,7 +7772,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7722,7 +7817,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7790,7 +7885,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7801,6 +7896,7 @@
         },
         {
             "matchId": 86624479,
+            "url": "https://cuescore.com/match/?matchId=86624479",
             "matchno": 54,
             "roundName": "Round 18",
             "roundCode": "roundX",
@@ -7809,7 +7905,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7854,7 +7950,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7922,7 +8018,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -7933,6 +8029,7 @@
         },
         {
             "matchId": 86624482,
+            "url": "https://cuescore.com/match/?matchId=86624482",
             "matchno": 55,
             "roundName": "Round 19",
             "roundCode": "roundX",
@@ -7941,7 +8038,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -7986,7 +8083,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8054,7 +8151,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8065,6 +8162,7 @@
         },
         {
             "matchId": 86624485,
+            "url": "https://cuescore.com/match/?matchId=86624485",
             "matchno": 56,
             "roundName": "Round 19",
             "roundCode": "roundX",
@@ -8073,7 +8171,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8118,7 +8216,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8186,7 +8284,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8197,6 +8295,7 @@
         },
         {
             "matchId": 86624488,
+            "url": "https://cuescore.com/match/?matchId=86624488",
             "matchno": 57,
             "roundName": "Round 19",
             "roundCode": "roundX",
@@ -8205,7 +8304,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8250,7 +8349,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8318,7 +8417,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8329,6 +8428,7 @@
         },
         {
             "matchId": 86624491,
+            "url": "https://cuescore.com/match/?matchId=86624491",
             "matchno": 58,
             "roundName": "Round 20",
             "roundCode": "roundX",
@@ -8337,7 +8437,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8382,7 +8482,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8450,7 +8550,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8461,6 +8561,7 @@
         },
         {
             "matchId": 86624494,
+            "url": "https://cuescore.com/match/?matchId=86624494",
             "matchno": 59,
             "roundName": "Round 20",
             "roundCode": "roundX",
@@ -8469,7 +8570,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8514,7 +8615,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8582,7 +8683,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8593,6 +8694,7 @@
         },
         {
             "matchId": 86624497,
+            "url": "https://cuescore.com/match/?matchId=86624497",
             "matchno": 60,
             "roundName": "Round 20",
             "roundCode": "roundX",
@@ -8601,7 +8703,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8646,7 +8748,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8714,7 +8816,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8725,6 +8827,7 @@
         },
         {
             "matchId": 86624500,
+            "url": "https://cuescore.com/match/?matchId=86624500",
             "matchno": 61,
             "roundName": "Round 21",
             "roundCode": "roundX",
@@ -8733,7 +8836,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8778,7 +8881,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8846,7 +8949,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8857,6 +8960,7 @@
         },
         {
             "matchId": 86624503,
+            "url": "https://cuescore.com/match/?matchId=86624503",
             "matchno": 62,
             "roundName": "Round 21",
             "roundCode": "roundX",
@@ -8865,7 +8969,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8910,7 +9014,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -8978,7 +9082,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -8989,6 +9093,7 @@
         },
         {
             "matchId": 86624506,
+            "url": "https://cuescore.com/match/?matchId=86624506",
             "matchno": 63,
             "roundName": "Round 21",
             "roundCode": "roundX",
@@ -8997,7 +9102,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9042,7 +9147,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9110,7 +9215,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -9121,6 +9226,7 @@
         },
         {
             "matchId": 86624509,
+            "url": "https://cuescore.com/match/?matchId=86624509",
             "matchno": 64,
             "roundName": "Round 22",
             "roundCode": "roundX",
@@ -9129,7 +9235,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9174,7 +9280,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9242,7 +9348,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -9253,6 +9359,7 @@
         },
         {
             "matchId": 86624512,
+            "url": "https://cuescore.com/match/?matchId=86624512",
             "matchno": 65,
             "roundName": "Round 22",
             "roundCode": "roundX",
@@ -9261,7 +9368,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9306,7 +9413,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9374,7 +9481,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -9385,6 +9492,7 @@
         },
         {
             "matchId": 86624515,
+            "url": "https://cuescore.com/match/?matchId=86624515",
             "matchno": 66,
             "roundName": "Round 22",
             "roundCode": "roundX",
@@ -9393,7 +9501,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9438,7 +9546,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9506,7 +9614,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -9517,6 +9625,7 @@
         },
         {
             "matchId": 86624518,
+            "url": "https://cuescore.com/match/?matchId=86624518",
             "matchno": 67,
             "roundName": "Round 23",
             "roundCode": "roundX",
@@ -9525,7 +9634,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9570,7 +9679,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9638,7 +9747,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -9649,6 +9758,7 @@
         },
         {
             "matchId": 86624521,
+            "url": "https://cuescore.com/match/?matchId=86624521",
             "matchno": 68,
             "roundName": "Round 23",
             "roundCode": "roundX",
@@ -9657,7 +9767,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9702,7 +9812,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9770,7 +9880,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -9781,6 +9891,7 @@
         },
         {
             "matchId": 86624524,
+            "url": "https://cuescore.com/match/?matchId=86624524",
             "matchno": 69,
             "roundName": "Round 23",
             "roundCode": "roundX",
@@ -9789,7 +9900,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9834,7 +9945,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9902,7 +10013,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -9913,6 +10024,7 @@
         },
         {
             "matchId": 86624527,
+            "url": "https://cuescore.com/match/?matchId=86624527",
             "matchno": 70,
             "roundName": "Round 24",
             "roundCode": "roundX",
@@ -9921,7 +10033,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -9966,7 +10078,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10034,7 +10146,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10045,6 +10157,7 @@
         },
         {
             "matchId": 86624530,
+            "url": "https://cuescore.com/match/?matchId=86624530",
             "matchno": 71,
             "roundName": "Round 24",
             "roundCode": "roundX",
@@ -10053,7 +10166,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10098,7 +10211,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10166,7 +10279,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10177,6 +10290,7 @@
         },
         {
             "matchId": 86624533,
+            "url": "https://cuescore.com/match/?matchId=86624533",
             "matchno": 72,
             "roundName": "Round 24",
             "roundCode": "roundX",
@@ -10185,7 +10299,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10230,7 +10344,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10298,7 +10412,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10309,6 +10423,7 @@
         },
         {
             "matchId": 86624536,
+            "url": "https://cuescore.com/match/?matchId=86624536",
             "matchno": 73,
             "roundName": "Round 25",
             "roundCode": "roundX",
@@ -10317,7 +10432,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10362,7 +10477,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10430,7 +10545,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10441,6 +10556,7 @@
         },
         {
             "matchId": 86624539,
+            "url": "https://cuescore.com/match/?matchId=86624539",
             "matchno": 74,
             "roundName": "Round 25",
             "roundCode": "roundX",
@@ -10449,7 +10565,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10494,7 +10610,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10562,7 +10678,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10573,6 +10689,7 @@
         },
         {
             "matchId": 86624542,
+            "url": "https://cuescore.com/match/?matchId=86624542",
             "matchno": 75,
             "roundName": "Round 25",
             "roundCode": "roundX",
@@ -10581,7 +10698,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10626,7 +10743,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10694,7 +10811,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10705,6 +10822,7 @@
         },
         {
             "matchId": 86624545,
+            "url": "https://cuescore.com/match/?matchId=86624545",
             "matchno": 76,
             "roundName": "Round 26",
             "roundCode": "roundX",
@@ -10713,7 +10831,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10758,7 +10876,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10826,7 +10944,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10837,6 +10955,7 @@
         },
         {
             "matchId": 86624548,
+            "url": "https://cuescore.com/match/?matchId=86624548",
             "matchno": 77,
             "roundName": "Round 26",
             "roundCode": "roundX",
@@ -10845,7 +10964,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10890,7 +11009,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -10958,7 +11077,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -10969,6 +11088,7 @@
         },
         {
             "matchId": 86624551,
+            "url": "https://cuescore.com/match/?matchId=86624551",
             "matchno": 78,
             "roundName": "Round 26",
             "roundCode": "roundX",
@@ -10977,7 +11097,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11022,7 +11142,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11090,7 +11210,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -11101,6 +11221,7 @@
         },
         {
             "matchId": 86624554,
+            "url": "https://cuescore.com/match/?matchId=86624554",
             "matchno": 79,
             "roundName": "Round 27",
             "roundCode": "roundX",
@@ -11109,7 +11230,7 @@
                 "teamId": 1176590,
                 "name": "Kings without Queens",
                 "url": "https://cuescore.com/team/Kings+without+Queens/1176590",
-                "image": "https://img.cuescore.com/image/d/4/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
+                "image": "https://img.cuescore.com/image/d/3/d170c4442f02b26029a50cf4a6c2c491.png?t=1627970720",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11154,7 +11275,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11222,7 +11343,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -11233,6 +11354,7 @@
         },
         {
             "matchId": 86624557,
+            "url": "https://cuescore.com/match/?matchId=86624557",
             "matchno": 80,
             "roundName": "Round 27",
             "roundCode": "roundX",
@@ -11241,7 +11363,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11286,7 +11408,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11354,7 +11476,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -11365,6 +11487,7 @@
         },
         {
             "matchId": 86624560,
+            "url": "https://cuescore.com/match/?matchId=86624560",
             "matchno": 81,
             "roundName": "Round 27",
             "roundCode": "roundX",
@@ -11373,7 +11496,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11418,7 +11541,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11486,7 +11609,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -11497,6 +11620,7 @@
         },
         {
             "matchId": 86624563,
+            "url": "https://cuescore.com/match/?matchId=86624563",
             "matchno": 82,
             "roundName": "Round 28",
             "roundCode": "roundX",
@@ -11505,7 +11629,7 @@
                 "teamId": 85540081,
                 "name": "Genoeg keus",
                 "url": "https://cuescore.com/team/Genoeg+keus/85540081",
-                "image": "https://img.cuescore.com/image/1/4/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
+                "image": "https://img.cuescore.com/image/1/3/195670e8d01702f78e7bc3f9a582dee1.png?t=1785441192",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11550,7 +11674,7 @@
                 "teamId": 63913216,
                 "name": "Keizer Karel",
                 "url": "https://cuescore.com/team/Keizer+Karel/63913216",
-                "image": "https://img.cuescore.com/image/2/4/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
+                "image": "https://img.cuescore.com/image/2/3/29ef24e6ab8b3ef08ddd124cbb8dc361.png?t=1752853139",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11618,7 +11742,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -11629,6 +11753,7 @@
         },
         {
             "matchId": 86624566,
+            "url": "https://cuescore.com/match/?matchId=86624566",
             "matchno": 83,
             "roundName": "Round 28",
             "roundCode": "roundX",
@@ -11637,7 +11762,7 @@
                 "teamId": 64052491,
                 "name": "Poolhall Junkies 1",
                 "url": "https://cuescore.com/team/Poolhall+Junkies+1/64052491",
-                "image": "https://img.cuescore.com/image/4/4/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
+                "image": "https://img.cuescore.com/image/4/3/4d5ff8339bf9c426ea78c1de172b7c0c.png?t=1786006536",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11682,7 +11807,7 @@
                 "teamId": 9201200,
                 "name": "Infinity and Beyond",
                 "url": "https://cuescore.com/team/Infinity+and+Beyond/9201200",
-                "image": "https://img.cuescore.com/image/6/4/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
+                "image": "https://img.cuescore.com/image/6/3/62ae7b4f4feb77556033c48494deea50.png?t=1724684517",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11750,7 +11875,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
@@ -11761,6 +11886,7 @@
         },
         {
             "matchId": 86624569,
+            "url": "https://cuescore.com/match/?matchId=86624569",
             "matchno": 84,
             "roundName": "Round 28",
             "roundCode": "roundX",
@@ -11769,7 +11895,7 @@
                 "teamId": 28858099,
                 "name": "Team kleintjeskamp",
                 "url": "https://cuescore.com/team/Team+kleintjeskamp/28858099",
-                "image": "https://img.cuescore.com/image/b/4/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
+                "image": "https://img.cuescore.com/image/b/3/b65e00f0076abd0055a71ffa703e5bff.png?t=1483705613",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11814,7 +11940,7 @@
                 "teamId": 62135434,
                 "name": "GO Customs 3",
                 "url": "https://cuescore.com/team/GO+Customs+3/62135434",
-                "image": "https://img.cuescore.com/image/4/4/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
+                "image": "https://img.cuescore.com/image/4/3/4be2f14ce8ebe19b511b67f3b31dac68.png?t=1749563395",
                 "country": {
                     "name": "Netherlands",
                     "alpha3": "NLD",
@@ -11882,7 +12008,7 @@
             "frames": [],
             "properties": [],
             "sets": [],
-            "curVersion": 651,
+            "curVersion": 739,
             "notes": [],
             "matchType": 1,
             "videoLink": "",
