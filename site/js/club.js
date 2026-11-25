@@ -43,12 +43,16 @@ clubViews.overzicht = () => {
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="pill ${POS_CLS(t)}">plek ${t.table.pos}/${t.nTeams}</span><b>${t.table.pts} pt</b><span class="mute small">${t.table.played} gespeeld</span>${form(t.form)}</div>
       <div class="mute small" style="margin-top:8px">Kans op titel ${pct1(t.race.title)} · top 3 ${pct1(t.race.top3)}${t.captain ? ` · aanvoerder ${esc(t.captain)}` : ""}</div></div>`;
   }).join("");
-  const nextRows = C.upcoming.slice(0, 6).map((m) => `<tr><td class="small">${dt(m.start)}</td><td>${esc(m.team)}</td><td>${m.home ? "–" : "@"} ${esc(m.opp)}</td><td class="n nowrap small">${m.win != null ? pct(m.win) : ""}</td></tr>`).join("");
+  const nowT = Date.now() - 3 * 3600e3;
+  const overdue = C.upcoming.filter((m) => new Date(m.start).getTime() < nowT);
+  const overdueHtml = overdue.length ? `<div class="card" style="margin-bottom:16px;border-left:4px solid var(--gold,#d4a017)"><b>Uitslag nog niet ingevoerd op CueScore</b><div class="small" style="margin-top:4px">${overdue.map((m) => `${dt(m.start)} · ${esc(m.team)} ${m.home ? "–" : "@"} ${esc(m.opp)}`).join("<br>")}</div><p class="mute small" style="margin:6px 0 0">Deze wedstrijden zijn gespeeld, maar de uitslag staat nog niet bij CueScore. De site werkt vanzelf bij zodra die is ingevoerd (dagelijks 02:00 en 08:00).</p></div>` : "";
+  const nextRows = C.upcoming.filter((m) => new Date(m.start).getTime() >= nowT).slice(0, 6).map((m) => `<tr><td class="small">${dt(m.start)}</td><td>${esc(m.team)}</td><td>${m.home ? "–" : "@"} ${esc(m.opp)}</td><td class="n nowrap small">${m.win != null ? pct(m.win) : ""}</td></tr>`).join("");
   const lastRows = C.recent.slice(0, 6).map((m) => `<tr><td class="small">${dtl.format(new Date(m.start))}</td><td>${esc(m.team)}</td><td>${m.home ? "–" : "@"} ${esc(m.opp)}</td><td class="n nowrap bold ${m.s > m.o ? "win" : m.s < m.o ? "lose" : ""}">${m.s}–${m.o}</td></tr>`).join("");
   const top3 = C.mvp.slice(0, 3).map((r, i) => `<tr><td class="n">${i + 1}</td><td>${cPl(r.id)}</td><td class="n bold">${fmt(r.v)}%</td></tr>`).join("");
   return `<section class="hero"><div class="mute" style="color:#cfe8d8">Vereniging</div><h1>${esc(C.meta.name)}</h1><div class="sub">Wageningen · ${found.length} teams in competitie · ${C.members.length} spelers</div>
     <div class="kpis"><div class="kpi"><b>${T0.w}-${T0.d}-${T0.l}</b><span>wedstrijden W-G-V</span></div><div class="kpi"><b>${pct(T0.fw / Math.max(1, T0.fw + T0.fl))}</b><span>partijen gewonnen</span></div>
     <div class="kpi"><b>${T0.played}</b><span>wedstrijden gespeeld</span></div><div class="kpi"><b>${C.members.length}</b><span>spelers actief</span></div></div></section>
+  ${overdueHtml}
   <h2>Onze teams</h2><div class="grid g3">${cards}</div>
   <div class="grid g2" style="margin-top:16px">
     <div class="card"><h3>Eerstvolgende wedstrijden</h3>${nextRows ? `<div class="tw"><table><tbody>${nextRows}</tbody></table></div><p class="mute small">Laatste kolom: kans op winst.</p>` : '<p class="mute">Geen openstaande wedstrijden.</p>'}</div>
