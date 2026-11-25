@@ -3,9 +3,9 @@ name: Nachtelijke update
 on:
   schedule:
     # Bewust op "rare" minuten: GitHub schuift of schrapt runs op :00/:30 vaak bij drukte.
-    - cron: "17 3 * * *"   # ~04:17 NL
-    - cron: "43 11 * * *"  # ~12:43 NL
-    - cron: "47 22 * * *"  # ~23:47 NL, na de speelavonden
+    # Tijden zijn UTC. Winter (CET) = +1 uur, zomer (CEST) = +2 uur.
+    - cron: "7 1 * * *"    # ~02:07 NL (winter)
+    - cron: "7 7 * * *"    # ~08:07 NL (winter)
   workflow_dispatch:        # handmatig starten kan ook
   push:
     branches: [main]
